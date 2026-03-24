@@ -75,8 +75,11 @@ export default function Home() {
     <main style={{ fontFamily: 'Georgia, serif', backgroundColor: '#f4f1eb', minHeight: '100vh', color: '#0a1931' }}>
       <Navbar />
       <section style={{ position: 'relative', textAlign: 'center', padding: '80px 20px 60px', color: '#fff', overflow: 'hidden', minHeight: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+        <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1, transition: 'opacity 1.5s' }} id="vid1" onEnded={() => { document.getElementById('vid1').style.opacity='0'; document.getElementById('vid2').style.opacity='1'; document.getElementById('vid2').play(); }}>
           <source src="/images/boogie-word.mov" type="video/mp4" />
+        </video>
+        <video muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0, transition: 'opacity 1.5s' }} id="vid2" onEnded={() => { document.getElementById('vid2').style.opacity='0'; document.getElementById('vid1').style.opacity='1'; document.getElementById('vid1').play(); }}>
+          <source src="/images/variety-tees.mov" type="video/mp4" />
         </video>
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(10,25,49,0.65)', zIndex: 1 }} />
         <div style={{ position: 'relative', zIndex: 2 }}>
