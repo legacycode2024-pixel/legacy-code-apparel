@@ -1,9 +1,41 @@
 'use client';
 import Navbar from './components/Navbar';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useCart } from './context/CartContext';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+
+function VideoHero() {
+  const vid1Ref = useRef<HTMLVideoElement>(null);
+  const vid2Ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (vid1Ref.current) vid1Ref.current.play();
+  }, []);
+
+  const handleVid1End = () => {
+    if (vid1Ref.current) vid1Ref.current.style.opacity = '0';
+    if (vid2Ref.current) { vid2Ref.current.style.opacity = '1'; vid2Ref.current.play(); }
+  };
+
+  const handleVid2End = () => {
+    if (vid2Ref.current) vid2Ref.current.style.opacity = '0';
+    if (vid1Ref.current) { vid1Ref.current.style.opacity = '1'; vid1Ref.current.play(); }
+  };
+
+  return (
+    <>
+      <video ref={vid1Ref} muted playsInline onEnded={handleVid1End} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1, transition: 'opacity 1.5s' }}>
+        <source src="/images/boogie-word.mov" type="video/mp4" />
+      </video>
+      <video ref={vid2Ref} muted playsInline onEnded={handleVid2End} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0, transition: 'opacity 1.5s' }}>
+        <source src="/images/variety-tees.mov" type="video/mp4" />
+      </video>
+    </>
+  );
+}
+
+const sizes = ['S', 'M', 'L', 'XL', '2XL', '3XL'];
 
 const allProducts = [
   { id: 1, name: 'Stand On It', color: 'Black', price: 30, frontImage: '/images/standonit-back.png', backImage: '/images/standonit-front.png' },
@@ -19,8 +51,6 @@ const allProducts = [
   { id: 11, name: 'Word Is Bond', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316977/wordfront-white_yucsqg.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316977/wordback-white_s0j1yb.jpg' },
   { id: 12, name: "I Could've But I Didn't", color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316939/couldvefront-white_mo8e22.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316939/couldveback-white_g2e3g9.jpg' },
 ];
-
-const sizes = ['S', 'M', 'L', 'XL', '2XL', '3XL'];
 
 function ProductCard({ product }: { product: typeof allProducts[0] }) {
   const [showBack, setShowBack] = useState(false);
@@ -43,7 +73,7 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
           <button onClick={() => setShowBack(false)} style={{ padding: '6px 14px', backgroundColor: !showBack ? '#0a1931' : '#fff', color: !showBack ? '#c9a84c' : '#0a1931', border: '1px solid #c9a84c', borderRadius: '20px', fontSize: '11px', fontWeight: '700', cursor: 'pointer', letterSpacing: '1px' }}>FRONT</button>
           <button onClick={() => setShowBack(true)} style={{ padding: '6px 14px', backgroundColor: showBack ? '#0a1931' : '#fff', color: showBack ? '#c9a84c' : '#0a1931', border: '1px solid #c9a84c', borderRadius: '20px', fontSize: '11px', fontWeight: '700', cursor: 'pointer', letterSpacing: '1px' }}>BACK</button>
         </div>
-        <div style={{ position: 'absolute', top: '12px', right: '12px', backgroundColor: product.color === 'White' ? '#fff' : '#c9a84c', color: product.color === 'White' ? '#0a1931' : '#0a1931', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px', border: '1px solid #c9a84c' }}>{product.color}</div>
+        <div style={{ position: 'absolute', top: '12px', right: '12px', backgroundColor: product.color === 'White' ? '#fff' : '#c9a84c', color: '#0a1931', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px', border: '1px solid #c9a84c' }}>{product.color}</div>
       </div>
       <div style={{ padding: '16px' }}>
         <h3 style={{ margin: '0 0 4px', fontSize: '14px', fontWeight: '600', color: '#0a1931' }}>{product.name}</h3>
@@ -75,12 +105,7 @@ export default function Home() {
     <main style={{ fontFamily: 'Georgia, serif', backgroundColor: '#f4f1eb', minHeight: '100vh', color: '#0a1931' }}>
       <Navbar />
       <section style={{ position: 'relative', textAlign: 'center', padding: '80px 20px 60px', color: '#fff', overflow: 'hidden', minHeight: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <video autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1, transition: 'opacity 1.5s' }} id="vid1" onEnded={() => { document.getElementById('vid1').style.opacity='0'; document.getElementById('vid2').style.opacity='1'; document.getElementById('vid2').play(); }}>
-          <source src="/images/boogie-word.mov" type="video/mp4" />
-        </video>
-        <video muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0, transition: 'opacity 1.5s' }} id="vid2" onEnded={() => { document.getElementById('vid2').style.opacity='0'; document.getElementById('vid1').style.opacity='1'; document.getElementById('vid1').play(); }}>
-          <source src="/images/variety-tees.mov" type="video/mp4" />
-        </video>
+        <VideoHero />
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(10,25,49,0.65)', zIndex: 1 }} />
         <div style={{ position: 'relative', zIndex: 2 }}>
           <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#c9a84c' }}>EST. 2024</p>
@@ -92,13 +117,11 @@ export default function Home() {
 
       <section id='shop' style={{ padding: '60px 20px' }}>
         <h2 style={{ textAlign: 'center', fontSize: '13px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '24px', color: '#c9a84c' }}>FEATURED TEES</h2>
-        
         <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '32px' }}>
           {['All', 'Black', 'White'].map(f => (
             <button key={f} onClick={() => setFilter(f)} style={{ padding: '8px 24px', backgroundColor: filter === f ? '#0a1931' : '#fff', color: filter === f ? '#c9a84c' : '#0a1931', border: '2px solid #0a1931', borderRadius: '24px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', letterSpacing: '1px' }}>{f}</button>
           ))}
         </div>
-
         <div style={{ position: 'relative' }}>
           <button onClick={() => scroll('left')} style={{ position: 'absolute', left: '0', top: '50%', transform: 'translateY(-50%)', zIndex: 2, backgroundColor: '#0a1931', color: '#c9a84c', border: '2px solid #c9a84c', borderRadius: '50%', width: '44px', height: '44px', fontSize: '20px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>‹</button>
           <div ref={carouselRef} style={{ display: 'flex', gap: '20px', overflowX: 'auto', scrollSnapType: 'x mandatory', padding: '20px 60px', scrollbarWidth: 'none' }}>
