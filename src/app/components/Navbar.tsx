@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav style={{ backgroundColor: '#0a1931', color: '#fff', padding: '0 40px', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '2px solid #c9a84c' }}>
       <div onClick={() => router.push('/')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px' }}>
-        <Image src="/images/logo.jpg" alt="Legacy Code Apparel" width={50} height={50} style={{ objectFit: 'contain', filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.9)' }} />
+        <Image src="/images/logo.png" alt="Legacy Code Apparel" width={50} height={50} style={{ objectFit: 'contain', filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.9)' }} />
         <span style={{ fontSize: '16px', fontWeight: '700', letterSpacing: '3px', color: '#c9a84c' }}>LEGACY CODE</span>
       </div>
       <div style={{ display: 'flex', gap: '24px', fontSize: '13px', letterSpacing: '1px', alignItems: 'center' }}>
