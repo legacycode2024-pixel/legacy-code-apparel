@@ -1,6 +1,7 @@
 'use client';
 import { useCart } from '../context/CartContext';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Navbar() {
   const { cart } = useCart();
@@ -8,8 +9,11 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav style={{ backgroundColor: '#0a1931', color: '#fff', padding: '0 40px', height: '64px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '2px solid #c9a84c' }}>
-      <span onClick={() => router.push('/')} style={{ fontSize: '18px', fontWeight: '700', letterSpacing: '3px', cursor: 'pointer', color: '#c9a84c' }}>LEGACY CODE</span>
+    <nav style={{ backgroundColor: '#0a1931', color: '#fff', padding: '0 40px', height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '2px solid #c9a84c' }}>
+      <div onClick={() => router.push('/')} style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <Image src="/images/logo.jpg" alt="Legacy Code Apparel" width={50} height={50} style={{ objectFit: 'contain', filter: 'invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(0.9)' }} />
+        <span style={{ fontSize: '16px', fontWeight: '700', letterSpacing: '3px', color: '#c9a84c' }}>LEGACY CODE</span>
+      </div>
       <div style={{ display: 'flex', gap: '24px', fontSize: '13px', letterSpacing: '1px', alignItems: 'center' }}>
         <a href="/" style={{ color: '#fff', textDecoration: 'none' }}>SHOP</a>
         <a href="/about" style={{ color: '#fff', textDecoration: 'none' }}>ABOUT</a>
