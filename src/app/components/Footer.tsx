@@ -5,9 +5,15 @@ export default function Footer() {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) { setSubmitted(true); setEmail(''); }
+    if (email) {
+      try {
+        const res = await fetch('/api/newsletter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) });
+        if (res.ok) { setSubmitted(true); setEmail(''); }
+        else { alert('Something went wrong. Please try again.'); }
+      } catch { alert('Something went wrong. Please try again.'); }
+    }
   };
 
   return (
