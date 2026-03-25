@@ -40,8 +40,9 @@ const posts: Record<string, { date: string; category: string; title: string; con
   },
 };
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = posts[params.slug];
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = posts[slug];
   if (!post) {
     return (
       <main style={{ fontFamily: 'Georgia, serif', backgroundColor: '#FAFAFA', minHeight: '100vh' }}>
