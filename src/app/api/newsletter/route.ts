@@ -5,11 +5,11 @@ export async function POST(req: Request) {
     const { email } = await req.json();
 
     const response = await fetch(
-      'https://us3.api.mailchimp.com/3.0/lists/10d9e685c2/members',
+      `https://us3.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_AUDIENCE_ID}/members`,
       {
         method: 'POST',
         headers: {
-          Authorization: 'apikey fe7e035b5650701be56e4ce1cc2e20b7-us3',
+          Authorization: `apikey ${process.env.MAILCHIMP_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
