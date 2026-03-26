@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Legacy Code Apparel | Integrity Tees with Meaning',
     description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
-    url: 'https://legacycodeapparel.com',
+    url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
     images: [{ url: '/images/standonit-front.png', width: 800, height: 800, alt: 'Legacy Code Apparel' }],
     type: 'website',

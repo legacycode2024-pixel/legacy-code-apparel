@@ -43,7 +43,7 @@ export default function SizeGuidePage() {
           <p style={{ margin: '0 0 8px', fontSize: '15px', color: '#444', lineHeight: '1.8' }}><strong>Length:</strong> Measure from the highest point of the shoulder down to the hem.</p>
           <p style={{ margin: '0', fontSize: '15px', color: '#444', lineHeight: '1.8' }}><strong>Sleeve:</strong> Measure from the shoulder seam to the end of the sleeve.</p>
         </div>
-        <p style={{ marginTop: '32px', fontSize: '15px', color: '#666', textAlign: 'center' }}>Not sure about your size? Email us at <a href="mailto:support@legacycodeapparel.com" style={{ color: '#0a1931', fontWeight: '600' }}>support@legacycodeapparel.com</a></p>
+        <p style={{ marginTop: '32px', fontSize: '15px', color: '#666', textAlign: 'center' }}>Not sure about your size? Email us at <a href="mailto:support@legacycodeapparel.store" style={{ color: '#0a1931', fontWeight: '600' }}>support@legacycodeapparel.store</a></p>
       </section>
       <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL</footer>
     </main>
