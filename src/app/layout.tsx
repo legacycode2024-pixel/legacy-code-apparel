@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import { CartProvider } from './context/CartContext';
 import Footer from './components/Footer';
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   title: 'Legacy Code Apparel | Integrity Tees with Meaning',
   description: 'Legacy Code Apparel — wear your values, leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose. Free shipping over $50.',
