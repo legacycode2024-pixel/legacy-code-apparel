@@ -103,7 +103,7 @@ export default function Home() {
 
   return (
     <main style={{ fontFamily: 'Georgia, serif', backgroundColor: '#f4f1eb', minHeight: '100vh', color: '#0a1931' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({"@context":"https://schema.org","@type":"VideoObject","name":"Legacy Code Apparel","description":"Your values. Your legacy. Your tee.","thumbnailUrl":"https://legacycodeapparel.store/images/standonit-front.png","uploadDate":"2024-03-01","contentUrl":"https://legacycodeapparel.store/images/boogie-word.mov"})}} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify({"@context":"https://schema.org","@type":"VideoObject","name":"Legacy Code Apparel","description":"Your values. Your legacy. Your tee.","thumbnailUrl":"https://legacycodeapparel.store/images/standonit-front.png","uploadDate":"2024-03-01T00:00:00+00:00","contentUrl":"https://legacycodeapparel.store/images/boogie-word.mov"})}} />
       <Navbar />
       <section style={{ position: 'relative', textAlign: 'center', padding: '80px 20px 60px', color: '#fff', overflow: 'hidden', minHeight: '500px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <VideoHero />
