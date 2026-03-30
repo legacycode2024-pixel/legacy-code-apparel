@@ -1,13 +1,18 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-      },
-    ],
+    domains: ['res.cloudinary.com'],
+  },
+  async redirects() {
+    return [
+      { source: '/de/:path*', destination: '/', permanent: true },
+      { source: '/es/:path*', destination: '/', permanent: true },
+      { source: '/products/:path*', destination: '/', permanent: true },
+      { source: '/cart/add', destination: '/cart', permanent: true },
+      { source: '/policies/:path*', destination: '/faq', permanent: true },
+      { source: '/pages/contact', destination: '/contact', permanent: true },
+    ];
   },
 };
 
