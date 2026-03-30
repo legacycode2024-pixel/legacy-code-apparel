@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from 'next';
 import { CartProvider } from './context/CartContext';
 import Footer from './components/Footer';
@@ -35,7 +36,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
           <Footer />
         </CartProvider>
-      </body>
+        <Analytics />
+</body>
     </html>
   );
 }
