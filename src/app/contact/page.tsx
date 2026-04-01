@@ -47,7 +47,7 @@ export default function ContactPage() {
               <textarea value={message} onChange={e => setMessage(e.target.value)} placeholder="How can we help you?" rows={6} style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '8px', fontSize: '15px', fontFamily: 'Georgia, serif', backgroundColor: '#fff', resize: 'vertical' }} />
             </div>
             <button onClick={handleSubmit} style={{ padding: '16px', backgroundColor: '#0a1931', color: '#c9a84c', border: '2px solid #c9a84c', borderRadius: '8px', fontSize: '13px', letterSpacing: '2px', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>SEND MESSAGE</button>
-            <p style={{ textAlign: 'center', fontSize: '13px', color: '#666' }}>Or email us directly at <a href="mailto:support@legacycodeapparel.store" style={{ color: '#0a1931', fontWeight: '600' }}>support@legacycodeapparel.store</a></p>
+            <p style={{ textAlign: 'center', fontSize: '13px', color: '#666' }}>Call or text us: <a href="tel:4046200261" style={{ color: '#0a1931', fontWeight: '600' }}>(404) 620-0261</a><br /><br />Or email us directly at <a href="mailto:support@legacycodeapparel.store" style={{ color: '#0a1931', fontWeight: '600' }}>support@legacycodeapparel.store</a></p>
           </div>
         )}
       </section>

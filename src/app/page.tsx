@@ -220,7 +220,7 @@ export default function Home() {
         <p style={{ textAlign: 'center', fontSize: '28px', color: '#0a1931', marginBottom: '40px', fontWeight: '400' }}>Leave a Review</p>
         <ReviewForm />
       </section>
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL</footer>
+      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>(404) 620-0261 | support@legacycodeapparel.store | © 2024 LEGACY CODE APPAREL</footer>
     </main>
   );
 }
