@@ -1,17 +1,18 @@
 'use client';
 import Navbar from './components/Navbar';
 import { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { useCart } from './context/CartContext';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 
 function ReviewForm() {
-  const [name, setName] = React.useState('');
-  const [rating, setRating] = React.useState(5);
-  const [tee, setTee] = React.useState('');
-  const [review, setReview] = React.useState('');
-  const [submitted, setSubmitted] = React.useState(false);
+  const [name, setName] = useState('');
+  const [rating, setRating] = useState(5);
+  const [tee, setTee] = useState('');
+  const [review, setReview] = useState('');
+  const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = async () => {
     if (name && review && tee) {
