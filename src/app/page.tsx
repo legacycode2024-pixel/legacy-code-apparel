@@ -136,6 +136,22 @@ export default function Home() {
         </div>
       </section>
 
+      
+      <section style={{ padding: '60px 20px', backgroundColor: '#0a1931' }}>
+        <h2 style={{ textAlign: 'center', fontSize: '13px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '8px', color: '#c9a84c' }}>WHAT THEY SAY</h2>
+        <p style={{ textAlign: 'center', fontSize: '28px', color: '#fff', marginBottom: '40px', fontWeight: '400' }}>Customer Reviews</p>
+        <div style={{ maxWidth: '800px', margin: '0 auto', justifyContent: 'center', display: 'flex' }}>
+          <div style={{ backgroundColor: '#fff', borderRadius: '12px', padding: '32px', maxWidth: '360px', width: '100%', border: '1px solid #c9a84c' }}>
+            <p style={{ color: '#c9a84c', fontSize: '20px', marginBottom: '16px' }}>★★★★★</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#333', marginBottom: '20px', fontStyle: 'italic' }}>"Loved the softness and the graphic on the front and back. The Stand On It tee is everything!"</p>
+            <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '16px' }}>
+              <p style={{ fontSize: '14px', fontWeight: '700', color: '#0a1931', marginBottom: '4px' }}>Braxton</p>
+              <p style={{ fontSize: '12px', color: '#c9a84c', letterSpacing: '2px', fontFamily: 'Arial, sans-serif' }}>STAND ON IT — VERIFIED BUYER</p>
+            </div>
+          </div>
+        </div>
+        <p style={{ textAlign: 'center', marginTop: '40px', fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Have a Legacy Code tee? Email us at support@legacycodeapparel.store</p>
+      </section>
       <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL</footer>
     </main>
   );
