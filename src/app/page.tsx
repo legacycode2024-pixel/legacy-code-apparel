@@ -5,6 +5,68 @@ import { useCart } from './context/CartContext';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 
+
+function ReviewForm() {
+  const [name, setName] = React.useState('');
+  const [rating, setRating] = React.useState(5);
+  const [tee, setTee] = React.useState('');
+  const [review, setReview] = React.useState('');
+  const [submitted, setSubmitted] = React.useState(false);
+
+  const handleSubmit = async () => {
+    if (name && review && tee) {
+      await fetch('/api/review', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, rating, tee, review }),
+      });
+      setSubmitted(true);
+    }
+  };
+
+  if (submitted) return (
+    <div style={{ textAlign: 'center', padding: '40px' }}>
+      <p style={{ fontSize: '24px', color: '#0a1931', marginBottom: '8px' }}>Thank you! 🖤</p>
+      <p style={{ color: '#666' }}>Your review has been submitted and will appear soon.</p>
+    </div>
+  );
+
+  return (
+    <div style={{ maxWidth: '500px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+      <div>
+        <label style={{ display: 'block', fontSize: '12px', letterSpacing: '2px', color: '#0a1931', marginBottom: '8px', fontFamily: 'Arial, sans-serif' }}>YOUR NAME</label>
+        <input value={name} onChange={e => setName(e.target.value)} placeholder="John Smith" style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '8px', fontSize: '15px', backgroundColor: '#fff' }} />
+      </div>
+      <div>
+        <label style={{ display: 'block', fontSize: '12px', letterSpacing: '2px', color: '#0a1931', marginBottom: '8px', fontFamily: 'Arial, sans-serif' }}>WHICH TEE DID YOU BUY?</label>
+        <select value={tee} onChange={e => setTee(e.target.value)} style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '8px', fontSize: '15px', backgroundColor: '#fff' }}>
+          <option value="">Select a tee...</option>
+          <option>Stand On It</option>
+          <option>Actions Over Applause</option>
+          <option>Principles Over Popularity</option>
+          <option>Word Is Bond</option>
+          <option>Right Over Easy</option>
+          <option>I Could've But I Didn't</option>
+          <option>Uncompromised</option>
+        </select>
+      </div>
+      <div>
+        <label style={{ display: 'block', fontSize: '12px', letterSpacing: '2px', color: '#0a1931', marginBottom: '8px', fontFamily: 'Arial, sans-serif' }}>RATING</label>
+        <div style={{ display: 'flex', gap: '8px' }}>
+          {[1,2,3,4,5].map(star => (
+            <button key={star} onClick={() => setRating(star)} style={{ fontSize: '28px', background: 'none', border: 'none', cursor: 'pointer', color: star <= rating ? '#c9a84c' : '#ddd' }}>★</button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <label style={{ display: 'block', fontSize: '12px', letterSpacing: '2px', color: '#0a1931', marginBottom: '8px', fontFamily: 'Arial, sans-serif' }}>YOUR REVIEW</label>
+        <textarea value={review} onChange={e => setReview(e.target.value)} placeholder="Tell us about your experience..." rows={4} style={{ width: '100%', padding: '14px', border: '1px solid #ddd', borderRadius: '8px', fontSize: '15px', backgroundColor: '#fff', resize: 'vertical' }} />
+      </div>
+      <button onClick={handleSubmit} style={{ padding: '16px', backgroundColor: '#0a1931', color: '#c9a84c', border: '2px solid #c9a84c', borderRadius: '8px', fontSize: '13px', letterSpacing: '2px', cursor: 'pointer', fontFamily: 'Arial, sans-serif' }}>SUBMIT REVIEW</button>
+    </div>
+  );
+}
+
 function VideoHero() {
   const vid1Ref = useRef<HTMLVideoElement>(null);
   const vid2Ref = useRef<HTMLVideoElement>(null);
@@ -151,6 +213,12 @@ export default function Home() {
           </div>
         </div>
         <p style={{ textAlign: 'center', marginTop: '40px', fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Have a Legacy Code tee? Email us at support@legacycodeapparel.store</p>
+      </section>
+      
+      <section style={{ padding: '60px 20px', backgroundColor: '#f4f1eb' }}>
+        <h2 style={{ textAlign: 'center', fontSize: '13px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '8px', color: '#c9a84c' }}>SHARE YOUR EXPERIENCE</h2>
+        <p style={{ textAlign: 'center', fontSize: '28px', color: '#0a1931', marginBottom: '40px', fontWeight: '400' }}>Leave a Review</p>
+        <ReviewForm />
       </section>
       <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL</footer>
     </main>
