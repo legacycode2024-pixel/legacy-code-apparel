@@ -6,7 +6,7 @@ export default function AboutPage() {
       <Navbar />
 
       <section style={{ textAlign: 'center', padding: '80px 20px 60px', backgroundColor: '#111', color: '#fff' }}>
-        <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#aaa' }}>EST. 2024</p>
+        <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#aaa' }}>EST. 2025</p>
         <h1 style={{ fontSize: '52px', fontWeight: '400', margin: '0', letterSpacing: '-1px' }}>Our Story</h1>
       </section>
 
@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div style={{ marginBottom: '48px' }}>
           <h2 style={{ fontSize: '11px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', color: '#999', marginBottom: '16px' }}>THE BEGINNING</h2>
           <p style={{ fontSize: '18px', lineHeight: '1.9', color: '#333', margin: 0 }}>
-            Legacy Code Apparel was founded in 2024, rooted in one question — in a world that rewards compromise, where are the people who still choose integrity? The ones who stand firm in their values and do the right thing not because it's easy, but because it defines who they are.
+            Legacy Code Apparel was founded in 2025, rooted in one question — in a world that rewards compromise, where are the people who still choose integrity? The ones who stand firm in their values and do the right thing not because it's easy, but because it defines who they are.
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
 
       </section>
 
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#111', color: '#666', fontSize: '13px', letterSpacing: '1px' }}>© 2024 LEGACY CODE APPAREL</footer>
+      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#111', color: '#666', fontSize: '13px', letterSpacing: '1px' }}>© 2025 LEGACY CODE APPAREL</footer>
     </main>
   );
 }
