@@ -171,7 +171,7 @@ export default function Home() {
         <VideoHero />
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(10,25,49,0.65)', zIndex: 1 }} />
         <div style={{ position: 'relative', zIndex: 2 }}>
-          <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#c9a84c' }}>EST. 2024</p>
+          <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#c9a84c' }}>EST. 2025</p>
           <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 16px', letterSpacing: '-1px', color: '#fff' }}>Legacy Code Apparel</h1>
           <p style={{ fontSize: '16px', color: '#c9a84c', letterSpacing: '1px', margin: '0 0 32px' }}>Your values. Your legacy. Your tee.</p>
           <a href='#shop' style={{ display: 'inline-block', padding: '14px 36px', border: '2px solid #c9a84c', color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px' }}>SHOP NOW</a>
