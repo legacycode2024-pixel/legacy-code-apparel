@@ -47,7 +47,7 @@ export default function Footer() {
             )}
           </div>
         </div>
-        <div style={{ borderTop: '1px solid #1e3a5f', paddingTop: '24px', textAlign: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '16px' }}><a href="https://tiktok.com/@legacycodeapparel.store" target="_blank" rel="noopener noreferrer" style={{ color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', textDecoration: 'none' }}>TIKTOK</a></div><div style={{ borderTop: '1px solid #1e3a5f', paddingTop: '24px', textAlign: 'center' }}>
           <p style={{ color: '#555', fontSize: '13px', margin: 0, letterSpacing: '1px' }}>© 2025 LEGACY CODE APPAREL — ALL RIGHTS RESERVED</p>
         </div>
       </div>
