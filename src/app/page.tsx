@@ -213,6 +213,16 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <p style={{ textAlign: 'center', marginTop: '40px', fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>
+          <div style={{ backgroundColor: '#fff', borderRadius: '12px', padding: '32px', maxWidth: '360px', width: '100%', border: '1px solid #c9a84c' }}>
+            <p style={{ color: '#c9a84c', fontSize: '20px', marginBottom: '16px' }}>★★★★★</p>
+            <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#333', marginBottom: '20px', fontStyle: 'italic' }}>"This tee is soft, nice quality and I love the wording on the front and back!"</p>
+            <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '16px' }}>
+              <p style={{ fontSize: '14px', fontWeight: '700', color: '#0a1931', marginBottom: '4px' }}>Chris</p>
+              <p style={{ fontSize: '12px', color: '#c9a84c', letterSpacing: '2px', fontFamily: 'Arial, sans-serif' }}>PRINCIPLES OVER POPULARITY — VERIFIED BUYER</p>
+            </div>
+          </div>
+        </div>
         <p style={{ textAlign: 'center', marginTop: '40px', fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Have a Legacy Code tee? Email us at support@legacycodeapparel.store</p>
       </section>
       
