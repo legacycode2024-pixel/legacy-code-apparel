@@ -9,12 +9,12 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Legacy Code Apparel | Integrity Tees with Meaning',
-  description: 'Legacy Code Apparel — wear your values, leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose. Free shipping over $50.',
+  title: 'Legacy Code Apparel | Integrity Tees with Meaning | Atlanta',
+  description: 'Legacy Code Apparel — wear your values, leave a legacy. Shop premium integrity tees dedicated to honor, character and moral purpose. Free shipping over $50. Use code LEGACY24 for 10% off.',
   keywords: 'integrity apparel, legacy tees, values based clothing, honor tshirts, moral principles apparel, legacy code apparel',
   openGraph: {
     title: 'Legacy Code Apparel | Integrity Tees with Meaning',
-    description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
+    description: 'Wear your values. Leave a legacy. Shop premium integrity tees dedicated to honor, character and moral purpose. Free shipping over $50. Use code LEGACY24 for 10% off.',
     url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
     images: [{ url: 'https://legacycodeapparel.store/images/og-image.jpg', width: 1200, height: 630, alt: 'Legacy Code Apparel — Stand On It Tee' }],
