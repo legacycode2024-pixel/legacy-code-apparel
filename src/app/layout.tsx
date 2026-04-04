@@ -9,6 +9,9 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
+  openGraph: {
+    images: [{ url: '/images/og-image.jpg', width: 1200, height: 630 }],
+  },
   title: 'Legacy Code Apparel | Integrity Tees with Meaning',
   description: 'Legacy Code Apparel — wear your values, leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose. Free shipping over $50.',
   keywords: 'integrity apparel, legacy tees, values based clothing, honor tshirts, moral principles apparel, legacy code apparel',
