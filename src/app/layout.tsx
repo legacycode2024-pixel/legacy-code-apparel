@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     description: 'Shop Legacy Code Apparel — premium integrity tees for people who lead with character. Free shipping over $50. Use code LEGACY24 for 10% off.',
     url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
-    images: [{ url: 'https://legacycodeapparel.store/images/og-image.jpg', width: 1200, height: 630, alt: 'Legacy Code Apparel — Stand On It Tee' }],
+    images: [{ url: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775277592/IMG_7062_pz5yll.jpg', width: 1200, height: 630, alt: 'Legacy Code Apparel — Stand On It Tee' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
     description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
-    images: ['https://legacycodeapparel.store/images/og-image.jpg'],
+    images: ['https://res.cloudinary.com/dozyoetnr/image/upload/v1775277592/IMG_7062_pz5yll.jpg'],
   },
 };
 
