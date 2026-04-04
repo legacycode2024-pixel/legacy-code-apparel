@@ -9,11 +9,11 @@ export const viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Legacy Code Apparel | Wear Your Values | Atlanta',
+  title: 'Legacy Code Apparel | Wear Your Values | ATL Shop',
   description: 'Shop Legacy Code Apparel — premium integrity tees for people who lead with character. Free shipping over $50. Use code LEGACY24 for 10% off.',
   keywords: 'integrity apparel, legacy tees, values based clothing, honor tshirts, moral principles apparel, legacy code apparel',
   openGraph: {
-    title: 'Legacy Code Apparel | Wear Your Values | Atlanta',
+    title: 'Legacy Code Apparel | Wear Your Values | ATL Shop',
     description: 'Shop Legacy Code Apparel — premium integrity tees for people who lead with character. Free shipping over $50. Use code LEGACY24 for 10% off.',
     url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Legacy Code Apparel | Wear Your Values | Atlanta',
+    title: 'Legacy Code Apparel | Wear Your Values | ATL Shop',
     description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
     images: ['https://legacycodeapparel.store/images/og-image.jpg'],
   },
