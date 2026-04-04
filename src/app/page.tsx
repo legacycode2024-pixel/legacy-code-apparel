@@ -111,7 +111,7 @@ const allProducts = [
   { id: 8, name: 'Actions Over Applause', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316611/actionsfront-white_jt4plp.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316939/actionsback-white_wrnfly.jpg' },
   { id: 9, name: 'Principles Over Popularity', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316371/principlesfront-white_b1xan8.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316939/principlesback-white_dc97sb.jpg' },
   { id: 10, name: 'Right Over Easy', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316976/rightfront-white_tblkun.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316977/rightback-white_ozvqzp.jpg' },
-  { id: 11, name: 'Word Is Bond', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316977/wordfront-white_yucsqg.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316977/wordback-white_s0j1yb.jpg' },
+  { id: 11, name: 'Word Is Bond', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316977/wordfront-white_yucsqg.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775287515/wordbackwhite_av0a0u.png' },
   { id: 12, name: "I Could've But I Didn't", color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316939/couldvefront-white_mo8e22.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316939/couldveback-white_g2e3g9.jpg' },
 ];
 
