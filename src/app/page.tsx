@@ -105,7 +105,7 @@ const allProducts = [
   { id: 2, name: 'Actions Over Applause', color: 'Black', price: 30, frontImage: '/images/actions-front.png', backImage: '/images/actions-back.png' },
   { id: 3, name: 'Principles Over Popularity', color: 'Black', price: 30, frontImage: '/images/principles-front.png', backImage: '/images/principles-back.png' },
   { id: 4, name: 'Right Over Easy', color: 'Black', price: 30, frontImage: '/images/right-front.png', backImage: '/images/right-back.png' },
-  { id: 5, name: 'Word Is Bond', color: 'Black', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775285019/word-black_jnwlli.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775285019/wordback-black_cm2jl0.jpg' },
+  { id: 5, name: 'Word Is Bond', color: 'Black', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775286417/wordfont-black_pjuhdc.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775285019/wordback-black_cm2jl0.jpg' },
   { id: 6, name: "I Could've But I Didn't", color: 'Black', price: 30, frontImage: '/images/couldve-front.png', backImage: '/images/couldve-back.png' },
   { id: 7, name: 'Stand On It', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316977/standonit-whitefront_h6z7v9.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774845265/07A6183E-6913-42BA-9BAD-887A1D00DDD2_zu09ug.png' },
   { id: 8, name: 'Actions Over Applause', color: 'White', price: 30, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316611/actionsfront-white_jt4plp.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774316939/actionsback-white_wrnfly.jpg' },
