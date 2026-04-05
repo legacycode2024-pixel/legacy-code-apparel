@@ -1,24 +1,13 @@
 content = open('src/app/page.tsx').read()
-old = '''        </div>
-        
-          <div style={{ backgroundColor: '#fff', borderRadius: '12px', padding: '32px', maxWidth: '360px', width: '100%', border: '1px solid #c9a84c' }}>
-            <p style={{ color: '#c9a84c', fontSize: '20px', marginBottom: '16px' }}>★★★★★</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#333', marginBottom: '20px', fontStyle: 'italic' }}>"What a great way to express yourself. Good quality!"</p>
-            <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '16px' }}>
-              <p style={{ fontSize: '14px', fontWeight: '700', color: '#0a1931', marginBottom: '4px' }}>Shel</p>
-              <p style={{ fontSize: '12px', color: '#c9a84c', letterSpacing: '2px', fontFamily: 'Arial, sans-serif' }}>I COULD&#39;VE BUT I DIDN&#39;T — VERIFIED BUYER</p>
-            </div>
-          </div>
-        </div>'''
-new = '''          <div style={{ backgroundColor: '#fff', borderRadius: '12px', padding: '32px', maxWidth: '360px', width: '100%', border: '1px solid #c9a84c' }}>
-            <p style={{ color: '#c9a84c', fontSize: '20px', marginBottom: '16px' }}>★★★★★</p>
-            <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#333', marginBottom: '20px', fontStyle: 'italic' }}>"What a great way to express yourself. Good quality!"</p>
-            <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '16px' }}>
-              <p style={{ fontSize: '14px', fontWeight: '700', color: '#0a1931', marginBottom: '4px' }}>Shel</p>
-              <p style={{ fontSize: '12px', color: '#c9a84c', letterSpacing: '2px', fontFamily: 'Arial, sans-serif' }}>I COULD&#39;VE BUT I DIDN&#39;T — VERIFIED BUYER</p>
-            </div>
-          </div>
-        </div>'''
+old = '''      <video ref={vid1Ref} muted playsInline onEnded={handleVid1End} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1, transition: 'opacity 1.5s' }}>
+        <source src="/images/standonit-video.mov" type="video/mp4" />
+      </video>
+      <video ref={vid2Ref} muted playsInline onEnded={handleVid2End} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 0, transition: 'opacity 1.5s' }}>
+        <source src="/images/variety-tees.mov" type="video/mp4" />
+      </video>'''
+new = '''      <video ref={vid1Ref} muted playsInline loop style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1, transition: 'opacity 1.5s' }}>
+        <source src="/images/variety-tees.mov" type="video/mp4" />
+      </video>'''
 content = content.replace(old, new)
 open('src/app/page.tsx', 'w').write(content)
 print('Done!')
