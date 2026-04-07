@@ -23,6 +23,12 @@ export default function Footer() {
           <div style={{ flex: '1', minWidth: '200px' }}>
             <p style={{ color: '#c9a84c', fontSize: '18px', fontWeight: '700', letterSpacing: '3px', margin: '0 0 12px' }}>LEGACY CODE</p>
             <p style={{ color: '#aaa', fontSize: '14px', lineHeight: '1.8', margin: 0 }}>Wear your values. Leave a legacy.</p>
+          <div style={{ display: 'flex', gap: '16px', marginTop: '16px' }}>
+            <a href="https://instagram.com/legacycodeapparel" target="_blank" style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>IG</a>
+            <a href="https://tiktok.com/@legacycodeapparel" target="_blank" style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>TT</a>
+            <a href="https://facebook.com/legacycodeapparel" target="_blank" style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>FB</a>
+            <a href="https://pinterest.com/legacycodellc" target="_blank" style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>PIN</a>
+          </div>
           </div>
           <div style={{ flex: '1', minWidth: '200px' }}>
             <p style={{ color: '#c9a84c', fontSize: '11px', letterSpacing: '3px', margin: '0 0 16px' }}>NAVIGATE</p>
