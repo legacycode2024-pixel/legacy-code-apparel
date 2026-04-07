@@ -1,0 +1,8 @@
+export const products = [
+  { slug: 'stand-on-it', name: 'Stand On It', price: 30, frontImage: '/images/standonit-back.png', backImage: '/images/standonit-front.png', description: 'Stand On It — because your word means everything. When you say something, you mean it. No excuses, no backing down.' },
+  { slug: 'actions-over-applause', name: 'Actions Over Applause', price: 30, frontImage: '/images/actions-front.png', backImage: '/images/actions-back.png', description: 'Actions Over Applause — stop waiting for recognition and just do the work. Your actions speak louder than any applause ever could.' },
+  { slug: 'principles-over-popularity', name: 'Principles Over Popularity', price: 30, frontImage: '/images/principles-front.png', backImage: '/images/principles-back.png', description: 'Principles Over Popularity — being liked is temporary but having integrity is forever. Never compromise your values for acceptance.' },
+  { slug: 'right-over-easy', name: 'Right Over Easy', price: 30, frontImage: '/images/right-front.png', backImage: '/images/right-back.png', description: 'Right Over Easy — doing the right thing is rarely the easy thing. But that is exactly what sets you apart.' },
+  { slug: 'word-is-bond', name: 'Word Is Bond', price: 30, frontImage: '/images/word-front.png', backImage: '/images/word-back.png', description: 'Word Is Bond — your word is your contract. No signature required. When you make a promise you keep it, no matter what.' },
+  { slug: 'i-couldve-but-i-didnt', name: "I Could've But I Didn't", price: 30, frontImage: '/images/couldve-front.png', backImage: '/images/couldve-back.png', description: "I Could've But I Didn't — because character counts even when nobody is watching." },
+];
