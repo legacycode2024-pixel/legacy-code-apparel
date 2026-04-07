@@ -6,9 +6,8 @@ import { useRouter } from 'next/navigation';
 import Navbar from '../../components/Navbar';
 import { products } from '../../data/products';
 
-export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-const product = products.find(p => p.slug === slug);
+export default function ProductPage({ params }: { params: { slug: string } }) {
+  const product = products.find(p => p.slug === params.slug);
   const [selectedSize, setSelectedSize] = useState('');
   const [showBack, setShowBack] = useState(false);
   const { addToCart } = useCart();
