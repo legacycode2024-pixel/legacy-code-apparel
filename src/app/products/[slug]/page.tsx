@@ -2,12 +2,14 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useCart } from '../../context/CartContext';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Navbar from '../../components/Navbar';
 import { products } from '../../data/products';
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const product = products.find(p => p.slug === params.slug);
+export default function ProductPage() {
+  const pathname = usePathname();
+  const slug = pathname.split('/').pop();
+  const product = products.find(p => p.slug === slug);
   const [selectedSize, setSelectedSize] = useState('');
   const [showBack, setShowBack] = useState(false);
   const { addToCart } = useCart();
@@ -42,7 +44,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         <div style={{ flex: '1', minWidth: '300px', paddingTop: '20px' }}>
           <p style={{ fontSize: '11px', letterSpacing: '3px', color: '#c9a84c', margin: '0 0 8px' }}>LEGACY CODE APPAREL</p>
           <h1 style={{ fontSize: '36px', fontWeight: '400', margin: '0 0 16px', letterSpacing: '-1px', color: '#0a1931' }}>{product.name}</h1>
-          <p style={{ fontSize: '24px', fontWeight: '700', color: '#c9a84c', margin: '0 0 24px' }}>${product.price}.00</p>
+          <p style={{ fontSize: '24px', fontWeight: '700', color: '#c9a84c', margin: '0 0 24px' }}>{product.price}.00</p>
           <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#444', margin: '0 0 32px' }}>{product.description}</p>
           <p style={{ fontSize: '11px', letterSpacing: '3px', color: '#0a1931', margin: '0 0 12px' }}>SELECT SIZE</p>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '24px', flexWrap: 'wrap' }}>
