@@ -8,6 +8,7 @@ export default function CartPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const freeShipping = total >= 45;
+  const hasBundle = cart.reduce((sum, i) => sum + i.quantity, 0) >= 2;
   const shippingCost = freeShipping ? 0 : 5.01;
   const orderTotal = total + shippingCost;
 
@@ -41,6 +42,9 @@ export default function CartPage() {
           <p style={{ fontSize: '14px', color: '#666', marginBottom: '24px' }}>
             Add <strong>${(50 - total).toFixed(2)}</strong> more for free shipping!
           </p>
+        )}
+        {hasBundle && (
+          <p style={{ fontSize: "14px", color: "green", marginBottom: "24px" }}>You qualify for 20% bundle discount — use code BUNDLE20 at checkout.</p>
         )}
         {freeShipping && (
           <p style={{ fontSize: '14px', color: 'green', marginBottom: '24px' }}>
