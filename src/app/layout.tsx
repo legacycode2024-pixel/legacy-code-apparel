@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from 'next';
 import { CartProvider } from './context/CartContext';
 import Footer from './components/Footer';
+import DiscountPopup from './components/DiscountPopup';
 
 export const viewport = {
   width: 'device-width',
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartProvider>
           {children}
           <Footer />
+          <DiscountPopup />
         </CartProvider>
         <Analytics />
       </body>
