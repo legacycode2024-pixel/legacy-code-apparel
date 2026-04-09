@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       },
     };
 
-    if (total >= 50) {
+    if (total >= 45) {
       sessionConfig.shipping_options = [
         {
           shipping_rate_data: {
