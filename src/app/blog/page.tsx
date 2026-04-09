@@ -3,6 +3,21 @@ import Navbar from '../components/Navbar';
 
 const posts = [
   {
+    slug: 'right-over-easy-story-behind-the-design',
+    date: 'March 28, 2024',
+    category: 'BRAND STORY',
+    title: 'Right Over Easy — The Story Behind the Design',
+    excerpt: 'The word RIGHT sits above the word EASY. That is not an accident. That is a statement about the road most people choose — and the one worth taking.',
+    content: [
+      'Look at the design on the Right Over Easy tee and you will see exactly what it means — the word RIGHT sits above the word EASY. That is not an accident. That is a statement.',
+      'The easy road is the most traveled road. In work, in relationships, in how we carry ourselves every day — people naturally gravitate toward what is comfortable, what is convenient, what requires the least resistance. It is human nature. But just because something is easy does not mean it is right.',
+      'Think about it. How many times have you seen someone take a shortcut at work instead of doing the job properly? How many relationships fall apart because people choose what feels good in the moment over what is actually right?',
+      'Right Over Easy is for the rare ones. The ones who do not mind the extra work. The ones who choose honesty even when a lie would be easier. The ones who raise their kids with discipline and values even when it is hard.',
+      'Doing the right thing is rarely the easy thing. But it is always worth it.',
+      'That is what this tee represents — a daily commitment to choosing right over easy in every area of your life. Wear it as a reminder. Wear it as a declaration. Because the easy road is crowded. The right road takes character.',
+    ],
+  },
+  {
     slug: '5-ways-to-lead-with-integrity',
     date: 'March 1, 2025',
     category: 'CHARACTER',
