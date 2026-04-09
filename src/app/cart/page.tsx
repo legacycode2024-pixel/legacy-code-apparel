@@ -86,6 +86,7 @@ export default function CartPage() {
                 <span>Total</span>
                 <span>${orderTotal.toFixed(2)}</span>
               </div>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '20px', flexWrap: 'wrap' }}><span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#666', letterSpacing: '0.5px' }}>SECURE CHECKOUT</span><span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#666', letterSpacing: '0.5px' }}>FREE RETURNS</span><span style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#666', letterSpacing: '0.5px' }}>MADE WITH PRIDE</span></div>
               <button onClick={handleCheckout} disabled={loading} style={{ width: '100%', padding: '16px', backgroundColor: loading ? '#666' : '#111', color: '#fff', border: 'none', borderRadius: '8px', cursor: loading ? 'not-allowed' : 'pointer', fontSize: '15px', fontWeight: '600', letterSpacing: '1px' }}>
                 {loading ? 'REDIRECTING TO CHECKOUT...' : 'PROCEED TO CHECKOUT'}
               </button>
