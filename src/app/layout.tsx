@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { CartProvider } from './context/CartContext';
 import Footer from './components/Footer';
 import DiscountPopup from './components/DiscountPopup';
+import AnnouncementBar from './components/AnnouncementBar';
 
 export const viewport = {
   width: 'device-width',
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body style={{ margin: 0, padding: 0 }}>
         <CartProvider>
+          <AnnouncementBar />
           {children}
           <Footer />
           <DiscountPopup />
