@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import RecentlyViewed from './RecentlyViewed';
 import { useCart } from '../context/CartContext';
 import { useRouter } from 'next/navigation';
 
@@ -19,7 +18,6 @@ export default function ProductCard({ product }: { product: { name: string; pric
   };
 
   return (
-    <>
     <div onMouseEnter={() => setFlipped(true)} onMouseLeave={() => setFlipped(false)} style={{ width: '300px', borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', cursor: 'pointer', border: '1px solid #c9a84c' }}>
       <div style={{ position: 'relative', height: '320px', backgroundColor: '#f4f1eb' }}>
         <Image src={flipped ? product.backImage : product.frontImage} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="300px" priority={false} />
@@ -36,7 +34,5 @@ export default function ProductCard({ product }: { product: { name: string; pric
         <button onClick={e => { e.stopPropagation(); handleAddToCart(); }} style={{ width: '100%', padding: '12px', backgroundColor: '#0a1931', color: '#c9a84c', border: '2px solid #c9a84c', borderRadius: '8px', cursor: 'pointer', fontSize: '14px', fontWeight: '600', letterSpacing: '0.5px' }}>ADD TO CART</button>
       </div>
     </div>
-    <RecentlyViewed currentProduct={product} />
-    </>
   );
 }
