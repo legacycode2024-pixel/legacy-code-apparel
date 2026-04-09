@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 export default function DiscountPopup() {
   const [show, setShow] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(600);
 
   useEffect(() => {
     const seen = localStorage.getItem('popupSeen');
@@ -12,6 +13,13 @@ export default function DiscountPopup() {
       return () => clearTimeout(timer);
     }
   }, []);
+
+  useEffect(() => {
+    if (!show) return;
+    if (timeLeft <= 0) { handleClose(); return; }
+    const interval = setInterval(() => setTimeLeft(prev => prev - 1), 1000);
+    return () => clearInterval(interval);
+  }, [show, timeLeft]);
 
   const handleClose = () => {
     localStorage.setItem('popupSeen', 'true');
@@ -24,6 +32,10 @@ export default function DiscountPopup() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+  const timeDisplay = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+
   if (!show) return null;
 
   return (
@@ -32,10 +44,13 @@ export default function DiscountPopup() {
         <button onClick={handleClose} style={{ position: 'absolute', top: '16px', right: '20px', background: 'none', border: 'none', color: '#aaa', fontSize: '24px', cursor: 'pointer', lineHeight: 1 }}>x</button>
         <p style={{ fontSize: '11px', letterSpacing: '4px', color: '#c9a84c', marginBottom: '16px' }}>WELCOME TO LEGACY CODE</p>
         <h2 style={{ fontSize: '36px', fontWeight: '400', color: '#fff', margin: '0 0 16px', letterSpacing: '-1px', lineHeight: '1.2' }}>Get 10% Off Your First Order</h2>
-        <p style={{ fontSize: '16px', color: '#aaa', margin: '0 0 32px', lineHeight: '1.7' }}>Use code at checkout and start wearing your values today.</p>
+        <p style={{ fontSize: '16px', color: '#aaa', margin: '0 0 16px', lineHeight: '1.7' }}>Use code at checkout and start wearing your values today.</p>
+        <div style={{ backgroundColor: '#c9a84c', color: '#0a1931', borderRadius: '8px', padding: '10px', marginBottom: '20px', fontSize: '14px', fontWeight: '700', letterSpacing: '1px' }}>
+          Offer expires in {timeDisplay}
+        </div>
         <div style={{ backgroundColor: '#0d2240', border: '1px dashed #c9a84c', borderRadius: '8px', padding: '16px', marginBottom: '24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
           <span style={{ fontSize: '24px', fontWeight: '700', color: '#c9a84c', letterSpacing: '3px' }}>LEGACY24</span>
-          <button onClick={handleCopy} style={{ padding: '8px 16px', backgroundColor: '#c9a84c', color: '#0a1931', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '700', letterSpacing: '1px' }}>{copied ? 'COPIED!' : 'COPY'}</button>
+          <button onClick={handleCopy} style={{ padding: '8px 16px', backgroundColor: '#c9a84c', color: '#0a1931', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '13px', fontWeight: '700', letterSpacing: '1px' }}>{copied ? 'COPIED' : 'COPY'}</button>
         </div>
         <a href='/#shop' onClick={handleClose} style={{ display: 'block', padding: '14px 36px', backgroundColor: '#c9a84c', color: '#0a1931', textDecoration: 'none', fontSize: '13px', fontWeight: '700', letterSpacing: '2px', borderRadius: '8px', marginBottom: '16px' }}>SHOP NOW</a>
         <button onClick={handleClose} style={{ background: 'none', border: 'none', color: '#666', fontSize: '13px', cursor: 'pointer', textDecoration: 'underline' }}>No thanks</button>
