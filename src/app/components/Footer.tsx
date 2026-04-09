@@ -28,6 +28,7 @@ export default function Footer() {
               <a href='/sizeguide' style={{ color: '#aaa', textDecoration: 'none', fontSize: '14px' }}>Size Guide</a>
               <a href='/privacy' style={{ color: '#aaa', textDecoration: 'none', fontSize: '14px' }}>Privacy Policy</a>
               <a href='/refunds' style={{ color: '#aaa', textDecoration: 'none', fontSize: '14px' }}>Refund Policy</a>
+              <a href='/terms' style={{ color: '#aaa', textDecoration: 'none', fontSize: '14px' }}>Terms of Service</a>
             </div>
           </div>
           <div style={{ flex: '2', minWidth: '280px' }}>
