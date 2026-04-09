@@ -8,9 +8,9 @@ const posts = [
     title: 'Right Over Easy — The Story Behind the Design',
     content: [
       'Look at the design on the Right Over Easy tee and you will see exactly what it means — the word RIGHT sits above the word EASY. That is not an accident. That is a statement.',
-      'The easy road is the most traveled road. In work, in relationships, in how we carry ourselves every day — people naturally gravitate toward what is comfortable, what is convenient, what requires the least resistance. It is human nature. But just because something is easy does not mean it is right.',
+      'The easy road is the most traveled road. In work, in relationships, in how we carry ourselves every day — people naturally gravitate toward what is comfortable, what is convenient, what requires the least resistance.',
       'Think about it. How many times have you seen someone take a shortcut at work instead of doing the job properly? How many relationships fall apart because people choose what feels good in the moment over what is actually right?',
-      'Right Over Easy is for the rare ones. The ones who do not mind the extra work. The ones who choose honesty even when a lie would be easier. The ones who raise their kids with discipline and values even when it is hard.',
+      'Right Over Easy is for the rare ones. The ones who do not mind the extra work. The ones who choose honesty even when a lie would be easier.',
       'Doing the right thing is rarely the easy thing. But it is always worth it.',
       'That is what this tee represents — a daily commitment to choosing right over easy in every area of your life. Wear it as a reminder. Wear it as a declaration. Because the easy road is crowded. The right road takes character.',
     ],
@@ -21,12 +21,12 @@ const posts = [
     category: 'CHARACTER',
     title: '5 Ways to Lead with Integrity Every Day',
     content: [
-      'Integrity is not a one time decision — it is a daily practice. It is built in the small moments, the quiet choices, the times when nobody is watching but you still do the right thing.',
-      '1. Keep your word. If you say you will do something, do it. Nothing builds trust faster than being someone people can count on.',
-      '2. Own your mistakes. When you are wrong, say so. Accountability is a sign of strength, not weakness.',
-      '3. Treat everyone with respect. The way you treat people who can do nothing for you says everything about your character.',
-      '4. Do the right thing even when it is hard. Integrity is tested most in difficult moments. That is where your legacy is built.',
-      '5. Be consistent. Who you are in public should match who you are in private. Consistency is the foundation of trust.',
+      'Integrity is not a one time decision — it is a daily practice.',
+      '1. Keep your word. If you say you will do something, do it.',
+      '2. Own your mistakes. When you are wrong, say so.',
+      '3. Treat everyone with respect.',
+      '4. Do the right thing even when it is hard.',
+      '5. Be consistent. Who you are in public should match who you are in private.',
     ],
   },
   {
@@ -35,10 +35,10 @@ const posts = [
     category: 'STYLE',
     title: 'How to Style Your Legacy Code Tee',
     content: [
-      'Your Legacy Code tee is more than just a shirt — it is a statement. Here is how to wear it in a way that makes that statement loud and clear.',
-      'Keep it simple. A Legacy Code tee paired with clean dark jeans and white sneakers is a classic look that never fails. Let the message on your tee speak for itself.',
-      'Layer it up. Throw an open button-down shirt or a bomber jacket over your tee for a more polished look that still keeps the message visible.',
-      'Dress it up. Pair your tee with chinos and clean leather shoes for a smart casual look that works for almost any occasion.',
+      'Your Legacy Code tee is more than just a shirt — it is a statement.',
+      'Keep it simple. A Legacy Code tee paired with clean dark jeans and white sneakers is a classic look that never fails.',
+      'Layer it up. Throw an open button-down shirt or a bomber jacket over your tee for a more polished look.',
+      'Dress it up. Pair your tee with chinos and clean leather shoes for a smart casual look.',
       'Own it with confidence. The best way to style any Legacy Code tee is to wear it with the confidence of someone who actually lives by the values on it.',
     ],
   },
@@ -49,16 +49,17 @@ const posts = [
     title: 'Why We Started Legacy Code Apparel',
     content: [
       'It started with a simple question — in a world that often rewards compromise, where are the people who still choose integrity?',
-      'Legacy Code Apparel was founded in 2024 because we believed those people exist. They are out there every day doing the right thing, standing firm in their values, leading with character even when it costs them something.',
+      'Legacy Code Apparel was founded in 2024 because we believed those people exist.',
       'We wanted to create something for those people. Not just a t-shirt with words on it, but a dedication to the values that define character and shape purpose.',
-      'The LC logo represents our founder initials, but it also represents something bigger — a mark of commitment to excellence, ethical living, and a tradition of honor that never goes out of style.',
+      'The LC logo represents our founder initials — a mark of commitment to excellence, ethical living, and a tradition of honor that never goes out of style.',
       'When you wear a Legacy Code tee, you are not just wearing a shirt. You are making a statement about who you are and the legacy you are leaving behind.',
     ],
   },
 ];
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = posts.find(p => p.slug === params.slug);
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = posts.find(p => p.slug === slug);
 
   if (!post) {
     return (
