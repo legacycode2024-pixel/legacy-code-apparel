@@ -13,6 +13,7 @@ export const viewport = {
 export const metadata: Metadata = {
   title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
   description: 'Shop Legacy Code Apparel — premium integrity tees for people who lead with character. Free shipping over $50. Use code LEGACY24 for 10% off.',
+  verification: { other: { "p:domain_verify": "4d94fdaaa523049b2792110ddb621732" } },
   keywords: 'integrity apparel, legacy tees, values based clothing, honor tshirts, moral principles apparel, legacy code apparel',
   openGraph: {
     title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
