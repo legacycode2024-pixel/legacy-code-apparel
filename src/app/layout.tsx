@@ -1,33 +1,25 @@
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from 'next';
 import { CartProvider } from './context/CartContext';
 import Footer from './components/Footer';
-import DiscountPopup from './components/DiscountPopup';
-import AnnouncementBar from './components/AnnouncementBar';
-
-export const viewport = {
-  width: 'device-width',
-  initialScale: 1,
-};
+import PreorderBanner from './components/PreorderBanner';
 
 export const metadata: Metadata = {
-  title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
-  description: 'Shop Legacy Code Apparel — premium integrity tees for people who lead with character. Free shipping over $50. Use code LEGACY24 for 10% off.',
-  verification: { other: { "p:domain_verify": "4d94fdaaa523049b2792110ddb621732" } },
+  title: 'Legacy Code Apparel | Integrity Tees with Meaning',
+  description: 'Legacy Code Apparel — wear your values, leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose. Free shipping over $50.',
   keywords: 'integrity apparel, legacy tees, values based clothing, honor tshirts, moral principles apparel, legacy code apparel',
   openGraph: {
-    title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
-    description: 'Shop Legacy Code Apparel — premium integrity tees for people who lead with character. Free shipping over $50. Use code LEGACY24 for 10% off.',
+    title: 'Legacy Code Apparel | Integrity Tees with Meaning',
+    description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
     url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
-    images: [{ url: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775277592/IMG_7062_pz5yll.jpg', width: 1200, height: 630, alt: 'Legacy Code Apparel — Stand On It Tee' }],
+    images: [{ url: '/images/standonit-front.png', width: 800, height: 800, alt: 'Legacy Code Apparel' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
+    title: 'Legacy Code Apparel | Integrity Tees with Meaning',
     description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
-    images: ['https://res.cloudinary.com/dozyoetnr/image/upload/v1775277592/IMG_7062_pz5yll.jpg'],
+    images: ['/images/standonit-front.png'],
   },
 };
 
@@ -36,12 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body style={{ margin: 0, padding: 0 }}>
         <CartProvider>
-          <AnnouncementBar />
+          <PreorderBanner />
           {children}
           <Footer />
-          <DiscountPopup />
         </CartProvider>
-        <Analytics />
       </body>
     </html>
   );

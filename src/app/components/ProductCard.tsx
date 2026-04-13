@@ -31,7 +31,7 @@ export default function ProductCard({ product }: { product: { name: string; pric
             <button key={size} onClick={e => { e.stopPropagation(); setSelectedSize(size); }} style={{ padding: '6px 10px', border: selectedSize === size ? '2px solid #c9a84c' : '1px solid #ddd', borderRadius: '6px', backgroundColor: selectedSize === size ? '#c9a84c' : '#fff', color: '#0a1931', fontSize: '12px', fontWeight: '600', cursor: 'pointer' }}>{size}</button>
           ))}
         </div>
-        <button onClick={e => { e.stopPropagation(); handleAddToCart(); }} style={{ width: '100%', padding: '12px', backgroundColor: '#0a1931', color: '#c9a84c', border: '2px solid #c9a84c', borderRadius: '8px', cursor: 'pointer', fontSize: '14px', fontWeight: '600', letterSpacing: '0.5px' }}>ADD TO CART</button>
+        <button onClick={e => { e.stopPropagation(); handleAddToCart(); }} style={{ width: '100%', padding: '12px', backgroundColor: '#0a1931', color: '#c9a84c', border: '2px solid #c9a84c', borderRadius: '8px', cursor: 'pointer', fontSize: '14px', fontWeight: '600', letterSpacing: '0.5px' }}>PRE-ORDER NOW</button>
       </div>
     </div>
   );
