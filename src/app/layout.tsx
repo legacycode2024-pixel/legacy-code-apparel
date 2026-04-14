@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
     url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
-    images: [{ url: '/images/standonit-front.png', width: 800, height: 800, alt: 'Legacy Code Apparel' }],
+    images: [{ url: 'https://legacycodeapparel.store/images/og-image.jpg', width: 800, height: 800, alt: 'Legacy Code Apparel' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Legacy Code Apparel | Integrity Tees with Meaning',
     description: 'Wear your values. Leave a legacy. Shop integrity tees dedicated to honor, character and moral purpose.',
-    images: ['/images/standonit-front.png'],
+    images: ['https://legacycodeapparel.store/images/og-image.jpg'],
   },
 };
 
