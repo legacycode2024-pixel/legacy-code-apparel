@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
         </div>
         <div style={{ borderTop: '1px solid #1e3a5f', paddingTop: '24px', textAlign: 'center' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '16px' }}><a href='https://instagram.com/legacycodeapparel' target='_blank' rel='noopener noreferrer' style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>INSTAGRAM</a><a href='https://tiktok.com/@legacycodeapparel' target='_blank' rel='noopener noreferrer' style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>TIKTOK</a><a href='https://facebook.com/legacycodeapparel' target='_blank' rel='noopener noreferrer' style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>FACEBOOK</a></div><p style={{ color: '#555', fontSize: '13px', margin: 0, letterSpacing: '1px' }}>© 2024 LEGACY CODE APPAREL — ALL RIGHTS RESERVED</p>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginBottom: '16px' }}><a href='https://instagram.com/legacycodeapparel' target='_blank' rel='noopener noreferrer' style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>INSTAGRAM</a><a href='https://tiktok.com/@legacycodeapparel' target='_blank' rel='noopener noreferrer' style={{ color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '1px' }}>TIKTOK</a></div><p style={{ color: '#555', fontSize: '13px', margin: 0, letterSpacing: '1px' }}>© 2024 LEGACY CODE APPAREL — ALL RIGHTS RESERVED</p>
         </div>
       </div>
     </footer>
