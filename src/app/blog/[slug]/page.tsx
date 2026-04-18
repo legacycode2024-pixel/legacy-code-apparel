@@ -2,6 +2,45 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'what-does-it-mean-to-stand-on-it',
+    date: 'March 25, 2025',
+    category: 'CHARACTER',
+    title: 'What Does It Mean to Stand On It?',
+    content: [
+      'Standing on it is not a phrase — it is a posture. It is the decision to plant your feet on what you believe and refuse to move regardless of who disagrees or what it costs you.',
+      'In a world that pressures you to bend, compromise and go along to get along, standing on it is an act of courage. It means your word is your bond. It means your convictions are not negotiable.',
+      'It does not mean you are rigid or closed minded. It means you have done the work — you know what you believe and why you believe it — and no amount of pressure will make you abandon that.',
+      'People who stand on it are rare. They are the ones others look to when things get hard. They are the ones who build trust because everyone knows where they stand.',
+      'Wear this tee as a daily reminder. Whatever room you walk into today — stand on it.',
+    ],
+  },
+  {
+    slug: 'the-difference-between-right-and-easy',
+    date: 'March 27, 2025',
+    category: 'CHARACTER',
+    title: 'The Difference Between Right and Easy',
+    content: [
+      'The easy road is crowded. The right road takes character.',
+      'Easy is telling someone what they want to hear. Right is telling them the truth with kindness. Easy is cutting corners when nobody is watching. Right is doing the full work every time.',
+      'The difference between right and easy shows up in small moments — the ones nobody sees. Those moments are where your legacy is actually built.',
+      'Choosing right over easy is not about being perfect. It is about being intentional. It is about asking yourself before every decision — is this right or is this just easy?',
+      'Legacy Code Apparel was built for the people who ask that question. The ones who choose right even when easy is standing right next to it.',
+    ],
+  },
+  {
+    slug: 'how-to-outwork-self-doubt',
+    date: 'March 29, 2025',
+    category: 'CHARACTER',
+    title: 'How to Outwork Self Doubt',
+    content: [
+      'Self doubt is loud. But action is louder.',
+      'Every person building something meaningful knows the feeling — the voice that says you are not ready, not good enough, not qualified. The voice that points out every reason why it will not work.',
+      'The secret is not silencing that voice. The secret is outworking it. You show up anyway. You post anyway. You build anyway. You take the next step even when you cannot see the full staircase.',
+      'Self doubt shrinks in the presence of momentum. Every small action you take is proof that you are capable. Stack enough of those actions and the doubt gets quieter.',
+      'Legacy Code is for the people in the middle of that fight. The ones who have not arrived yet but refuse to quit. Keep going. Outwork the doubt. Leave a legacy worth remembering.',
+    ],
+  },
+  {
     slug: 'perfect-sneakers-legacy-code-tee',
     date: 'April 17, 2026',
     category: 'STYLE',
