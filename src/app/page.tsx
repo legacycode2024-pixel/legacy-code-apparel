@@ -236,7 +236,7 @@ export default function Home() {
         <ReviewForm />
       </section>
       <RecentlyViewed products={allProducts} />
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>(404) 620-0261 | support@legacycodeapparel.store | © 2025 LEGACY CODE APPAREL</footer>
+      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>(404) 620-7228 | support@legacycodeapparel.store | © 2025 LEGACY CODE APPAREL</footer>
     </main>
   );
 }
