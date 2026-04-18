@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 const posts = [
   {
     slug: 'right-over-easy-story-behind-the-design',
-    date: 'March 28, 2024',
+    date: 'March 28, 2025',
     category: 'BRAND STORY',
     title: 'Right Over Easy — The Story Behind the Design',
     excerpt: 'The word RIGHT sits above the word EASY. That is not an accident. That is a statement about the road most people choose — and the one worth taking.',
