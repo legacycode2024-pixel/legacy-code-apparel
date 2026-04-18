@@ -14,11 +14,20 @@ export async function POST(req: Request) {
         currency: 'usd',
         product_data: {
           name: `${item.name} (${item.size})`,
+          metadata: {
+            design: item.name,
+            size: item.size,
+          },
         },
         unit_amount: Math.round(item.price * 100),
       },
       quantity: item.quantity,
     }));
+
+    const itemsSummary = items
+      .map((i: any) => `${i.name}|${i.size}|${i.quantity}`)
+      .join(';')
+      .slice(0, 500);
 
     const sessionConfig: any = {
       payment_method_types: ['card'],
@@ -29,6 +38,9 @@ export async function POST(req: Request) {
       allow_promotion_codes: true,
       shipping_address_collection: {
         allowed_countries: ['US'],
+      },
+      metadata: {
+        items: itemsSummary,
       },
     };
 
