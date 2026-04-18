@@ -27,7 +27,7 @@ export default async function PackingSlipPage({
   }
 
   const lineItems = session.line_items?.data ?? [];
-  const shipping = session.shipping_details ?? session.collected_information?.shipping_details;
+  const shipping = session.collected_information?.shipping_details as any;
   const address = shipping?.address;
   const orderDate = new Date(session.created * 1000).toLocaleDateString('en-US', {
     year: 'numeric',
