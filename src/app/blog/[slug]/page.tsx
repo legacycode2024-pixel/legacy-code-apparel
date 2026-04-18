@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar';
 const posts = [
   {
     slug: 'perfect-sneakers-legacy-code-tee',
-    date: 'April 17, 2025',
+    date: 'April 17, 2026',
     category: 'STYLE',
     title: 'The Perfect Sneakers to Pair with Your Legacy Code Tee',
     content: [
