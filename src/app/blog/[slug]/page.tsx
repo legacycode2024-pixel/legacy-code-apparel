@@ -2,6 +2,21 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'perfect-sneakers-legacy-code-tee',
+    date: 'April 17, 2025',
+    category: 'STYLE',
+    title: 'The Perfect Sneakers to Pair with Your Legacy Code Tee',
+    content: [
+      'Your Legacy Code tee already says something about who you are. The right sneakers just make sure everyone hears it.',
+      '1. Clean White Air Force 1s — You cannot go wrong. A crisp pair of white AF1s with a black Legacy Code tee is the classic combo that never fails. Simple, clean and confident.',
+      '2. Jordan 1s — High top or low top, Jordans bring energy to any Legacy Code fit. Pair a bred or chicago colorway with the Word Is Bond tee for a look that hits hard.',
+      '3. New Balance 550s — For a more laid back elevated look the NB 550 is undefeated. Pair with the Stand On It tee, clean dark jeans and an open button down for a smart casual fit.',
+      '4. Adidas Sambas — The Samba has made a serious comeback and it pairs beautifully with Legacy Code tees. Wear with the Principles Over Popularity tee and straight leg chinos.',
+      '5. Timberland 6-Inch Boots — Wheat Timbs with a Legacy Code tee is a culture classic. Pair with the Actions Over Applause tee and dark cargo pants for a rugged bold look.',
+      'The Bottom Line — Whatever you lace up, wear them with the same intentionality you wear your Legacy Code tee — with confidence, purpose and zero apologies.',
+    ],
+  },
+  {
     slug: 'right-over-easy-story-behind-the-design',
     date: 'March 28, 2024',
     category: 'BRAND STORY',
