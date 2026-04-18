@@ -71,7 +71,7 @@ export default function BlogPage() {
       </section>
       <section style={{ maxWidth: '900px', margin: '0 auto', padding: '60px 20px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '32px' }}>
-          {posts.map((post) => (
+          {posts.slice().sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
             <div key={post.slug} style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e5e5', display: 'flex', flexDirection: 'column' }}>
               <div style={{ padding: '28px', flex: 1 }}>
                 <p style={{ fontSize: '11px', letterSpacing: '3px', color: '#c9a84c', marginBottom: '12px', fontFamily: 'Arial, sans-serif' }}>{post.category} — {post.date}</p>
