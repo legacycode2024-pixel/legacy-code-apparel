@@ -38,7 +38,7 @@ function VideoHero() {
 const sizes = ['S', 'M', 'L', 'XL', '2XL', '3XL'];
 
 const allProducts = [
-  { id: 1, name: 'Stand On It', color: 'Black', price: 20, frontImage: '/images/standonit-front.png', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774846513/367BC533-7689-4E1A-B03D-AAF004F6FD69_eraib6.png' },
+  { id: 1, name: 'Stand On It', color: 'Black', price: 20, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774849264/stand_on_it-_front_oedg2v.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1774846513/367BC533-7689-4E1A-B03D-AAF004F6FD69_eraib6.png' },
   { id: 2, name: 'Actions Over Applause', color: 'Black', price: 20, frontImage: '/images/actions-front.png', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776742613/39583CED-D0DA-456D-8B47-4F722E73D421_mfwhja.jpg' },
   { id: 3, name: 'Principles Over Popularity', color: 'Black', price: 20, frontImage: '/images/principles-front.png', backImage: '/images/principles-back.png' },
   { id: 4, name: 'Right Over Easy', color: 'Black', price: 20, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776660208/right-front-black_kz6ufo.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776660208/right-back-black_jiw0ef.jpg' },
