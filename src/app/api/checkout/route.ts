@@ -30,7 +30,7 @@ export async function POST(req: Request) {
       .slice(0, 500);
 
     const sessionConfig: any = {
-      payment_method_types: ['card'],
+      payment_method_types: ['card', 'klarna', 'afterpay_clearpay', 'zip'],
       line_items,
       mode: 'payment',
       success_url: `${req.headers.get('origin')}/success`,
