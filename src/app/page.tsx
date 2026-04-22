@@ -25,7 +25,7 @@ function VideoHero() {
 
   return (
     <>
-      <video ref={vid1Ref} muted playsInline onEnded={handleVid1End} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1, transition: 'opacity 1.5s' }}>
+      <video ref={vid1Ref} muted playsInline loop style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1, transition: 'opacity 1.5s' }}>
         <source src="/images/signature.mp4" type="video/mp4" />
       </video>
     </>
