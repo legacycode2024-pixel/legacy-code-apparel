@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+new_content = """import { NextResponse } from 'next/server';
 
 export async function POST(req: Request) {
   try {
@@ -72,3 +72,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
   }
 }
+"""
+open('src/app/api/newsletter/route.ts', 'w').write(new_content)
+print('Done!')
