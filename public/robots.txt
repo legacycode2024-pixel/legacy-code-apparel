@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://legacycodeapparel.store
+
+# Sitemaps
+Sitemap: https://legacycodeapparel.store/sitemap.xml
