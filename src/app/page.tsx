@@ -152,13 +152,13 @@ export default function Home() {
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.5px', margin: '0 0 12px', maxWidth: '500px' }}>Premium statement tees for people who lead with integrity.</p>
           <p style={{ fontSize: '13px', color: '#c9a84c', letterSpacing: '1px', margin: '0 0 32px' }}>Free shipping over $50 &nbsp;·&nbsp; Ships in 3-5 days &nbsp;·&nbsp; 14-day returns</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href='#shop' style={{ display: 'inline-block', padding: '14px 36px', backgroundColor: '#c9a84c', color: '#0a1931', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px', fontWeight: '700' }}>SHOP BEST SELLERS</a>
+            <a href='#bestsellers' style={{ display: 'inline-block', padding: '14px 36px', backgroundColor: '#c9a84c', color: '#0a1931', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px', fontWeight: '700' }}>SHOP BEST SELLERS</a>
             <a href='/about' style={{ display: 'inline-block', padding: '14px 36px', border: '2px solid #c9a84c', color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px' }}>OUR STORY</a>
           </div>
         </div>
       </section>
 
-      <section style={{ padding: '40px 20px', backgroundColor: '#0a1931', textAlign: 'center' }}>
+      <section id='bestsellers' style={{ padding: '40px 20px', backgroundColor: '#0a1931', textAlign: 'center' }}>
         <p style={{ fontSize: '12px', letterSpacing: '4px', color: '#c9a84c', marginBottom: '16px', fontFamily: 'Arial, sans-serif' }}>MOST LOVED</p>
         <h2 style={{ fontSize: '32px', fontWeight: '400', color: '#fff', marginBottom: '40px' }}>Best Sellers</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
