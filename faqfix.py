@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar';
+new_content = """import Navbar from '../components/Navbar';
 
 const faqGroups = [
   {
@@ -71,3 +71,6 @@ export default function FAQPage() {
     </main>
   );
 }
+"""
+open('src/app/faq/page.tsx', 'w').write(new_content)
+print('Done!')
