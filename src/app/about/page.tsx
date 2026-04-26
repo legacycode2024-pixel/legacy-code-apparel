@@ -6,7 +6,7 @@ export default function AboutPage() {
       <Navbar />
 
       <section style={{ textAlign: 'center', padding: '80px 20px 60px', backgroundColor: '#111', color: '#fff' }}>
-        <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#aaa' }}>EST. 2025</p>
+        <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#aaa' }}>EST. 2024</p>
         <h1 style={{ fontSize: '52px', fontWeight: '400', margin: '0', letterSpacing: '-1px' }}>Our Story</h1>
       </section>
 
