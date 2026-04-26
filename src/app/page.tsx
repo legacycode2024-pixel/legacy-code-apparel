@@ -114,7 +114,7 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
           <ul style={{ margin: '10px 0 0', padding: '0 0 0 16px', fontSize: '11px', color: '#555', lineHeight: '2' }}>
             {details.bullets.map((b, i) => <li key={i}>{b}</li>)}
             <li>Free shipping on orders over $50</li>
-            <li>Easy returns within 30 days</li>
+            <li>Easy returns within 14 days</li>
           </ul>
         )}
       </div>
