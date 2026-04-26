@@ -131,7 +131,14 @@ export default function Home() {
   const [filter, setFilter] = useState('All');
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  const filtered = filter === 'All' ? allProducts : allProducts.filter(p => p.color === filter);
+  const bestSellers = ['Word Is Bond', 'Stand On It'];
+  const newDrops = ['Pressure Tested'];
+  const filtered = filter === 'All' ? allProducts
+    : filter === 'Best Sellers' ? allProducts.filter(p => bestSellers.includes(p.name))
+    : filter === 'New Drops' ? allProducts.filter(p => newDrops.includes(p.name))
+    : filter === 'Black' ? allProducts.filter(p => p.color === 'Black')
+    : filter === 'White' ? allProducts.filter(p => p.color === 'White')
+    : allProducts.filter(p => p.name === filter);
 
   const scroll = (dir: 'left' | 'right') => {
     if (carouselRef.current) {
@@ -174,8 +181,8 @@ export default function Home() {
       <section id='shop' style={{ padding: '60px 20px' }}>
         <h2 style={{ textAlign: 'center', fontSize: '13px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '24px', color: '#c9a84c' }}>FEATURED TEES</h2>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '32px' }}>
-          {['All', 'Black', 'White'].map(f => (
-            <button key={f} onClick={() => setFilter(f)} style={{ padding: '8px 24px', backgroundColor: filter === f ? '#0a1931' : '#fff', color: filter === f ? '#c9a84c' : '#0a1931', border: '2px solid #0a1931', borderRadius: '24px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', letterSpacing: '1px' }}>{f}</button>
+          {['All', 'Best Sellers', 'New Drops', 'Black', 'White', 'Stand On It', 'Actions Over Applause', 'Principles Over Popularity', 'Word Is Bond', "I Could've But I Didn't"].map(f => (
+            <button key={f} onClick={() => setFilter(f)} style={{ padding: '8px 16px', backgroundColor: filter === f ? '#0a1931' : '#fff', color: filter === f ? '#c9a84c' : '#0a1931', border: '2px solid #0a1931', borderRadius: '24px', fontSize: '12px', fontWeight: '600', cursor: 'pointer', letterSpacing: '1px', whiteSpace: 'nowrap' }}>{f}</button>
           ))}
         </div>
         <div style={{ position: 'relative' }}>
