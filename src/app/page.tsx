@@ -181,7 +181,7 @@ export default function Home() {
       <section id='shop' style={{ padding: '60px 20px' }}>
         <h2 style={{ textAlign: 'center', fontSize: '13px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '24px', color: '#c9a84c' }}>FEATURED TEES</h2>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '32px' }}>
-          {['All', 'Best Sellers', 'New Drops', 'Black', 'White', 'Stand On It', 'Actions Over Applause', 'Principles Over Popularity', 'Word Is Bond', "I Could've But I Didn't"].map(f => (
+          {['All', 'New Drops', 'Black', 'White', 'Stand On It', 'Actions Over Applause', 'Principles Over Popularity', 'Word Is Bond', "I Could've But I Didn't"].map(f => (
             <button key={f} onClick={() => setFilter(f)} style={{ padding: '8px 16px', backgroundColor: filter === f ? '#0a1931' : '#fff', color: filter === f ? '#c9a84c' : '#0a1931', border: '2px solid #0a1931', borderRadius: '24px', fontSize: '12px', fontWeight: '600', cursor: 'pointer', letterSpacing: '1px', whiteSpace: 'nowrap' }}>{f}</button>
           ))}
         </div>
