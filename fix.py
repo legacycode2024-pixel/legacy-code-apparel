@@ -1,5 +1,4 @@
 content = open('src/app/page.tsx').read()
-content = content.replace("  { id: 4, name: 'Right Over Easy', color: 'Black', price: 20, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776660208/right-front-black_kz6ufo.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776660208/right-back-black_jiw0ef.jpg' },\n", "")
-content = content.replace("  { id: 10, name: 'Right Over Easy', color: 'White', price: 20, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776660208/right-front-white_lwgedo.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776660208/right-back-white_ns3dew.jpg' },\n", "")
+content = content.replace("'100% cotton, 5.3 oz midweight'", "'Anvil by Gildan, 4.5 oz combed ring-spun cotton'")
 open('src/app/page.tsx', 'w').write(content)
 print('Done!')

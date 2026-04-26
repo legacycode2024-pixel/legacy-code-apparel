@@ -50,23 +50,23 @@ const allProducts = [
 const productDetails: Record<string, { why: string; bullets: string[] }> = {
   'Stand On It': {
     why: "For people who don't just talk about their values — they live them. This tee is a daily reminder to hold your ground.",
-    bullets: ['100% cotton, 5.3 oz midweight', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
+    bullets: ['Anvil by Gildan, 4.5 oz combed ring-spun cotton', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
   },
   'Actions Over Applause': {
     why: "For those who let their work speak. No need for validation — results are the only receipt that matters.",
-    bullets: ['100% cotton, 5.3 oz midweight', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
+    bullets: ['Anvil by Gildan, 4.5 oz combed ring-spun cotton', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
   },
   'Principles Over Popularity': {
     why: "For the ones who choose integrity over trends. When everyone zigs, you know why you zag.",
-    bullets: ['100% cotton, 5.3 oz midweight', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
+    bullets: ['Anvil by Gildan, 4.5 oz combed ring-spun cotton', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
   },
   'Word Is Bond': {
     why: "Your word is your brand. This tee is for people who mean what they say and say what they mean.",
-    bullets: ['100% cotton, 5.3 oz midweight', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
+    bullets: ['Anvil by Gildan, 4.5 oz combed ring-spun cotton', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
   },
   "I Could've But I Didn't": {
     why: "Discipline is the real flex. This tee celebrates the quiet power of choosing character over compromise.",
-    bullets: ['100% cotton, 5.3 oz midweight', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
+    bullets: ['Anvil by Gildan, 4.5 oz combed ring-spun cotton', 'Unisex relaxed fit, true to size', 'Size up for an oversized look', 'Machine wash cold, tumble dry low'],
   },
 };
 
