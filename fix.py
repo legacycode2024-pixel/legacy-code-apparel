@@ -1,15 +1,4 @@
-content = open('next.config.ts').read()
-old = """  images: {
-    domains: ['res.cloudinary.com'],
-  },"""
-new = """  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
-      },
-    ],
-  },"""
-content = content.replace(old, new)
-open('next.config.ts', 'w').write(content)
+content = open('src/proxy.ts').read()
+content = content.replace('export function middleware(req: NextRequest)', 'export function proxy(req: NextRequest)')
+open('src/proxy.ts', 'w').write(content)
 print('Done!')
