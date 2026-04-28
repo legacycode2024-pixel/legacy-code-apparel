@@ -101,7 +101,7 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
           <p style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: '#c9a84c' }}>${product.price.toFixed(2)}</p>
           <span style={{ fontSize: '11px', color: '#888' }}>⭐⭐⭐⭐⭐ Verified buyers</span>
         </div>
-        <p style={{ margin: '0 0 8px', fontSize: '11px', color: '#27ae60', fontWeight: '600' }}>✓ Free shipping over $50 &nbsp;|&nbsp; ✓ 14-day returns</p>
+        <p style={{ margin: '0 0 8px', fontSize: '11px', color: '#27ae60', fontWeight: '600' }}>✓ Free shipping over $45 &nbsp;|&nbsp; ✓ 14-day returns</p>
         <p style={{ margin: '0 0 8px', fontSize: '11px', color: '#555' }}>👕 Relaxed unisex fit — true to size. Size up for oversized.</p>
         {details && <p style={{ margin: '0 0 12px', fontSize: '12px', color: '#555', lineHeight: '1.6', fontStyle: 'italic' }}>{details.why}</p>}
         <div style={{ display: 'flex', gap: '4px', marginBottom: '12px', flexWrap: 'wrap' }}>
@@ -118,7 +118,7 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
         {showDetails && details && (
           <ul style={{ margin: '10px 0 0', padding: '0 0 0 16px', fontSize: '11px', color: '#555', lineHeight: '2' }}>
             {details.bullets.map((b, i) => <li key={i}>{b}</li>)}
-            <li>Free shipping on orders over $50</li>
+            <li>Free shipping on orders over $45</li>
             <li>Easy returns within 14 days</li>
           </ul>
         )}
@@ -215,7 +215,7 @@ export default function Home() {
           <p style={{ fontSize: '12px', letterSpacing: '4px', marginBottom: '16px', color: '#c9a84c' }}>EST. 2024</p>
           <h1 style={{ fontSize: '56px', fontWeight: '400', margin: '0 0 16px', letterSpacing: '-1px', color: '#fff' }}>Wear What You Stand For.</h1>
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.85)', letterSpacing: '0.5px', margin: '0 0 12px', maxWidth: '500px' }}>Premium statement tees for people who lead with integrity.</p>
-          <p style={{ fontSize: '13px', color: '#c9a84c', letterSpacing: '1px', margin: '0 0 32px' }}>Free shipping over $50 &nbsp;·&nbsp; Ships in 3-5 days &nbsp;·&nbsp; 14-day returns</p>
+          <p style={{ fontSize: '13px', color: '#c9a84c', letterSpacing: '1px', margin: '0 0 32px' }}>Free shipping over $45 &nbsp;·&nbsp; Ships in 3-5 days &nbsp;·&nbsp; 14-day returns</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href='#bestsellers' style={{ display: 'inline-block', padding: '14px 36px', backgroundColor: '#c9a84c', color: '#0a1931', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px', fontWeight: '700' }}>SHOP BEST SELLERS</a>
             <a href='/about' style={{ display: 'inline-block', padding: '14px 36px', border: '2px solid #c9a84c', color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px' }}>OUR STORY</a>
@@ -247,7 +247,7 @@ export default function Home() {
         </div>
         {/* TRUST BLOCK */}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '12px', marginBottom: '32px', padding: '16px 20px', backgroundColor: '#0a1931', borderRadius: '12px', maxWidth: '800px', margin: '0 auto 32px' }}>
-          <span style={{ fontSize: '13px', color: '#fff' }}>🚚 <strong style={{ color: '#c9a84c' }}>Free shipping</strong> on orders over $50</span>
+          <span style={{ fontSize: '13px', color: '#fff' }}>🚚 <strong style={{ color: '#c9a84c' }}>Free shipping</strong> on orders over $45</span>
           <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
           <span style={{ fontSize: '13px', color: '#fff' }}>📦 Ships in <strong style={{ color: '#c9a84c' }}>3-5 days</strong></span>
           <span style={{ color: 'rgba(255,255,255,0.3)' }}>|</span>
@@ -351,7 +351,7 @@ export default function Home() {
             { q: 'What are the tees made of?', a: 'Anvil by Gildan combed ring-spun cotton, 4.5 oz. Soft, lightweight, and breathable.' },
             { q: 'How long does shipping take?', a: 'Orders ship within 3-5 business days. You will receive a tracking number once your order ships.' },
             { q: 'What is your return policy?', a: 'We accept returns within 14 days of delivery. Items must be unworn and unwashed.' },
-            { q: 'Do you offer free shipping?', a: 'Yes! Free shipping on all orders over $50.' },
+            { q: 'Do you offer free shipping?', a: 'Yes! Free shipping on all orders over $45.' },
           ].map((faq, i) => (
             <div key={i} style={{ backgroundColor: '#fff', padding: '20px 24px', borderRadius: '12px', border: '1px solid #e5e5e5' }}>
               <p style={{ fontSize: '14px', fontWeight: '700', color: '#0a1931', marginBottom: '8px' }}>{faq.q}</p>

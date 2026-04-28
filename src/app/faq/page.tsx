@@ -5,7 +5,7 @@ const faqGroups = [
     category: 'SHIPPING',
     faqs: [
       { question: 'How long does shipping take?', answer: 'Standard shipping takes 3-5 business days. You will receive a tracking number via email once your order ships.' },
-      { question: 'Do you offer free shipping?', answer: 'Yes! We offer free shipping on all orders over $50. Orders under $50 ship for $5.01.' },
+      { question: 'Do you offer free shipping?', answer: 'Yes! We offer free shipping on all orders over $45. Orders under $50 ship for $5.01.' },
       { question: 'Do you ship internationally?', answer: 'Currently we ship within the United States only. International shipping is coming soon!' },
       { question: 'How do I track my order?', answer: 'Once your order ships you will receive a confirmation email with a tracking number.' },
     ],

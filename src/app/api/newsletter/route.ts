@@ -51,7 +51,7 @@ export async function POST(req: Request) {
             </div>
             <div style="padding: 24px 40px; border-top: 1px solid #e5e5e5; text-align: center;">
               <p style="font-size: 14px; color: #555; line-height: 1.8; font-style: italic; margin: 0 0 16px;">"Wear your values. Leave a legacy."</p>
-              <p style="font-size: 12px; color: #999; margin: 0;">Free shipping over $50 &nbsp;·&nbsp; Ships in 3-5 days &nbsp;·&nbsp; 14-day returns</p>
+              <p style="font-size: 12px; color: #999; margin: 0;">Free shipping over $45 &nbsp;·&nbsp; Ships in 3-5 days &nbsp;·&nbsp; 14-day returns</p>
             </div>
             <div style="background-color: #0a1931; padding: 24px; text-align: center;">
               <p style="color: #c9a84c; font-size: 12px; letter-spacing: 2px; margin: 0 0 8px;">LEGACY CODE APPAREL</p>
