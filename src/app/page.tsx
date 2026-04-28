@@ -94,8 +94,8 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
   };
 
   return (
-    <div style={{ width: '280px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', transition: 'transform 0.2s', borderTop: `4px solid ${productAccents[product.name] || '#c9a84c'}` }}>
-      <div style={{ position: 'relative', height: '300px', backgroundColor: '#f4f1eb' }}>
+    <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', transition: 'box-shadow 0.2s', borderTop: `4px solid ${productAccents[product.name] || '#c9a84c'}` }}>
+      <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
         <Image src={showBack ? product.backImage : product.frontImage} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
         <div style={{ position: 'absolute', bottom: '12px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px', zIndex: 1 }}>
           <button onClick={() => setShowBack(false)} style={{ padding: '6px 14px', backgroundColor: !showBack ? '#0a1931' : '#fff', color: !showBack ? '#c9a84c' : '#0a1931', border: '1px solid #c9a84c', borderRadius: '20px', fontSize: '11px', fontWeight: '700', cursor: 'pointer', letterSpacing: '1px' }}>FRONT</button>
@@ -103,15 +103,20 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
         </div>
         <div style={{ position: 'absolute', top: '12px', right: '12px', backgroundColor: product.color === 'White' ? '#fff' : '#c9a84c', color: '#0a1931', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px', border: '1px solid #c9a84c' }}>{product.color}</div>
       </div>
-      <div style={{ padding: '16px' }}>
-        <h3 style={{ margin: '0 0 4px', fontSize: '14px', fontWeight: '600', color: '#0a1931' }}>{product.name}</h3>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-          <p style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: productAccents[product.name] || '#c9a84c' }}>${product.price.toFixed(2)}</p>
-          <span style={{ fontSize: '11px', color: '#888' }}>⭐⭐⭐⭐⭐ Verified buyers</span>
+      <div style={{ padding: '24px' }}>
+        <div style={{ marginBottom: '12px' }}>
+          <p style={{ margin: '0 0 2px', fontSize: '11px', letterSpacing: '3px', color: productAccents[product.name] || '#c9a84c', fontFamily: 'Arial, sans-serif' }}>{product.color.toUpperCase()} TEE</p>
+          <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '600', color: '#0a1931', lineHeight: '1.2' }}>{product.name}</h3>
+          {details && <p style={{ margin: '0 0 12px', fontSize: '13px', color: '#666', lineHeight: '1.7', fontStyle: 'italic' }}>{details.why}</p>}
         </div>
-        <p style={{ margin: '0 0 8px', fontSize: '11px', color: '#27ae60', fontWeight: '600' }}>✓ Free shipping over $45 &nbsp;|&nbsp; ✓ 14-day returns</p>
-        <p style={{ margin: '0 0 8px', fontSize: '11px', color: '#555' }}>👕 Relaxed unisex fit — true to size. Size up for oversized.</p>
-        {details && <p style={{ margin: '0 0 12px', fontSize: '12px', color: '#555', lineHeight: '1.6', fontStyle: 'italic' }}>{details.why}</p>}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', padding: '12px 0', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
+          <div>
+            <p style={{ margin: 0, fontSize: '22px', fontWeight: '700', color: productAccents[product.name] || '#c9a84c' }}>${product.price.toFixed(2)}</p>
+            <p style={{ margin: 0, fontSize: '11px', color: '#27ae60', fontWeight: '600' }}>✓ Free shipping over $45</p>
+          </div>
+          <span style={{ fontSize: '12px', color: '#888' }}>⭐⭐⭐⭐⭐</span>
+        </div>
+        <p style={{ margin: '0 0 16px', fontSize: '12px', color: '#555' }}>👕 Relaxed unisex fit · True to size · S–3XL</p>
         <div style={{ display: 'flex', gap: '4px', marginBottom: '12px', flexWrap: 'wrap' }}>
           {sizes.map(size => (
             <button key={size} onClick={e => { e.stopPropagation(); setSelectedSize(size); }} style={{ padding: '4px 8px', border: selectedSize === size ? '2px solid #c9a84c' : '1px solid #ddd', borderRadius: '6px', backgroundColor: selectedSize === size ? '#c9a84c' : '#fff', color: '#0a1931', fontSize: '11px', fontWeight: '600', cursor: 'pointer' }}>{size}</button>
