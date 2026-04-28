@@ -47,6 +47,14 @@ const allProducts = [
   { id: 12, name: "I Could've But I Didn't", color: 'White', price: 20, frontImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776662741/5AD469BE-328F-467D-9F46-D3E506C18096_ntqaqd.jpg', backImage: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1776664243/ChatGPT_Image_Apr_20_2026_at_01_47_01_AM_tfjzta.png' },
 ];
 
+const productAccents: Record<string, string> = {
+  'Stand On It': '#c9a84c',
+  'Actions Over Applause': '#c0392b',
+  'Principles Over Popularity': '#1a7a7a',
+  'Word Is Bond': '#1a3a6b',
+  "I Could've But I Didn't": '#722f37',
+};
+
 const productDetails: Record<string, { why: string; bullets: string[] }> = {
   'Stand On It': {
     why: "For people who don't just talk about their values — they live them. This tee is a daily reminder to hold your ground.",
@@ -86,7 +94,7 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
   };
 
   return (
-    <div style={{ width: '280px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', transition: 'transform 0.2s', borderTop: '4px solid #c9a84c' }}>
+    <div style={{ width: '280px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 4px 20px rgba(0,0,0,0.08)', transition: 'transform 0.2s', borderTop: `4px solid ${productAccents[product.name] || '#c9a84c'}` }}>
       <div style={{ position: 'relative', height: '300px', backgroundColor: '#f4f1eb' }}>
         <Image src={showBack ? product.backImage : product.frontImage} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
         <div style={{ position: 'absolute', bottom: '12px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px', zIndex: 1 }}>
@@ -98,7 +106,7 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
       <div style={{ padding: '16px' }}>
         <h3 style={{ margin: '0 0 4px', fontSize: '14px', fontWeight: '600', color: '#0a1931' }}>{product.name}</h3>
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
-          <p style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: '#c9a84c' }}>${product.price.toFixed(2)}</p>
+          <p style={{ margin: 0, fontSize: '16px', fontWeight: '700', color: productAccents[product.name] || '#c9a84c' }}>${product.price.toFixed(2)}</p>
           <span style={{ fontSize: '11px', color: '#888' }}>⭐⭐⭐⭐⭐ Verified buyers</span>
         </div>
         <p style={{ margin: '0 0 8px', fontSize: '11px', color: '#27ae60', fontWeight: '600' }}>✓ Free shipping over $45 &nbsp;|&nbsp; ✓ 14-day returns</p>
@@ -109,7 +117,7 @@ function ProductCard({ product }: { product: typeof allProducts[0] }) {
             <button key={size} onClick={e => { e.stopPropagation(); setSelectedSize(size); }} style={{ padding: '4px 8px', border: selectedSize === size ? '2px solid #c9a84c' : '1px solid #ddd', borderRadius: '6px', backgroundColor: selectedSize === size ? '#c9a84c' : '#fff', color: '#0a1931', fontSize: '11px', fontWeight: '600', cursor: 'pointer' }}>{size}</button>
           ))}
         </div>
-        <button onClick={handleAddToCart} style={{ width: '100%', padding: '14px', backgroundColor: '#c9a84c', color: '#0a1931', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '14px', fontWeight: '700', letterSpacing: '1px', marginBottom: '8px', boxShadow: '0 4px 12px rgba(201,168,76,0.3)' }}>ADD TO CART — ${product.price.toFixed(2)}</button>
+        <button onClick={handleAddToCart} style={{ width: '100%', padding: '14px', backgroundColor: productAccents[product.name] || '#c9a84c', color: '#fff', border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '14px', fontWeight: '700', letterSpacing: '1px', marginBottom: '8px', boxShadow: `0 4px 12px ${productAccents[product.name] || '#c9a84c'}40` }}>ADD TO CART — ${product.price.toFixed(2)}</button>
         <div style={{ display: 'flex', gap: '8px', justifyContent: 'center', marginBottom: '8px', fontSize: '11px', color: '#888' }}>
           <span>🔒 Secure Checkout</span>
           <span>📦 Ships in 3-5 days</span>
