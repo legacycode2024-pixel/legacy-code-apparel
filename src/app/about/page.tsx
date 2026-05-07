@@ -42,7 +42,22 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div style={{ textAlign: 'center', paddingTop: '20px' }}>
+        
+      <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '48px', marginBottom: '48px' }}>
+        <h2 style={{ fontSize: '11px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', color: '#999', marginBottom: '16px' }}>AS SEEN IN NEW YORK CITY</h2>
+        <p style={{ fontSize: '18px', lineHeight: '1.9', color: '#333', margin: '0 0 24px' }}>
+          From Atlanta to the streets of New York City — Legacy Code Apparel hit Times Square in 2026. This is what happens when you stand on your values and refuse to quit.
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px', marginBottom: '24px' }}>
+          <img src='/images/nyc-billboard.png' alt='Legacy Code Apparel Billboard in NYC' style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }} />
+          <img src='/images/nyc-times-square-1.jpg' alt='Legacy Code Apparel founder in Times Square' style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }} />
+          <img src='/images/nyc-times-square-2.jpg' alt='Legacy Code Apparel founder in Times Square NYC' style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }} />
+        </div>
+        <p style={{ fontSize: '16px', lineHeight: '1.9', color: '#333', margin: 0, fontStyle: 'italic' }}>
+          "This is just the beginning." — Lataysha Cartwright, Founder
+        </p>
+      </div>
+      <div style={{ textAlign: 'center', paddingTop: '20px' }}>
           <a href="/" style={{ display: 'inline-block', padding: '14px 36px', backgroundColor: '#111', color: '#fff', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px', borderRadius: '8px', fontFamily: 'Arial, sans-serif' }}>SHOP THE COLLECTION</a>
         </div>
 
