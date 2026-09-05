@@ -1,5 +1,6 @@
 import Stripe from 'stripe';
 import { NextResponse } from 'next/server';
+import { supabase } from '../../lib/supabase';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -19,6 +20,29 @@ export async function POST(req: Request) {
     const customerEmail = session.customer_details?.email;
     const customerName = session.customer_details?.name;
     const orderId = session.id;
+    const itemsSummary: string = session.metadata?.items || '';
+
+    // Parse "Name (Color)|Size|Quantity;Name (Color)|Size|Quantity" and mark each as sold
+    const parsedItems = itemsSummary.split(';').filter(Boolean).map(entry => {
+      const [nameWithColor, size] = entry.split('|');
+      const match = nameWithColor.match(/^(.+) \((.+)\)$/);
+      return {
+        product: match ? match[1] : nameWithColor,
+        color: match ? match[2] : '',
+        size,
+      };
+    });
+
+    for (const item of parsedItems) {
+      await supabase
+        .from('inventory')
+        .update({ sold: true })
+        .eq('product', item.product)
+        .eq('color', item.color)
+        .eq('size', item.size)
+        .eq('sold', false)
+        .limit(1);
+    }
 
     await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/send-confirmation`, {
       method: 'POST',
@@ -26,7 +50,7 @@ export async function POST(req: Request) {
       body: JSON.stringify({
         email: customerEmail,
         name: customerName,
-        items: session.metadata?.items ? JSON.parse(session.metadata.items) : [],
+        items: parsedItems,
         total: session.amount_total / 100,
         orderId,
       }),
