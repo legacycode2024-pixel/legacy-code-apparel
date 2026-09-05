@@ -30,6 +30,7 @@ type InventoryRow = {
   color: string;
   price: number;
   sold: boolean;
+  design: string;
 };
 
 const preorderProducts = [
@@ -61,6 +62,7 @@ const preorderProducts = [
 
 function PreorderCard({ product, inventory }: { product: typeof preorderProducts[0]; inventory: InventoryRow[] }) {
   const productRows = inventory.filter(r => r.product === product.name);
+  const currentDesign = productRows.find(r => !r.sold)?.design || '';
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
   const [selectedColor, setSelectedColor] = useState('');
   const [selectedSize, setSelectedSize] = useState('');
@@ -89,6 +91,9 @@ function PreorderCard({ product, inventory }: { product: typeof preorderProducts
       <div style={{ padding: '24px' }}>
         <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '600', color: '#0a1931', lineHeight: '1.2' }}>{product.name}</h3>
         <p style={{ margin: '0 0 12px', fontSize: '13px', color: '#666', lineHeight: '1.7', fontStyle: 'italic' }}>{product.tagline}</p>
+        {currentDesign && (
+          <p style={{ margin: '0 0 12px', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', color: product.accent }}>DESIGN: {currentDesign.toUpperCase()}</p>
+        )}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', padding: '12px 0', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
           <p style={{ margin: 0, fontSize: '22px', fontWeight: '700', color: product.accent }}>${product.price.toFixed(2)}</p>
         </div>

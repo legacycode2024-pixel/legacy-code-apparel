@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   const { data, error } = await supabase
-    .from('inventory')
+    .from('Inventory')
     .select('*')
     .eq('sold', false);
 

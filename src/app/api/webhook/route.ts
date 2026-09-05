@@ -35,7 +35,7 @@ export async function POST(req: Request) {
 
     for (const item of parsedItems) {
       await supabase
-        .from('inventory')
+        .from('Inventory')
         .update({ sold: true })
         .eq('product', item.product)
         .eq('color', item.color)
