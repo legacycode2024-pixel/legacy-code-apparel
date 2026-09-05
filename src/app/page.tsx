@@ -197,7 +197,7 @@ export default function Home() {
       <EmailPopup />
 
       <div style={{ backgroundColor: '#c9a84c', padding: '10px 20px', textAlign: 'center' }}>
-        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 PREORDER LIVE — 8 DAY WINDOW &nbsp;·&nbsp; ONE-OF-ONE PIECES, ONCE THEY'RE GONE THEY'RE GONE</p>
+        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 PREORDER LIVE — 2 WEEK WINDOW &nbsp;·&nbsp; ONE-OF-ONE PIECES, ONCE THEY'RE GONE THEY'RE GONE</p>
       </div>
 
       <section style={{ position: 'relative', textAlign: 'center', padding: '100px 20px 80px', color: '#fff', overflow: 'hidden', minHeight: '600px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -262,7 +262,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>📦</p>
-            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>PREORDER — 8 DAY WINDOW</p>
+            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>PREORDER — 2 WEEK WINDOW</p>
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>1️⃣</p>
