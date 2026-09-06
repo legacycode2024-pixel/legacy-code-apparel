@@ -31,14 +31,14 @@ export default function AboutPage() {
 
         <div style={{ backgroundColor: '#111', color: '#fff', padding: '40px', borderRadius: '16px', marginBottom: '48px', textAlign: 'center' }}>
           <p style={{ fontSize: '22px', lineHeight: '1.8', fontStyle: 'italic', margin: 0, color: '#eee' }}>
-            "This isn't just a t-shirt with words on it. It's a dedication to the values that define character, shape purpose, and leave something worth remembering."
+            "This isn't just a piece with words on it. It's a dedication to the values that define character, shape purpose, and leave something worth remembering."
           </p>
         </div>
 
         <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '48px', marginBottom: '48px' }}>
           <h2 style={{ fontSize: '11px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', color: '#999', marginBottom: '16px' }}>WHAT YOU'RE WEARING</h2>
           <p style={{ fontSize: '18px', lineHeight: '1.9', color: '#333', margin: 0 }}>
-            Every Legacy Code tee is a statement of commitment — to excellence, to ethical living, and to a tradition of honor that never goes out of style. The LC mark, our founder's initials, is more than a logo. It's a promise.
+            Every Legacy Code piece is a statement of commitment — to excellence, to ethical living, and to a tradition of honor that never goes out of style. The LC mark, our founder's initials, is more than a logo. It's a promise.
           </p>
         </div>
 
