@@ -48,6 +48,9 @@ export default function AboutPage() {
         <p style={{ fontSize: '18px', lineHeight: '1.9', color: '#333', margin: '0 0 24px' }}>
           From Atlanta to the streets of New York City — Legacy Code Apparel hit Times Square in 2026. This is what happens when you stand on your values and refuse to quit.
         </p>
+        <p style={{ fontSize: '18px', lineHeight: '1.9', color: '#333', margin: '0 0 24px' }}>
+          Legacy Code Apparel started as a tee brand out of Atlanta, then grew into something bigger — heavyweight hoodies, sweatshirts, and crops built the same way we started: on values, not trends.
+        </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '16px', marginBottom: '24px' }}>
           <img src='/images/nyc-billboard.png' alt='Legacy Code Apparel Billboard in NYC' style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }} />
           <img src='/images/nyc-times-square-1.jpg' alt='Legacy Code Apparel founder in Times Square' style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }} />
