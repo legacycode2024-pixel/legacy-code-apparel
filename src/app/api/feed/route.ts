@@ -1,11 +1,8 @@
 export async function GET() {
   const products = [
-    { id: 'stand-on-it', title: 'Stand On It Tee', description: 'For the ones who never fold. Stand on your word, your principles, your convictions no matter the pressure.', price: '30.00', link: 'https://legacycodeapparel.store/products/stand-on-it', image: 'https://legacycodeapparel.store/images/standonit-back.png' },
-    { id: 'actions-over-applause', title: 'Actions Over Applause Tee', description: 'You do not need a crowd to validate what you do. Let your actions speak.', price: '30.00', link: 'https://legacycodeapparel.store/products/actions-over-applause', image: 'https://legacycodeapparel.store/images/actions-front.png' },
-    { id: 'principles-over-popularity', title: 'Principles Over Popularity Tee', description: 'Trends fade. Principles last. Never trade your values for validation.', price: '30.00', link: 'https://legacycodeapparel.store/products/principles-over-popularity', image: 'https://legacycodeapparel.store/images/principles-front.png' },
-    { id: 'right-over-easy', title: 'Right Over Easy Tee', description: 'The easy road and the right road are rarely the same. Choose right every time.', price: '30.00', link: 'https://legacycodeapparel.store/products/right-over-easy', image: 'https://legacycodeapparel.store/images/right-front.png' },
-    { id: 'word-is-bond', title: 'Word Is Bond Tee', description: 'No signature required. Your word is your contract.', price: '30.00', link: 'https://legacycodeapparel.store/products/word-is-bond', image: 'https://legacycodeapparel.store/images/word-front.png' },
-    { id: 'i-couldve-but-i-didnt', title: 'I Couldve But I Didnt Tee', description: 'Having the power to do something and choosing not to is real strength.', price: '30.00', link: 'https://legacycodeapparel.store/products/i-couldve-but-i-didnt', image: 'https://legacycodeapparel.store/images/couldve-front.png' },
+    { id: 'no-cap', title: 'No Cap Hoodie', description: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric.", price: '71.00', link: 'https://legacycodeapparel.store/#shop', image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788704201/ChatGPT_Image_Sep_6_2026_at_10_13_58_AM_sl2yop.png' },
+    { id: 'consistent-by-choice', title: 'Consistent by Choice Sweatshirt', description: "Showing up isn't luck. It's a decision you make again, every single day, even when nobody's watching. Heavyweight fleece.", price: '61.00', link: 'https://legacycodeapparel.store/#shop', image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638967/ChatGPT_Image_Sep_5_2026_at_04_09_02_PM_adky9z.png' },
+    { id: 'nothing-to-hide', title: 'Nothing to Hide Crop', description: 'This crop is for showing up as you actually are — no performance, no apology. Being seen isn\'t a risk when you already like who you are.', price: '53.00', link: 'https://legacycodeapparel.store/#shop', image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png' },
   ];
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -13,7 +10,7 @@ export async function GET() {
   <channel>
     <title>Legacy Code Apparel</title>
     <link>https://legacycodeapparel.store</link>
-    <description>Integrity Tees with Meaning</description>
+    <description>Integrity Pieces with Meaning</description>
     ${products.map(p => `
     <item>
       <g:id>${p.id}</g:id>
