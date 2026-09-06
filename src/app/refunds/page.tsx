@@ -53,6 +53,7 @@ export default function RefundsPage() {
             <li>Items returned after 14 days of delivery</li>
             <li>Items that have been worn, washed or altered</li>
             <li>Sale items</li>
+            <li>Preorder pieces — each piece is one-of-one and final sale due to limited availability</li>
           </ul>
         </div>
 
@@ -66,7 +67,7 @@ export default function RefundsPage() {
         </div>
 
       </section>
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2025 LEGACY CODE APPAREL — ALL RIGHTS RESERVED</footer>
+      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL — ALL RIGHTS RESERVED</footer>
     </main>
   );
 }
