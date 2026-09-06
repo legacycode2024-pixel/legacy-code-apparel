@@ -21,12 +21,9 @@ export default function SizeGuidePage() {
           </thead>
           <tbody>
             {[
-              { size: 'S', chest: '34-36', length: '27', sleeve: '8' },
               { size: 'M', chest: '38-40', length: '28', sleeve: '8.5' },
               { size: 'L', chest: '42-44', length: '29', sleeve: '9' },
               { size: 'XL', chest: '46-48', length: '30', sleeve: '9.5' },
-              { size: '2XL', chest: '50-52', length: '31', sleeve: '10' },
-              { size: '3XL', chest: '54-56', length: '32', sleeve: '10.5' },
             ].map((row, index) => (
               <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f4f1eb', borderBottom: '1px solid #e5e5e5' }}>
                 <td style={{ padding: '14px', fontWeight: '700', color: '#0a1931' }}>{row.size}</td>
@@ -45,7 +42,7 @@ export default function SizeGuidePage() {
         </div>
         <p style={{ marginTop: '32px', fontSize: '15px', color: '#666', textAlign: 'center' }}>Not sure about your size? Email us at <a href="mailto:support@legacycodeapparel.store" style={{ color: '#0a1931', fontWeight: '600' }}>support@legacycodeapparel.store</a></p>
       </section>
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2025 LEGACY CODE APPAREL</footer>
+      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL</footer>
     </main>
   );
 }
