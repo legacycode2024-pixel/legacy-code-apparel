@@ -102,7 +102,7 @@ function PreorderCard({ product, inventory }: { product: typeof preorderProducts
           <div style={{ padding: '14px', textAlign: 'center', backgroundColor: '#f4f1eb', borderRadius: '8px', fontWeight: '700', color: '#888' }}>SOLD OUT</div>
         ) : (
           <>
-            <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: '700', color: '#888', letterSpacing: '1px' }}>COLOR</p>
+            <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: '700', color: '#888', letterSpacing: '1px' }}>COLOR <span style={{ fontWeight: 400, color: '#aaa' }}>(each 1 of 1)</span></p>
             <div style={{ display: 'flex', gap: '6px', marginBottom: '12px', flexWrap: 'wrap' }}>
               {availableColors.map(color => (
                 <button key={color} onClick={e => { e.stopPropagation(); setSelectedColor(color); setSelectedSize(''); }} style={{ padding: '6px 12px', border: selectedColor === color ? `2px solid ${product.accent}` : '1px solid #ddd', borderRadius: '6px', backgroundColor: selectedColor === color ? product.accent : '#fff', color: selectedColor === color ? '#fff' : '#0a1931', fontSize: '12px', fontWeight: '600', cursor: 'pointer' }}>{color}</button>
