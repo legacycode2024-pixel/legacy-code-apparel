@@ -15,7 +15,7 @@ export default function AboutPage() {
         <div style={{ marginBottom: '48px' }}>
           <h2 style={{ fontSize: '11px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', color: '#999', marginBottom: '16px' }}>THE BEGINNING</h2>
           <p style={{ fontSize: '18px', lineHeight: '1.9', color: '#333', margin: 0 }}>
-            Legacy Code Apparel was founded in 2025, rooted in one question — in a world that rewards compromise, where are the people who still choose integrity? The ones who stand firm in their values and do the right thing not because it's easy, but because it defines who they are.
+            Legacy Code Apparel was founded in 2024, rooted in one question — in a world that rewards compromise, where are the people who still choose integrity? The ones who stand firm in their values and do the right thing not because it's easy, but because it defines who they are.
           </p>
         </div>
 
