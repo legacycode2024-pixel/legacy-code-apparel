@@ -31,7 +31,7 @@ export default function AboutPage() {
 
         <div style={{ backgroundColor: '#111', color: '#fff', padding: '40px', borderRadius: '16px', marginBottom: '48px', textAlign: 'center' }}>
           <p style={{ fontSize: '22px', lineHeight: '1.8', fontStyle: 'italic', margin: 0, color: '#eee' }}>
-            "This isn't just a piece with words on it. It's a dedication to the values that define character, shape purpose, and leave something worth remembering."
+            "These aren't just pieces with words on them. They are a dedication to the values that define character, shape purpose, and leave something worth remembering."
           </p>
         </div>
 
