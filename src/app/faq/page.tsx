@@ -22,7 +22,7 @@ const faqGroups = [
     faqs: [
       { question: 'What sizes do you offer?', answer: 'We offer M, L and XL on all styles.' },
       { question: 'How do the pieces fit?', answer: 'Our hoodies, sweatshirts, and crops have a relaxed, true-to-size fit. Size up if you prefer an oversized look.' },
-      { question: 'What are your pieces made of?', answer: 'Heavyweight fleece — 53% polyester, 42% cotton, 5% other fibers. Soft, durable, and built to hold up wear after wear.' },
+      { question: 'What are your pieces made of?', answer: 'Heavyweight polyester-cotton blend fleece (exact ratio varies slightly by piece), plus a small percentage of other fibers. Soft, durable, and built to hold up wear after wear.' },
     ],
   },
   {
