@@ -5,7 +5,7 @@ const faqGroups = [
     category: 'SHIPPING',
     faqs: [
       { question: 'How long does shipping take?', answer: 'Standard shipping takes 3-5 business days. You will receive a tracking number via email once your order ships.' },
-      { question: 'Do you offer free shipping?', answer: 'Yes! We offer free shipping on all orders over $45. Orders under $50 ship for $5.01.' },
+      { question: 'Do you offer free shipping?', answer: 'Yes! We offer free shipping on all orders over $50. Orders under $50 ship for $5.01.' },
       { question: 'Do you ship internationally?', answer: 'Currently we ship within the United States only. International shipping is coming soon!' },
       { question: 'How do I track my order?', answer: 'Once your order ships you will receive a confirmation email with a tracking number.' },
     ],
@@ -20,9 +20,9 @@ const faqGroups = [
   {
     category: 'SIZING & FIT',
     faqs: [
-      { question: 'What sizes do you offer?', answer: 'We offer S, M, L, XL, 2XL and 3XL on all styles.' },
-      { question: 'How do the tees fit?', answer: 'Our tees have a relaxed unisex fit and are true to size. Size up if you prefer an oversized look.' },
-      { question: 'What are your tees made of?', answer: 'Anvil by Gildan combed ring-spun cotton, 4.5 oz. Soft, lightweight and breathable.' },
+      { question: 'What sizes do you offer?', answer: 'We offer M, L and XL on all styles.' },
+      { question: 'How do the pieces fit?', answer: 'Our hoodies, sweatshirts, and crops have a relaxed, true-to-size fit. Size up if you prefer an oversized look.' },
+      { question: 'What are your pieces made of?', answer: 'Heavyweight fleece — 53% polyester, 42% cotton, 5% other fibers. Soft, durable, and built to hold up wear after wear.' },
     ],
   },
   {
@@ -67,7 +67,7 @@ export default function FAQPage() {
           <a href="/contact" style={{ display: 'inline-block', padding: '14px 36px', border: '2px solid #c9a84c', color: '#c9a84c', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px' }}>CONTACT US</a>
         </div>
       </section>
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2025 LEGACY CODE APPAREL</footer>
+      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL</footer>
     </main>
   );
 }
