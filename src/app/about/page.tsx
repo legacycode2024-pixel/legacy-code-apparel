@@ -63,7 +63,7 @@ export default function AboutPage() {
 
       </section>
 
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#111', color: '#666', fontSize: '13px', letterSpacing: '1px' }}>© 2025 LEGACY CODE APPAREL</footer>
+      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#111', color: '#666', fontSize: '13px', letterSpacing: '1px' }}>© 2024 LEGACY CODE APPAREL</footer>
     </main>
   );
 }
