@@ -44,7 +44,7 @@ export async function POST(req: Request) {
       },
     };
 
-    if (total >= 45) {
+    if (total >= 50) {
       sessionConfig.shipping_options = [
         {
           shipping_rate_data: {

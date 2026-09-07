@@ -282,7 +282,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '13px', letterSpacing: '1px', borderTop: '2px solid #c9a84c' }}>© 2024 LEGACY CODE APPAREL</footer>
     </main>
   );
 }

@@ -7,7 +7,7 @@ export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, total } = useCart();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const freeShipping = total >= 45;
+  const freeShipping = total >= 50;
   const hasBundle = cart.reduce((sum, i) => sum + i.quantity, 0) >= 2;
   const shippingCost = freeShipping ? 0 : 5.01;
   const orderTotal = total + shippingCost;
