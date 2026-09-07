@@ -94,8 +94,9 @@ function PreorderCard({ product, inventory }: { product: typeof preorderProducts
         {currentDesign && (
           <p style={{ margin: '0 0 12px', fontSize: '11px', fontWeight: 700, letterSpacing: '1px', color: product.accent }}>DESIGN: {currentDesign.toUpperCase()}</p>
         )}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', padding: '12px 0', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
-          <p style={{ margin: 0, fontSize: '22px', fontWeight: '700', color: product.accent }}>${product.price.toFixed(2)}</p>
+        <div style={{ marginBottom: '16px', padding: '12px 0', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
+          <p style={{ margin: '0 0 4px', fontSize: '22px', fontWeight: '700', color: product.accent }}>${product.price.toFixed(2)}</p>
+          <p style={{ margin: 0, fontSize: '11px', color: '#999' }}>One-of-one · Heavyweight fleece · Never restocked</p>
         </div>
 
         {isSoldOut ? (
@@ -221,7 +222,8 @@ export default function Home() {
       <section id='shop' style={{ padding: '60px 20px' }}>
         <p style={{ textAlign: 'center', fontSize: '12px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '8px', color: '#c9a84c' }}>THE COLLECTION</p>
         <h2 style={{ textAlign: 'center', fontSize: '36px', fontWeight: '400', color: '#0a1931', marginBottom: '8px' }}>Preorder Now</h2>
-        <p style={{ textAlign: 'center', fontSize: '14px', color: '#888', marginBottom: '32px' }}>Each piece is one-of-one. Once a size/color sells, it's gone for good.</p>
+        <p style={{ textAlign: 'center', fontSize: '14px', color: '#888', marginBottom: '8px' }}>Each piece is one-of-one. Once a size/color sells, it's gone for good.</p>
+        <p style={{ textAlign: 'center', fontSize: '13px', color: '#aaa', marginBottom: '32px' }}>Heavyweight fleece. Never restocked. Never mass produced.</p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
           {preorderProducts.map(product => (
