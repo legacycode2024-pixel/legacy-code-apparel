@@ -43,9 +43,6 @@ export default function CartPage() {
             Add <strong>${(50 - total).toFixed(2)}</strong> more for free shipping!
           </p>
         )}
-        {hasBundle && (
-          <p style={{ fontSize: "14px", color: "green", marginBottom: "24px" }}>You qualify for 20% bundle discount — use code BUNDLE20 at checkout.</p>
-        )}
         {freeShipping && (
           <p style={{ fontSize: '14px', color: 'green', marginBottom: '24px' }}>
             You qualify for free shipping!
