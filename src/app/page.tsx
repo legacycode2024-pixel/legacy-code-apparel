@@ -33,7 +33,17 @@ type InventoryRow = {
   design: string;
 };
 
-const preorderProducts = [
+type PreorderProduct = {
+  name: string;
+  price: number;
+  tagline: string;
+  why: string;
+  accent: string;
+  image: string;
+  image2?: string;
+};
+
+const preorderProducts: PreorderProduct[] = [
   {
     name: 'No Cap',
     price: 71,
@@ -41,6 +51,7 @@ const preorderProducts = [
     why: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric, built for the ones who keep it that way.",
     accent: '#c9a84c',
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788704201/ChatGPT_Image_Sep_6_2026_at_10_13_58_AM_sl2yop.png',
+    image2: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788961819/D13078E4-AB75-4C99-AABF-1A2066A8CE70_wf72gn.jpg',
   },
   {
     name: 'Consistent by Choice',
@@ -60,7 +71,8 @@ const preorderProducts = [
   },
 ];
 
-function PreorderCard({ product, inventory }: { product: typeof preorderProducts[0]; inventory: InventoryRow[] }) {
+function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
+  const [showBack, setShowBack] = useState(false);
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
@@ -85,8 +97,11 @@ function PreorderCard({ product, inventory }: { product: typeof preorderProducts
   return (
     <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', borderTop: `4px solid ${product.accent}` }}>
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
-        <Image src={product.image} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
+        <Image src={showBack && product.image2 ? product.image2 : product.image} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
+        {product.image2 && (
+          <button onClick={(e) => { e.stopPropagation(); setShowBack(!showBack); }} style={{ position: 'absolute', bottom: '12px', right: '12px', backgroundColor: 'rgba(10,25,49,0.85)', color: '#fff', border: 'none', borderRadius: '20px', padding: '6px 14px', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>{showBack ? 'FRONT' : 'BACK'}</button>
+        )}
       </div>
       <div style={{ padding: '24px' }}>
         <h3 style={{ margin: '0 0 8px', fontSize: '20px', fontWeight: '600', color: '#0a1931', lineHeight: '1.2' }}>{product.name}</h3>
