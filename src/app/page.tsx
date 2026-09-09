@@ -85,7 +85,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
   const router = useRouter();
 
   const sizesForColor = (color: string) =>
-    productRows.filter(r => r.color === color && !r.sold).map(r => r.size);
+    Array.from(new Set(productRows.filter(r => r.color === color && !r.sold).map(r => r.size)));
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
