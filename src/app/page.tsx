@@ -100,7 +100,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
         <Image src={showBack && product.image2 ? product.image2 : product.image} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
         {product.image2 && (
-          <button onClick={(e) => { e.stopPropagation(); setShowBack(!showBack); }} style={{ position: 'absolute', bottom: '12px', right: '12px', backgroundColor: 'rgba(10,25,49,0.85)', color: '#fff', border: 'none', borderRadius: '20px', padding: '6px 14px', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>{showBack ? 'FRONT' : 'BACK & RIGHT SLEEVE'}</button>
+          <button onClick={(e) => { e.stopPropagation(); setShowBack(!showBack); }} style={{ position: 'absolute', bottom: '12px', right: '12px', backgroundColor: 'rgba(10,25,49,0.85)', color: '#fff', border: 'none', borderRadius: '20px', padding: '6px 14px', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>{showBack ? 'BACK' : 'RIGHT SLEEVE'}</button>
         )}
       </div>
       <div style={{ padding: '24px' }}>
