@@ -61,7 +61,8 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Heavyweight fleece for the days you show up anyway.',
     why: "Showing up isn't luck. It's a decision you make again, every single day, even when nobody's watching. This sweatshirt is for the ones who don't need a reason to keep going — discipline over motivation, every time. Heavyweight fleece. Built to be worn as often as the message needs saying.",
     accent: '#1a3a6b',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638967/ChatGPT_Image_Sep_5_2026_at_04_09_02_PM_adky9z.png',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788992443/763B4F06-4A7B-4B2A-9A0E-1E7078DCA893_npp8bu.jpg',
+    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638967/ChatGPT_Image_Sep_5_2026_at_04_09_02_PM_adky9z.png',
   },
   {
     name: 'Nothing to Hide',
