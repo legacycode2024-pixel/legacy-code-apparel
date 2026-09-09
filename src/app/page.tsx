@@ -40,7 +40,8 @@ type PreorderProduct = {
   why: string;
   accent: string;
   image: string;
-  image2?: string;
+  imageBack?: string;
+  imageSleeve?: string;
 };
 
 const preorderProducts: PreorderProduct[] = [
@@ -50,8 +51,9 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Hood up, truth out.',
     why: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric, built for the ones who keep it that way.",
     accent: '#c9a84c',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788704201/ChatGPT_Image_Sep_6_2026_at_10_13_58_AM_sl2yop.png',
-    image2: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788961819/D13078E4-AB75-4C99-AABF-1A2066A8CE70_wf72gn.jpg',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788988611/5143FC13-BAED-4DC1-A872-AC4CF9304A98_iykbed.jpg',
+    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788704201/ChatGPT_Image_Sep_6_2026_at_10_13_58_AM_sl2yop.png',
+    imageSleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788961819/D13078E4-AB75-4C99-AABF-1A2066A8CE70_wf72gn.jpg',
   },
   {
     name: 'Consistent by Choice',
@@ -72,7 +74,8 @@ const preorderProducts: PreorderProduct[] = [
 ];
 
 function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
-  const [showBack, setShowBack] = useState(false);
+  const [view, setView] = useState<'front' | 'back' | 'sleeve'>('front');
+  const activeImage = view === 'back' && product.imageBack ? product.imageBack : view === 'sleeve' && product.imageSleeve ? product.imageSleeve : product.image;
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
@@ -97,10 +100,18 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
   return (
     <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', borderTop: `4px solid ${product.accent}` }}>
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
-        <Image src={showBack && product.image2 ? product.image2 : product.image} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
+        <Image src={activeImage} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
-        {product.image2 && (
-          <button onClick={(e) => { e.stopPropagation(); setShowBack(!showBack); }} style={{ position: 'absolute', bottom: '12px', right: '12px', backgroundColor: 'rgba(10,25,49,0.85)', color: '#fff', border: 'none', borderRadius: '20px', padding: '6px 14px', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>{showBack ? 'RIGHT SLEEVE' : 'BACK'}</button>
+        {(product.imageBack || product.imageSleeve) && (
+          <div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}>
+            <button onClick={(e) => { e.stopPropagation(); setView('front'); }} style={{ backgroundColor: view === 'front' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'front' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FRONT</button>
+            {product.imageBack && (
+              <button onClick={(e) => { e.stopPropagation(); setView('back'); }} style={{ backgroundColor: view === 'back' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'back' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>BACK</button>
+            )}
+            {product.imageSleeve && (
+              <button onClick={(e) => { e.stopPropagation(); setView('sleeve'); }} style={{ backgroundColor: view === 'sleeve' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'sleeve' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>SLEEVE</button>
+            )}
+          </div>
         )}
       </div>
       <div style={{ padding: '24px' }}>
