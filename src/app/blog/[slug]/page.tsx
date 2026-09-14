@@ -2,6 +2,20 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'what-it-means-to-wear-a-piece-no-one-else-has',
+    date: 'September 7, 2026',
+    category: 'BRAND STORY',
+    title: 'What It Means to Wear a Piece No One Else Has',
+    content: [
+      'There is a difference between owning something and owning the something. Most clothes you buy exist in the thousands — same shirt, same size, same print, sitting in closets all over the country. You blend in without even trying to.',
+      'A Legacy Code piece does not work that way. When you buy one, you are not buying an item off a shelf that gets restocked next week. You are buying the only one. The exact size, the exact color, the exact piece — it exists once, and then it is yours.',
+      'That changes what it means to wear it. It is not just a hoodie or a sweatshirt anymore. It is proof you moved when it mattered, that you did not wait around for a restock that was never coming. There is a quiet kind of confidence in that — knowing nobody else in the room is wearing what you are wearing, not because you tried to be different, but because there genuinely is not another one.',
+      'We did not build it this way to create hype. We built it this way because that is how we think things worth having should work — rare, intentional, and real. Not mass produced. Not disposable. Made once, worn with meaning.',
+      'If you are wearing Legacy Code, you are not wearing a product. You are wearing the only one.',
+    ],
+  },
+
+  {
     slug: 'why-one-of-one-streetwear-matters',
     date: 'September 6, 2026',
     category: 'BRAND STORY',
