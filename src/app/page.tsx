@@ -70,7 +70,8 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Comfortable in your own skin, on purpose.',
     why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true.",
     accent: '#722f37',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789396046/Image_5_vapxz7.jpg',
+    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
   },
 ];
 
