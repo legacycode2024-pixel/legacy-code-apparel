@@ -16,7 +16,7 @@ export default function CartPage() {
     const res = await fetch('/api/checkout', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ items: cart }),
+      body: JSON.stringify({ items: cart, anonId: (window as any).opinly?.anonId }),
     });
     const data = await res.json();
     if (data.url) {

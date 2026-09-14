@@ -93,6 +93,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
     if (!selectedColor) { alert('Please select a color'); return; }
     if (!selectedSize) { alert('Please select a size'); return; }
     addToCart({ name: `${product.name} (${selectedColor})`, price: product.price, size: selectedSize, quantity: 1, image: product.image });
+    (window as any).opinly?.track('add_to_cart', { value: product.price, currency: 'USD', items: [product.name] });
     router.push('/cart');
   };
 

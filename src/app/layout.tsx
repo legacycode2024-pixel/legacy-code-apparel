@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { CartProvider } from './context/CartContext';
 import Footer from './components/Footer';
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         ` }} />
       </head>
       <body style={{ margin: 0, padding: 0 }}>
+        <Script id="opinly-pixel" strategy="afterInteractive" src="https://static.opinly.ai/p.js" data-key="pk-oHN002lAsfur_zTeYjrnj_4ZvKe4z9h5BaUDHkF" />
         <CartProvider>
           {children}
           <Footer />

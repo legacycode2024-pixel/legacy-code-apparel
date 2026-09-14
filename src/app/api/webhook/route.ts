@@ -1,6 +1,7 @@
 import Stripe from 'stripe';
 import { NextResponse } from 'next/server';
 import { supabase } from '../../lib/supabase';
+import { createOpinlyClient } from '@opinly/backend';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
@@ -32,6 +33,13 @@ export async function POST(req: Request) {
         size,
       };
     });
+
+    const opinly = createOpinlyClient();
+    await opinly.track(
+      'purchase',
+      { value: session.amount_total / 100, currency: 'USD' },
+      { externalEventId: orderId, anonId: session.metadata?.anonId || undefined, email: customerEmail }
+    );
 
     for (const item of parsedItems) {
       await supabase

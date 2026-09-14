@@ -5,7 +5,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(req: Request) {
   try {
-    const { items } = await req.json();
+    const { items, anonId } = await req.json();
 
     const total = items.reduce((sum: number, item: any) => sum + item.price * item.quantity, 0);
 
@@ -41,6 +41,7 @@ export async function POST(req: Request) {
       },
       metadata: {
         items: itemsSummary,
+        anonId: anonId || '',
       },
     };
 
