@@ -71,7 +71,7 @@ const preorderProducts: PreorderProduct[] = [
     why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true. Finished with a utility belt detail at the hem — a small nod to holding things together, on purpose.",
     accent: '#722f37',
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789417910/402dcb02-f3cd-422a-ba44-ea701311375c_2_kvx9nr.jpg',
-    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789419070/Image_1_q5bfbu.jpg',
+    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
   },
 ];
 
