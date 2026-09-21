@@ -105,7 +105,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
   return (
     <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', borderTop: `4px solid ${product.accent}` }}>
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
-        <Image src={activeImage} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
+        <Image src={activeImage} alt={product.name} fill style={{ objectFit: view === 'model' ? 'contain' : 'cover' }} sizes="280px" />
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
         {(product.imageBack || product.imageSleeve || product.imageModel) && (
           <div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}>
