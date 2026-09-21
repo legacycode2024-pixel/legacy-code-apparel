@@ -2,6 +2,20 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'small-details-you-wont-notice-until-wearing-it',
+    date: 'September 8, 2026',
+    category: 'BRAND STORY',
+    title: "The Small Details You Won't Notice Until You're Wearing It",
+    content: [
+      'Most streetwear brands stop at the print. Design goes on the fabric, fabric goes on the rack, rack goes to checkout. Legacy Code does not stop there.',
+      'Look closer at "Nothing to Hide" and you will find a utility belt detail at the hem — small, deliberate, there because it belongs there. "No Cap" carries patch details on the chest and right sleeve, the kind of thing you would only notice up close. "Consistent by Choice" carries the founder\'s own signature, stitched right into the sleeve — not a printed mark, a personal one.',
+      'None of these details are required. A hoodie works fine without a patch. A sweatshirt sells without a signature. We added them anyway, because that is the difference between clothing made to move units and clothing made to mean something.',
+      'If you have ever bought something and felt like it was made carelessly, you know what that absence feels like. We built Legacy Code so you would never have to feel that with us.',
+      'That is the whole point of one-of-one. Not just rarity — care. The kind you can only put into something when you are not making a thousand of it.',
+    ],
+  },
+
+  {
     slug: 'what-it-means-to-wear-a-piece-no-one-else-has',
     date: 'September 7, 2026',
     category: 'BRAND STORY',
