@@ -42,6 +42,7 @@ type PreorderProduct = {
   image: string;
   imageBack?: string;
   imageSleeve?: string;
+  imageModel?: string;
 };
 
 const preorderProducts: PreorderProduct[] = [
@@ -54,6 +55,7 @@ const preorderProducts: PreorderProduct[] = [
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788988611/5143FC13-BAED-4DC1-A872-AC4CF9304A98_iykbed.jpg',
     imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788704201/ChatGPT_Image_Sep_6_2026_at_10_13_58_AM_sl2yop.png',
     imageSleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788961819/D13078E4-AB75-4C99-AABF-1A2066A8CE70_wf72gn.jpg',
+    imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789963828/5FC67237-1DF0-4D7E-AD4C-50E13780490E_jmrr0d.png',
   },
   {
     name: 'Consistent by Choice',
@@ -76,8 +78,8 @@ const preorderProducts: PreorderProduct[] = [
 ];
 
 function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
-  const [view, setView] = useState<'front' | 'back' | 'sleeve'>('front');
-  const activeImage = view === 'back' && product.imageBack ? product.imageBack : view === 'sleeve' && product.imageSleeve ? product.imageSleeve : product.image;
+  const [view, setView] = useState<'front' | 'back' | 'sleeve' | 'model'>('front');
+  const activeImage = view === 'back' && product.imageBack ? product.imageBack : view === 'sleeve' && product.imageSleeve ? product.imageSleeve : view === 'model' && product.imageModel ? product.imageModel : product.image;
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
@@ -105,7 +107,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
         <Image src={activeImage} alt={product.name} fill style={{ objectFit: 'cover' }} sizes="280px" />
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
-        {(product.imageBack || product.imageSleeve) && (
+        {(product.imageBack || product.imageSleeve || product.imageModel) && (
           <div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}>
             <button onClick={(e) => { e.stopPropagation(); setView('front'); }} style={{ backgroundColor: view === 'front' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'front' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FRONT</button>
             {product.imageBack && (
@@ -113,6 +115,9 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
             )}
             {product.imageSleeve && (
               <button onClick={(e) => { e.stopPropagation(); setView('sleeve'); }} style={{ backgroundColor: view === 'sleeve' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'sleeve' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>SLEEVE</button>
+            )}
+            {product.imageModel && (
+              <button onClick={(e) => { e.stopPropagation(); setView('model'); }} style={{ backgroundColor: view === 'model' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'model' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>MODEL</button>
             )}
           </div>
         )}
