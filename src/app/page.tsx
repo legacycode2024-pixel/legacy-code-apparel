@@ -65,6 +65,7 @@ const preorderProducts: PreorderProduct[] = [
     accent: '#1a3a6b',
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788992443/763B4F06-4A7B-4B2A-9A0E-1E7078DCA893_npp8bu.jpg',
     imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638967/ChatGPT_Image_Sep_5_2026_at_04_09_02_PM_adky9z.png',
+    imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964520/922D4F54-7C94-49CE-B9BF-AFB209AD9CBD_lcwx9f.jpg',
   },
   {
     name: 'Nothing to Hide',
