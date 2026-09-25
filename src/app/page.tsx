@@ -100,11 +100,13 @@ const preorderProducts: PreorderProduct[] = [
 
 function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
   const [view, setView] = useState<'front' | 'back' | 'sleeve' | 'model'>('front');
-  const colorImgs = product.colorImages && selectedColor ? (product.colorImages as any)[selectedColor] : null; const activeImage = view === 'back' ? (colorImgs?.back || product.imageBack || product.image) : view === 'model' ? (colorImgs?.model || product.imageModel || product.image) : (colorImgs?.front || product.image);
+  
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
   const [selectedColor, setSelectedColor] = useState('');
+  const colorImgs = product.colorImages && selectedColor ? (product.colorImages as any)[selectedColor] : null;
+  const activeImage = view === 'back' ? (colorImgs?.back || product.imageBack || product.image) : view === 'model' ? (colorImgs?.model || product.imageModel || product.image) : (colorImgs?.front || product.image);
   const [selectedSize, setSelectedSize] = useState('');
   const { addToCart } = useCart();
   const router = useRouter();
