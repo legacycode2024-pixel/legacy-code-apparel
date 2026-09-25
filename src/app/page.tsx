@@ -80,7 +80,7 @@ const preorderProducts: PreorderProduct[] = [
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/ar_1:1,b_gen_fill,c_pad/e_enhance/r_20/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
     colorImages: {
       Black: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789417910/402dcb02-f3cd-422a-ba44-ea701311375c_2_kvx9nr.jpg',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964263/C98A6C3B-2E76-46C4-8365-42C618727593_nun4on.jpg',
         back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
         model: 'https://res.cloudinary.com/dozyoetnr/image/upload/ar_1:1,b_gen_fill,c_pad/e_enhance/r_20/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
       },
