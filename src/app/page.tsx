@@ -33,6 +33,7 @@ type InventoryRow = {
   design: string;
 };
 
+type ColorImageSet = { front: string; back: string; model: string; };
 type PreorderProduct = {
   name: string;
   price: number;
