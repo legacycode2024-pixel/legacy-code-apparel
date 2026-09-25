@@ -76,12 +76,29 @@ const preorderProducts: PreorderProduct[] = [
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789417910/402dcb02-f3cd-422a-ba44-ea701311375c_2_kvx9nr.jpg',
     imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/ar_1:1,b_gen_fill,c_pad/e_enhance/r_20/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
+    colorImages: {
+      Black: {
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789417910/402dcb02-f3cd-422a-ba44-ea701311375c_2_kvx9nr.jpg',
+        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
+        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/ar_1:1,b_gen_fill,c_pad/e_enhance/r_20/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
+      },
+      Blue: {
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
+        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/EADE9FC2-3694-4B8A-9551-957EDAA79986_vdepx6.jpg',
+        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_upof7l.jpg',
+      },
+      White: {
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_yq4pyx.jpg',
+        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_egv9xi.jpg',
+        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_seyr7x.jpg',
+      },
+    },
   },
 ];
 
 function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
   const [view, setView] = useState<'front' | 'back' | 'sleeve' | 'model'>('front');
-  const activeImage = view === 'back' && product.imageBack ? product.imageBack : view === 'sleeve' && product.imageSleeve ? product.imageSleeve : view === 'model' && product.imageModel ? product.imageModel : product.image;
+  const colorImgs = product.colorImages && selectedColor ? (product.colorImages as any)[selectedColor] : null; const activeImage = view === 'back' ? (colorImgs?.back || product.imageBack || product.image) : view === 'model' ? (colorImgs?.model || product.imageModel || product.image) : (colorImgs?.front || product.image);
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
