@@ -65,9 +65,27 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Heavyweight fleece for the days you show up anyway.',
     why: "Showing up isn't luck. It's a decision you make again, every single day, even when nobody's watching. This sweatshirt is for the ones who don't need a reason to keep going — discipline over motivation, every time. Heavyweight fleece. Built to be worn as often as the message needs saying. Finished with a signature detail on the sleeve — a personal mark on every piece.",
     accent: '#1a3a6b',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788992443/763B4F06-4A7B-4B2A-9A0E-1E7078DCA893_npp8bu.jpg',
-    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638967/ChatGPT_Image_Sep_5_2026_at_04_09_02_PM_adky9z.png',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356682/77B5E230-2FB2-44BC-933D-0F98C8701E45_tprwqe.jpg',
+    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356698/77B5E230-2FB2-44BC-933D-0F98C8701E45_xfnpn8.jpg',
+    imageSleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356724/77B5E230-2FB2-44BC-933D-0F98C8701E45_vfvtt6.jpg',
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964520/922D4F54-7C94-49CE-B9BF-AFB209AD9CBD_lcwx9f.jpg',
+    colorImages: {
+      Black: {
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356682/77B5E230-2FB2-44BC-933D-0F98C8701E45_tprwqe.jpg',
+        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356698/77B5E230-2FB2-44BC-933D-0F98C8701E45_xfnpn8.jpg',
+        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356724/77B5E230-2FB2-44BC-933D-0F98C8701E45_vfvtt6.jpg',
+      },
+      White: {
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_w9fnpu.jpg',
+        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379630/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_tzay2s.jpg',
+        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_aai6fy.jpg',
+      },
+      Blue: {
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379684/B567FFDB-137B-4F71-9E2D-B3C1EF768198_xnaomg.jpg',
+        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379695/B567FFDB-137B-4F71-9E2D-B3C1EF768198_ovp94d.jpg',
+        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379670/B567FFDB-137B-4F71-9E2D-B3C1EF768198_h98ma2.jpg',
+      },
+    },
   },
   {
     name: 'Nothing to Hide',
