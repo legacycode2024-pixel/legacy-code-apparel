@@ -44,7 +44,7 @@ type PreorderProduct = {
   imageBack?: string;
   imageSleeve?: string;
   imageModel?: string;
-  colorImages?: { [color: string]: { front: string; back: string; model: string; } };
+  colorImages?: { [color: string]: { front: string; back: string; model?: string; sleeve?: string; } };
 };
 
 const preorderProducts: PreorderProduct[] = [
@@ -106,7 +106,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
   const [selectedColor, setSelectedColor] = useState('');
   const colorImgs = product.colorImages && selectedColor ? (product.colorImages as any)[selectedColor] : null;
-  const activeImage = view === 'back' ? (colorImgs?.back || product.imageBack || product.image) : view === 'model' ? (colorImgs?.model || product.imageModel || product.image) : (colorImgs?.front || product.image);
+  const activeImage = view === 'back' ? (colorImgs?.back || product.imageBack || product.image) : view === 'sleeve' ? (colorImgs?.sleeve || product.imageSleeve || product.image) : view === 'model' ? (colorImgs?.model || product.imageModel || product.image) : (colorImgs?.front || product.image);
   const [selectedSize, setSelectedSize] = useState('');
   const { addToCart } = useCart();
   const router = useRouter();
