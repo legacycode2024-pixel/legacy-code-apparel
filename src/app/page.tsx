@@ -55,7 +55,7 @@ const preorderProducts: PreorderProduct[] = [
     why: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric, built for the ones who keep it that way. Finished with patch details on the chest and right sleeve.",
     accent: '#c9a84c',
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481935/3BCC37CE-47F1-4B41-9C52-54CEE63DC46D_ouohhx.jpg',
-    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/77B5E230-2FB2-44BC-933D-0F98C8701E45_xfnpn8.jpg',
+    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790355438/36FA33AA-BD95-49CA-BEA3-51A410ED41D5_ghgqxg.jpg',
     imageSleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/77B5E230-2FB2-44BC-933D-0F98C8701E45_vfvtt6.jpg',
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789963828/5FC67237-1DF0-4D7E-AD4C-50E13780490E_jmrr0d.png',
     colorImages: {
