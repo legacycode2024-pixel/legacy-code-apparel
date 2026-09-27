@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -111,6 +112,7 @@ export default function BlogPage() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '32px' }}>
           {posts.slice().sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
             <div key={post.slug} style={{ backgroundColor: '#fff', borderRadius: '12px', overflow: 'hidden', border: '1px solid #e5e5e5', display: 'flex', flexDirection: 'column' }}>
+              {post.image && (<div style={{ position: 'relative', height: '200px', width: '100%' }}><Image src={post.image} alt={post.title} fill style={{ objectFit: 'cover' }} sizes='400px' /></div>)}
               <div style={{ padding: '28px', flex: 1 }}>
                 <p style={{ fontSize: '11px', letterSpacing: '3px', color: '#c9a84c', marginBottom: '12px', fontFamily: 'Arial, sans-serif' }}>{post.category} — {post.date}</p>
                 <h2 style={{ fontSize: '20px', fontWeight: '600', marginBottom: '12px', lineHeight: '1.4', color: '#0a1931' }}>{post.title}</h2>
