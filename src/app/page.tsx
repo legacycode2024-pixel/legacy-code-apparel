@@ -16,7 +16,7 @@ function VideoHero() {
 
   return (
     <>
-      <video ref={vid1Ref} muted playsInline loop style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1 }}>
+      <video ref={vid1Ref} autoPlay muted playsInline loop style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0, opacity: 1 }}>
         <source src="https://res.cloudinary.com/dozyoetnr/video/upload/v1790524233/3_6_0_a685on.mp4" type="video/mp4" />
       </video>
     </>
