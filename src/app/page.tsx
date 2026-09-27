@@ -100,6 +100,7 @@ const preorderProducts: PreorderProduct[] = [
         back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379630/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_tzay2s.jpg',
         sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_aai6fy.jpg',
         model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379642/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_aai6fy.jpg',
+        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/image-to-video/i2v_4bdcce5743b04141a92facadea541d63.mp4',
       },
       Blue: {
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379684/B567FFDB-137B-4F71-9E2D-B3C1EF768198_xnaomg.jpg',
@@ -168,7 +169,11 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
   return (
     <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', borderTop: `4px solid ${product.accent}` }}>
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
-        <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'front') && colorImgs ? 'contain' : view === 'model' ? 'contain' : 'cover' }} sizes="280px" />
+        {view === 'model' && colorImgs?.modelVideo ? (
+          <video src={colorImgs.modelVideo} autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
+        ) : (
+          <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'front') && colorImgs ? 'contain' : view === 'model' ? 'contain' : 'cover' }} sizes="280px" />
+        )}
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
         {(product.imageBack || product.imageSleeve || product.imageModel) && (
           <div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}>
