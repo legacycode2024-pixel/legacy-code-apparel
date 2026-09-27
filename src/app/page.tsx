@@ -44,7 +44,7 @@ type PreorderProduct = {
   imageBack?: string;
   imageSleeve?: string;
   imageModel?: string;
-  colorImages?: { [color: string]: { front: string; back: string; model?: string; sleeve?: string; } };
+  colorImages?: { [color: string]: ColorImageSet };
 };
 
 const preorderProducts: PreorderProduct[] = [
