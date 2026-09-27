@@ -140,6 +140,7 @@ const preorderProducts: PreorderProduct[] = [
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_yq4pyx.jpg',
         back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481957/694E47C0-A691-4FD3-AB04-17CE78322E3F_ftijq4.jpg',
         model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790353021/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_egv9xi.jpg',
+        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1790494720/bfe1482e-84f4-412a-9a2f-b2b15bdf0441_qnca1q.mp4',
       },
     },
   },
