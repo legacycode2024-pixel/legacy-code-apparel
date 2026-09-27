@@ -1,4 +1,12 @@
 import Navbar from '../components/Navbar';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'FAQ & Returns | Legacy Code Apparel',
+  description: 'Frequently asked questions about Legacy Code Apparel — shipping, returns, sizing and more.',
+};
+
+
 
 const faqGroups = [
   {

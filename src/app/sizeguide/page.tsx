@@ -1,4 +1,12 @@
 import Navbar from '../components/Navbar';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Size Guide | Legacy Code Apparel',
+  description: 'Find your perfect fit with the Legacy Code Apparel size guide for hoodies, sweatshirts and crops.',
+};
+
+
 
 export default function SizeGuidePage() {
   return (

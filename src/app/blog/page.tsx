@@ -1,5 +1,13 @@
 'use client';
 import Navbar from '../components/Navbar';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'The Blog | Legacy Code Apparel',
+  description: 'Read the Legacy Code blog — stories about integrity, character, style and what it means to wear your values every day.',
+};
+
+
 
 const posts = [
   {

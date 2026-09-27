@@ -1,4 +1,12 @@
 import Navbar from '../components/Navbar';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Story | Legacy Code Apparel',
+  description: 'Learn the story behind Legacy Code Apparel — a values-based streetwear brand founded in Atlanta in 2024 rooted in integrity, character and legacy.',
+};
+
+
 
 export default function AboutPage() {
   return (
