@@ -115,7 +115,7 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Comfortable in your own skin, on purpose.',
     why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true. Finished with a utility belt detail at the hem — a small nod to holding things together, on purpose.",
     accent: '#722f37',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789417910/402dcb02-f3cd-422a-ba44-ea701311375c_2_kvx9nr.jpg',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964263/C98A6C3B-2E76-46C4-8365-42C618727593_nun4on.jpg',
     imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/ar_1:1,b_gen_fill,c_pad/e_enhance/r_20/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
     colorImages: {
