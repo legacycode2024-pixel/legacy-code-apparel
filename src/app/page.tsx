@@ -99,6 +99,7 @@ const preorderProducts: PreorderProduct[] = [
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_w9fnpu.jpg',
         back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379630/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_tzay2s.jpg',
         sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_aai6fy.jpg',
+        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379642/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_aai6fy.jpg',
       },
       Blue: {
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379684/B567FFDB-137B-4F71-9E2D-B3C1EF768198_xnaomg.jpg',
@@ -130,7 +131,7 @@ const preorderProducts: PreorderProduct[] = [
       },
       White: {
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_yq4pyx.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_egv9xi.jpg',
+        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481957/694E47C0-A691-4FD3-AB04-17CE78322E3F_ftijq4.jpg',
         model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790353021/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_egv9xi.jpg',
       },
     },
