@@ -379,7 +379,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>📦</p>
-            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>PREORDER — 2 WEEK WINDOW</p>
+            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>PREORDER — ENDS OCT 12 · SHIPS OCT 26</p>
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>1️⃣</p>
