@@ -2,6 +2,34 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'why-small-batch-drops-are-taking-over-streetwear',
+    date: 'September 27, 2026',
+    category: 'BRAND STORY',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481935/3BCC37CE-47F1-4B41-9C52-54CEE63DC46D_ouohhx.jpg',
+    title: 'Why Small Batch Drops Are Taking Over Streetwear',
+    excerpt: 'The era of mass production is over. The most sought after pieces in streetwear right now are not the ones everyone has — they are the ones almost nobody can get.',
+    content: [
+      'The streetwear game has changed.',
+      'For years the formula was simple — make thousands of the same piece, flood the market, hope people buy. Brands competed on who could produce the most, distribute the widest and advertise the loudest. The result? Everyone wearing the same thing. Nobody standing out. Nothing feeling special.',
+      'That era is over.',
+      'In 2026 the most sought after pieces in streetwear are not the ones everybody has. They are the ones almost nobody can get. Small batch drops, limited releases and one of one pieces are dominating the conversation — and for good reason.',
+      'Scarcity changes everything.',
+      'When you know only one exists in your size, you do not sleep on it. You do not wait for a sale. You do not assume it will be there tomorrow. You act — because you know it will not be. That urgency is not a marketing trick. It is the natural result of something that is genuinely rare.',
+      'Mass produced clothing can be replaced. A one of one piece cannot.',
+      'It is about meaning, not just exclusivity.',
+      'The shift toward small batch drops is not just about making something hard to get. It is about making something worth getting. Consumers in 2026 are done buying things that do not mean anything. They want pieces with a story. Pieces that reflect who they are. Pieces that say something without having to explain themselves.',
+      'That is exactly why Legacy Code Apparel was built the way it was built.',
+      'Every piece we make is one of one. Not one of a hundred. Not one of fifty. One. The only one that will ever exist in that exact size and color. When it is gone it is gone — and it is never coming back.',
+      'The brands winning right now are the ones with conviction.',
+      'The research confirms it. Small batch, frequent drops are outselling large seasonal collections. Heavyweight fleece is dominating premium streetwear orders. Consumers are choosing brands with a clear identity over brands with a loud logo.',
+      'Legacy Code has always been that brand. Values over volume. Character over clout. One of one, because integrity itself is rare.',
+      'This is not a trend for us. It is who we are.',
+      'We did not switch to small batch drops because it became popular. We built this way from the beginning because we believe that what you wear should mean something — and things that mean something do not come in unlimited quantities.',
+      'If you have been waiting for the right moment to claim your piece — this is it. Because unlike trends, one of one does not come back around.',
+    ],
+  },
+
+  {
     slug: 'small-details-you-wont-notice-until-wearing-it',
     date: 'September 8, 2026',
     category: 'BRAND STORY',

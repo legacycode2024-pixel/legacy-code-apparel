@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'why-small-batch-drops-are-taking-over-streetwear',
+    date: 'September 27, 2026',
+    category: 'BRAND STORY',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481935/3BCC37CE-47F1-4B41-9C52-54CEE63DC46D_ouohhx.jpg',
+    title: 'Why Small Batch Drops Are Taking Over Streetwear',
+    excerpt: 'The era of mass production is over. The most sought after pieces in streetwear right now are not the ones everyone has — they are the ones almost nobody can get.',
+  },
+
+  {
     slug: 'small-details-you-wont-notice-until-wearing-it',
     date: 'September 8, 2026',
     category: 'BRAND STORY',
