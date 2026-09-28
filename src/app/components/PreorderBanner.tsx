@@ -5,7 +5,7 @@ export default function PreorderBanner() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const target = new Date('May 4, 2026 23:59:59');
+    const target = new Date('October 12, 2026 23:59:59');
     const interval = setInterval(() => {
       const now = new Date();
       const diff = target.getTime() - now.getTime();
