@@ -46,6 +46,35 @@ export default function SizeGuidePage() {
           </tbody>
         </table>
 
+
+        {/* Men's Crop Section */}
+        <h2 style={{ fontSize: '24px', fontWeight: '600', color: '#0a1931', marginBottom: '8px', letterSpacing: '1px' }}>MEN&apos;S CROP FIT GUIDE</h2>
+        <p style={{ fontSize: '14px', color: '#666', marginBottom: '24px' }}>Nothing to Hide Crop — sits above the waist. Men who prefer a longer crop should size up one.</p>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '15px', marginBottom: '48px' }}>
+          <thead>
+            <tr style={{ backgroundColor: '#0a1931', color: '#c9a84c' }}>
+              <th style={{ padding: '14px', textAlign: 'left', letterSpacing: '1px' }}>SIZE</th>
+              <th style={{ padding: '14px', textAlign: 'center', letterSpacing: '1px' }}>CHEST</th>
+              <th style={{ padding: '14px', textAlign: 'center', letterSpacing: '1px' }}>LENGTH</th>
+              <th style={{ padding: '14px', textAlign: 'center', letterSpacing: '1px' }}>SLEEVE</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              { size: 'M', chest: '41-43', length: '17', sleeve: '8.5' },
+              { size: 'L', chest: '44-46', length: '18', sleeve: '9' },
+              { size: 'XL', chest: '47-49', length: '19', sleeve: '9.5' },
+            ].map((row, index) => (
+              <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f4f1eb', borderBottom: '1px solid #e5e5e5' }}>
+                <td style={{ padding: '14px', fontWeight: '700', color: '#0a1931' }}>{row.size}</td>
+                <td style={{ padding: '14px', textAlign: 'center' }}>{row.chest}&quot;</td>
+                <td style={{ padding: '14px', textAlign: 'center' }}>{row.length}&quot;</td>
+                <td style={{ padding: '14px', textAlign: 'center' }}>{row.sleeve}&quot;</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
         {/* Women's Crop Section */}
         <h2 style={{ fontSize: '24px', fontWeight: '600', color: '#0a1931', marginBottom: '8px', letterSpacing: '1px' }}>WOMEN&apos;S SIZE GUIDE</h2>
         <p style={{ fontSize: '14px', color: '#666', marginBottom: '24px' }}>Nothing to Hide Crop</p>
