@@ -32,7 +32,6 @@ export default function SizeGuidePage() {
           </thead>
           <tbody>
             {[
-              { size: 'S', chest: '38-40', length: '27', sleeve: '33' },
               { size: 'M', chest: '41-43', length: '28', sleeve: '34' },
               { size: 'L', chest: '44-46', length: '29', sleeve: '35' },
               { size: 'XL', chest: '47-49', length: '30', sleeve: '36' },
@@ -63,7 +62,6 @@ export default function SizeGuidePage() {
           </thead>
           <tbody>
             {[
-              { size: 'S', bust: '32-34', length: '16', waist: '26-28' },
               { size: 'M', bust: '35-37', length: '17', waist: '29-31' },
               { size: 'L', bust: '38-40', length: '18', waist: '32-34' },
               { size: 'XL', bust: '41-43', length: '19', waist: '35-37' },
@@ -93,7 +91,6 @@ export default function SizeGuidePage() {
           </thead>
           <tbody>
             {[
-              { size: 'S', oversized: 'XS-S', fitted: 'Size down not recommended' },
               { size: 'M', oversized: 'S-M', fitted: 'XS-S' },
               { size: 'L', oversized: 'M-L', fitted: 'S-M' },
               { size: 'XL', oversized: 'L-XL', fitted: 'M-L' },
