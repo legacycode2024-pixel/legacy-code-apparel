@@ -35,8 +35,6 @@ export default function SizeGuidePage() {
               { size: 'M', chest: '41-43', length: '28', sleeve: '34' },
               { size: 'L', chest: '44-46', length: '29', sleeve: '35' },
               { size: 'XL', chest: '47-49', length: '30', sleeve: '36' },
-              { size: '2XL', chest: '50-52', length: '31', sleeve: '37' },
-              { size: '3XL', chest: '53-55', length: '32', sleeve: '38' },
             ].map((row, index) => (
               <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f4f1eb', borderBottom: '1px solid #e5e5e5' }}>
                 <td style={{ padding: '14px', fontWeight: '700', color: '#0a1931' }}>{row.size}</td>
@@ -65,8 +63,6 @@ export default function SizeGuidePage() {
               { size: 'M', bust: '35-37', length: '17', waist: '29-31' },
               { size: 'L', bust: '38-40', length: '18', waist: '32-34' },
               { size: 'XL', bust: '41-43', length: '19', waist: '35-37' },
-              { size: '2XL', bust: '44-46', length: '20', waist: '38-40' },
-              { size: '3XL', bust: '47-49', length: '21', waist: '41-43' },
             ].map((row, index) => (
               <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f4f1eb', borderBottom: '1px solid #e5e5e5' }}>
                 <td style={{ padding: '14px', fontWeight: '700', color: '#0a1931' }}>{row.size}</td>
@@ -94,8 +90,6 @@ export default function SizeGuidePage() {
               { size: 'M', oversized: 'S-M', fitted: 'XS-S' },
               { size: 'L', oversized: 'M-L', fitted: 'S-M' },
               { size: 'XL', oversized: 'L-XL', fitted: 'M-L' },
-              { size: '2XL', oversized: 'XL-2X', fitted: 'L-XL' },
-              { size: '3XL', oversized: '2X-3X', fitted: 'XL-2X' },
             ].map((row, index) => (
               <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#fff' : '#f4f1eb', borderBottom: '1px solid #e5e5e5' }}>
                 <td style={{ padding: '14px', fontWeight: '700', color: '#0a1931' }}>{row.size}</td>
