@@ -377,7 +377,7 @@ export default function Home() {
           <p style={{ fontSize: '11px', letterSpacing: '4px', color: '#c9a84c', marginBottom: '16px', fontFamily: 'Arial, sans-serif' }}>CUSTOMER REVIEWS</p>
           <h2 style={{ fontSize: '36px', fontWeight: '400', color: '#0a1931', marginBottom: '48px', letterSpacing: '-1px' }}>What They&apos;re Saying</h2>
           <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <div style={{ backgroundColor: '#fff', borderRadius: '16px', padding: '32px', maxWidth: '420px', textAlign: 'left', border: '1px solid #e5e5e5', boxShadow: '0 4px 16px rgba(0,0,0,0.06)' }}>
+            <div style={{ backgroundColor: '#fff', borderRadius: '16px', padding: '32px', maxWidth: '380px', textAlign: 'left', border: '1px solid #e5e5e5', boxShadow: '0 4px 16px rgba(0,0,0,0.06)' }}>
               <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
                 {[1,2,3,4,5].map(i => <span key={i} style={{ color: '#c9a84c', fontSize: '18px' }}>&#9733;</span>)}
               </div>
@@ -386,6 +386,32 @@ export default function Home() {
                 <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#0a1931', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9a84c', fontWeight: '700', fontSize: '16px' }}>L</div>
                 <div>
                   <p style={{ margin: 0, fontWeight: '700', color: '#0a1931', fontSize: '14px' }}>Lenard</p>
+                  <p style={{ margin: 0, fontSize: '12px', color: '#999', letterSpacing: '1px' }}>VERIFIED BUYER</p>
+                </div>
+              </div>
+            </div>
+            <div style={{ backgroundColor: '#fff', borderRadius: '16px', padding: '32px', maxWidth: '380px', textAlign: 'left', border: '1px solid #e5e5e5', boxShadow: '0 4px 16px rgba(0,0,0,0.06)' }}>
+              <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
+                {[1,2,3,4,5].map(i => <span key={i} style={{ color: '#c9a84c', fontSize: '18px' }}>&#9733;</span>)}
+              </div>
+              <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#444', marginBottom: '20px', fontStyle: 'italic' }}>&ldquo;The quality matches the price point perfectly. Legacy Code is just getting started and I can&apos;t wait to see what comes next.&rdquo;</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#0a1931', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9a84c', fontWeight: '700', fontSize: '16px' }}>P.C.</div>
+                <div>
+                  <p style={{ margin: 0, fontWeight: '700', color: '#0a1931', fontSize: '14px' }}>P.C.</p>
+                  <p style={{ margin: 0, fontSize: '12px', color: '#999', letterSpacing: '1px' }}>VERIFIED BUYER</p>
+                </div>
+              </div>
+            </div>
+            <div style={{ backgroundColor: '#fff', borderRadius: '16px', padding: '32px', maxWidth: '380px', textAlign: 'left', border: '1px solid #e5e5e5', boxShadow: '0 4px 16px rgba(0,0,0,0.06)' }}>
+              <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
+                {[1,2,3,4,5].map(i => <span key={i} style={{ color: '#c9a84c', fontSize: '18px' }}>&#9733;</span>)}
+              </div>
+              <p style={{ fontSize: '16px', lineHeight: '1.8', color: '#444', marginBottom: '20px', fontStyle: 'italic' }}>&ldquo;The fit is perfect and knowing I&apos;m the only person in the world with this exact piece makes it that much better.&rdquo;</p>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div style={{ width: '40px', height: '40px', borderRadius: '50%', backgroundColor: '#0a1931', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9a84c', fontWeight: '700', fontSize: '16px' }}>T.R.</div>
+                <div>
+                  <p style={{ margin: 0, fontWeight: '700', color: '#0a1931', fontSize: '14px' }}>T.R.</p>
                   <p style={{ margin: 0, fontSize: '12px', color: '#999', letterSpacing: '1px' }}>VERIFIED BUYER</p>
                 </div>
               </div>
