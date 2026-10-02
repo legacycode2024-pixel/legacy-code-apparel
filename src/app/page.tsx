@@ -33,7 +33,7 @@ type InventoryRow = {
   design: string;
 };
 
-type ColorImageSet = { front: string; back: string; model?: string; sleeve?: string; modelVideo?: string; };
+type ColorImageSet = { front: string; back: string; model?: string; sleeve?: string; modelVideo?: string; modelFemale?: string; };
 type PreorderProduct = {
   name: string;
   price: number;
@@ -122,8 +122,7 @@ const preorderProducts: PreorderProduct[] = [
     why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true. Finished with a utility belt detail at the hem — a small nod to holding things together, on purpose.",
     accent: '#722f37',
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964263/C98A6C3B-2E76-46C4-8365-42C618727593_nun4on.jpg',
-    imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788638035/word-is-bond-crop-product_wwuorv.png',
-    imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/ar_1:1,b_gen_fill,c_pad/e_enhance/r_20/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
+
     colorImages: {
       Black: {
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964263/C98A6C3B-2E76-46C4-8365-42C618727593_nun4on.jpg',
@@ -148,14 +147,14 @@ const preorderProducts: PreorderProduct[] = [
 ];
 
 function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
-  const [view, setView] = useState<'front' | 'back' | 'sleeve' | 'model'>('front');
+  const [view, setView] = useState<'front' | 'back' | 'sleeve' | 'model' | 'modelFemale'>('front');
   
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
   const availableColors = Array.from(new Set(productRows.filter(r => !r.sold).map(r => r.color)));
   const [selectedColor, setSelectedColor] = useState('');
   const colorImgs = product.colorImages && selectedColor ? (product.colorImages as any)[selectedColor] : null;
-  const activeImage = view === 'back' ? (colorImgs?.back || product.imageBack || product.image) : view === 'sleeve' ? (colorImgs?.sleeve || product.imageSleeve || product.image) : view === 'model' ? (colorImgs?.model || product.imageModel || product.image) : (colorImgs?.front || product.image);
+  const activeImage = view === 'back' ? (colorImgs?.back || product.imageBack || product.image) : view === 'sleeve' ? (colorImgs?.sleeve || product.imageSleeve || product.image) : view === 'model' ? (colorImgs?.model || product.imageModel || product.image) : view === 'modelFemale' ? (colorImgs?.modelFemale || product.image) : (colorImgs?.front || product.image);
   const [selectedSize, setSelectedSize] = useState('');
   const { addToCart } = useCart();
   const router = useRouter();
@@ -183,7 +182,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
           <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'front') && colorImgs ? 'contain' : view === 'model' ? 'contain' : 'cover' }} sizes="280px" />
         )}
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
-        {(product.imageBack || product.imageSleeve || product.imageModel) && (
+        {product.name === 'Nothing to Hide' ? (<div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}><button onClick={(e) => { e.stopPropagation(); setView('model'); }} style={{ backgroundColor: view === 'model' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'model' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>MALE</button><button onClick={(e) => { e.stopPropagation(); setView('modelFemale'); }} style={{ backgroundColor: view === 'modelFemale' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'modelFemale' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FEMALE</button></div>) : null}{(product.imageBack || product.imageSleeve || product.imageModel) && product.name !== 'Nothing to Hide' && (
           <div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}>
             <button onClick={(e) => { e.stopPropagation(); setView('front'); }} style={{ backgroundColor: view === 'front' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'front' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FRONT</button>
             {product.imageBack && (
