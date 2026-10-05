@@ -2,6 +2,33 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'the-story-behind-nothing-to-hide',
+    date: 'October 4, 2026',
+    category: 'BRAND STORY',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169397/1E104AA6-BD03-4930-806F-A16161B63788_xuyk8j.jpg',
+    title: 'The Story Behind Nothing to Hide',
+    excerpt: 'This piece was not designed to cover you up. It was designed to free you up. The story behind the Nothing to Hide crop.',
+    content: [
+      'There is a certain kind of confidence that has nothing to do with how you look.',
+      'It is not the confidence that comes from a perfect outfit or the right shoes or someone telling you that you look good. It is the kind that comes from knowing exactly who you are — and being completely at peace with that person showing up.',
+      'That is what Nothing to Hide is about.',
+      'When we designed this piece we were not thinking about trends. We were not thinking about what was selling or what the algorithm was pushing. We were thinking about a specific kind of woman — and a specific kind of man — who moves through the world without pretense. Without performance. Without the exhausting work of managing how they are perceived.',
+      'The ones who have done the inner work. Who have sat with themselves long enough to know what they stand for. Who do not need to dress things up because they are not hiding anything.',
+      'The utility belt detail was intentional.',
+      'At the hem of every Nothing to Hide crop there is a utility belt detail — a small structural element that most people will not notice until they are wearing it. We put it there on purpose.',
+      'Because holding things together — quietly, intentionally, without needing recognition for it — is exactly what this piece represents. The detail is a nod to intention. A small reminder that everything on this piece was placed with purpose.',
+      'One of one. Always.',
+      'Every Nothing to Hide crop exists once. One in your size. One in your color. When it is gone it is gone forever — and it will never be made again exactly this way.',
+      'That is not a sales tactic. That is a reflection of the values this brand was built on. Integrity is not mass produced. Neither are our pieces.',
+      'Who this piece is for.',
+      'Nothing to Hide is for the person who has stopped performing for rooms they do not belong in. The one who shows up as they actually are — not a curated version, not a softened version, not a version designed to make other people comfortable.',
+      'It is for the person who is comfortable in their own skin. On purpose.',
+      'If that is you — this piece was made for you. Literally. Only one exists in your size.',
+      'Wear your values. Leave a legacy. 🖤',
+    ],
+  },
+
+  {
     slug: 'why-small-batch-drops-are-taking-over-streetwear',
     date: 'September 27, 2026',
     category: 'BRAND STORY',
