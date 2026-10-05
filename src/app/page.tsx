@@ -125,22 +125,19 @@ const preorderProducts: PreorderProduct[] = [
 
     colorImages: {
       Black: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964263/C98A6C3B-2E76-46C4-8365-42C618727593_nun4on.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481967/694E47C0-A691-4FD3-AB04-17CE78322E3F_ytrvgo.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790900418/1E104AA6-BD03-4930-806F-A16161B63788_jjkgwr.png',
-        modelFemale: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790900265/76BEC992-947A-435D-BB9E-7CAD58159335_m2ru5i.png',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169397/1E104AA6-BD03-4930-806F-A16161B63788_xuyk8j.jpg',
+        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169397/1E104AA6-BD03-4930-806F-A16161B63788_xuyk8j.jpg',
+        modelFemale: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169389/76BEC992-947A-435D-BB9E-7CAD58159335_ecwivc.jpg',
       },
       Blue: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/67E05BD3-1C45-4F50-84FC-46A074A60E89_qohshq.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481946/694E47C0-A691-4FD3-AB04-17CE78322E3F_b01hiu.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790900229/257831AC-6BAD-4FAB-8069-9E26FBCC1C42_qlln2j.png',
-        modelFemale: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790900292/F3C35EBD-7C60-4886-9C36-4CD34C15A071_tllezg.png',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169366/257831AC-6BAD-4FAB-8069-9E26FBCC1C42_b5nwxa.jpg',
+        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169366/257831AC-6BAD-4FAB-8069-9E26FBCC1C42_b5nwxa.jpg',
+        modelFemale: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169412/F3C35EBD-7C60-4886-9C36-4CD34C15A071_x2hwej.jpg',
       },
       White: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/3141AA15-37B7-44D3-B8F7-C10D9CBA2E3E_yq4pyx.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481957/694E47C0-A691-4FD3-AB04-17CE78322E3F_ftijq4.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790900249/598F7732-B463-475B-80A4-246C9C85B722_ejkqyu.png',
-        modelFemale: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790900330/891BE5E1-08E0-4E74-B520-BCCBDA73F3C3_cdtwyt.png',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169377/598F7732-B463-475B-80A4-246C9C85B722_q3f3j5.jpg',
+        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169377/598F7732-B463-475B-80A4-246C9C85B722_q3f3j5.jpg',
+        modelFemale: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169404/891BE5E1-08E0-4E74-B520-BCCBDA73F3C3_paqkiy.jpg',
       },
     },
   },
