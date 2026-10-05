@@ -82,24 +82,13 @@ const preorderProducts: PreorderProduct[] = [
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356682/77B5E230-2FB2-44BC-933D-0F98C8701E45_tprwqe.jpg',
     colorImages: {
       Black: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356682/77B5E230-2FB2-44BC-933D-0F98C8701E45_tprwqe.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356698/77B5E230-2FB2-44BC-933D-0F98C8701E45_xfnpn8.jpg',
-        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356724/77B5E230-2FB2-44BC-933D-0F98C8701E45_vfvtt6.jpg',
-        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1790491624/1ee26efb-9252-4118-8914-a00533e222bc_y7wev6.mp4',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204729/C8AFEA41-3C41-4242-B994-2A8173B09960_leoeni.png',
       },
       White: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_w9fnpu.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379630/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_tzay2s.jpg',
-        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_aai6fy.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379642/2E268133-E9DE-4A8A-9F7F-E0E99EF87D3F_aai6fy.jpg',
-        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/image-to-video/i2v_4bdcce5743b04141a92facadea541d63.mp4',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204716/22C0627A-A0EC-46EC-A971-4BB39594A64A_ud5wcy.png',
       },
       Blue: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379684/B567FFDB-137B-4F71-9E2D-B3C1EF768198_xnaomg.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379695/B567FFDB-137B-4F71-9E2D-B3C1EF768198_ovp94d.jpg',
-        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379670/B567FFDB-137B-4F71-9E2D-B3C1EF768198_h98ma2.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790379670/B567FFDB-137B-4F71-9E2D-B3C1EF768198_h98ma2.jpg',
-        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1790491157/abe0edbd-2036-4e2a-879a-13be4d213251_l4v06p.mp4',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204735/86BA3EAF-5B27-4E4D-A378-641E32CA413E_zc8a8t.png',
       },
     },
   },
@@ -167,7 +156,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
           <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'modelFemale' || view === 'front') && colorImgs ? 'contain' : view === 'model' || view === 'modelFemale' ? 'contain' : 'cover' }} sizes="280px" />
         )}
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
-        {product.name === 'Nothing to Hide' ? (<div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}><button onClick={(e) => { e.stopPropagation(); setView('model'); }} style={{ backgroundColor: view === 'model' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'model' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>MALE</button><button onClick={(e) => { e.stopPropagation(); setView('modelFemale'); }} style={{ backgroundColor: view === 'modelFemale' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'modelFemale' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FEMALE</button></div>) : null}{(product.imageBack || product.imageSleeve || product.imageModel) && product.name !== 'Nothing to Hide' && product.name !== 'No Cap' && (
+        {product.name === 'Nothing to Hide' ? (<div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}><button onClick={(e) => { e.stopPropagation(); setView('model'); }} style={{ backgroundColor: view === 'model' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'model' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>MALE</button><button onClick={(e) => { e.stopPropagation(); setView('modelFemale'); }} style={{ backgroundColor: view === 'modelFemale' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'modelFemale' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FEMALE</button></div>) : null}{(product.imageBack || product.imageSleeve || product.imageModel) && product.name !== 'Nothing to Hide' && product.name !== 'No Cap' && product.name !== 'Consistent by Choice' && (
           <div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}>
             <button onClick={(e) => { e.stopPropagation(); setView('front'); }} style={{ backgroundColor: view === 'front' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'front' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FRONT</button>
             {product.imageBack && (
