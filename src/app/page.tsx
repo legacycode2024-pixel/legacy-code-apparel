@@ -60,25 +60,13 @@ const preorderProducts: PreorderProduct[] = [
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789963828/5FC67237-1DF0-4D7E-AD4C-50E13780490E_jmrr0d.png',
     colorImages: {
       Black: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481935/3BCC37CE-47F1-4B41-9C52-54CEE63DC46D_ouohhx.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790355438/36FA33AA-BD95-49CA-BEA3-51A410ED41D5_ghgqxg.jpg',
-        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788961819/D13078E4-AB75-4C99-AABF-1A2066A8CE70_wf72gn.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789963828/5FC67237-1DF0-4D7E-AD4C-50E13780490E_jmrr0d.png',
-        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1790492204/b5970220-9a12-4a15-ba2b-48a48277e8eb_axr8nf.mp4',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791200377/B03B7051-9D45-4133-A516-649904D29ADE_huru1w.png',
       },
       White: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481875/552D08A5-59B0-4211-BF45-8ACBF237B1D7_zrjyqq.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790355501/E8FBDA16-6113-4A6B-9CD2-4E9BF68E4122_q9qzfq.jpg',
-        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto/q_auto/E8FBDA16-6113-4A6B-9CD2-4E9BF68E4122_veee1q.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790355538/E8FBDA16-6113-4A6B-9CD2-4E9BF68E4122_icvmyb.jpg',
-        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1790493294/4557f2d9-2547-4bf4-8b28-bee58ea19448_pmjiu8.mp4',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791200368/F40F1DC3-47E8-4752-847D-FD67F07EA629_zu5pes.png',
       },
       Blue: {
-        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481922/552D08A5-59B0-4211-BF45-8ACBF237B1D7_zpqruk.jpg',
-        back: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790355563/0F6716F4-0C55-4756-A1E7-BF2DC8E50476_kmd1e0.jpg',
-        sleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481922/552D08A5-59B0-4211-BF45-8ACBF237B1D7_zpqruk.jpg',
-        model: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481922/552D08A5-59B0-4211-BF45-8ACBF237B1D7_zpqruk.jpg',
-        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1790493572/109ad8dd-d7d0-4b2f-888f-0ff41426f98d_eazpk8.mp4',
+        front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791200358/2A325AD8-F16A-43B1-95B5-1516B6EA6C35_a0clqc.png',
       },
     },
   },
