@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'the-story-behind-nothing-to-hide',
+    date: 'October 4, 2026',
+    category: 'BRAND STORY',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169397/1E104AA6-BD03-4930-806F-A16161B63788_xuyk8j.jpg',
+    title: 'The Story Behind Nothing to Hide',
+    excerpt: 'This piece was not designed to cover you up. It was designed to free you up. The story behind the Nothing to Hide crop.',
+  },
+
+  {
     slug: 'why-small-batch-drops-are-taking-over-streetwear',
     date: 'September 27, 2026',
     category: 'BRAND STORY',
