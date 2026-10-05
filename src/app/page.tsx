@@ -83,12 +83,15 @@ const preorderProducts: PreorderProduct[] = [
     colorImages: {
       Black: {
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204729/C8AFEA41-3C41-4242-B994-2A8173B09960_leoeni.png',
+        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1791205699/582513cf-2477-42c7-9ed4-bc0ca603e878_nhcgk0.mp4',
       },
       White: {
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204716/22C0627A-A0EC-46EC-A971-4BB39594A64A_ud5wcy.png',
+        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1791205671/599bd287-f39a-428a-a933-d544a4f86874_psfgje.mp4',
       },
       Blue: {
         front: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204735/86BA3EAF-5B27-4E4D-A378-641E32CA413E_zc8a8t.png',
+        modelVideo: 'https://res.cloudinary.com/dozyoetnr/video/upload/v1791205866/7aa3864c-9f1e-4451-be5b-b3038266a238_nvfwnv.mp4',
       },
     },
   },
@@ -150,7 +153,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
   return (
     <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', borderTop: `4px solid ${product.accent}` }}>
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
-        {view === 'model' && colorImgs?.modelVideo ? (
+        {(product.name === 'Consistent by Choice' && colorImgs?.modelVideo) || (view === 'model' && colorImgs?.modelVideo) ? (
           <video src={colorImgs.modelVideo} autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
         ) : (
           <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'modelFemale' || view === 'front') && colorImgs ? 'contain' : view === 'model' || view === 'modelFemale' ? 'contain' : 'cover' }} sizes="280px" />
