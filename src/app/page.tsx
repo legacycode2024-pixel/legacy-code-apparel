@@ -50,7 +50,7 @@ type PreorderProduct = {
 const preorderProducts: PreorderProduct[] = [
   {
     name: 'No Cap',
-    price: 95,
+    price: 225,
     tagline: 'Hood up, truth out.',
     why: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric, built for the ones who keep it that way. Finished with patch details on the chest and right sleeve.",
     accent: '#c9a84c',
@@ -72,7 +72,7 @@ const preorderProducts: PreorderProduct[] = [
   },
   {
     name: 'Consistent by Choice',
-    price: 85,
+    price: 190,
     tagline: 'Heavyweight fleece for the days you show up anyway.',
     why: "Showing up isn't luck. It's a decision you make again, every single day, even when nobody's watching. This sweatshirt is for the ones who don't need a reason to keep going — discipline over motivation, every time. Heavyweight fleece. Built to be worn as often as the message needs saying. Finished with a signature detail on the sleeve — a personal mark on every piece.",
     accent: '#1a3a6b',
@@ -97,7 +97,7 @@ const preorderProducts: PreorderProduct[] = [
   },
   {
     name: 'Nothing to Hide',
-    price: 65,
+    price: 165,
     tagline: 'Comfortable in your own skin, on purpose.',
     why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true. Finished with a utility belt detail at the hem — a small nod to holding things together, on purpose.",
     accent: '#722f37',
