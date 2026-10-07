@@ -110,7 +110,7 @@ const preorderProducts: PreorderProduct[] = [
     name: 'Nothing to Hide',
     price: 165,
     tagline: 'Comfortable in your own skin, on purpose.',
-    why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true. Finished with a utility belt detail at the hem — a small nod to holding things together, on purpose.",
+    why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true. Finished with a cinch pull at the hem — a small nod to holding things together, on purpose.",
     accent: '#722f37',
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380617/305DAD42-4AE8-4AAC-94C9-48580057D063_jgyeux.png',
     sneakPeek: [
@@ -185,7 +185,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
           <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'modelFemale' || view === 'front') && colorImgs ? 'contain' : view === 'model' || view === 'modelFemale' ? 'contain' : 'cover' }} sizes="280px" />
         )}
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
-        {product.name === 'Nothing to Hide' ? (<div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}><button onClick={(e) => { e.stopPropagation(); setView('model'); }} style={{ backgroundColor: view === 'model' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'model' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>MALE</button><button onClick={(e) => { e.stopPropagation(); setView('modelFemale'); }} style={{ backgroundColor: view === 'modelFemale' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'modelFemale' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FEMALE</button></div>) : null}{(product.imageBack || product.imageSleeve || product.imageModel) && product.name !== 'Nothing to Hide' && product.name !== 'No Cap' && product.name !== 'Consistent by Choice' && (
+        {(product.imageBack || product.imageSleeve || product.imageModel) && product.name !== 'Nothing to Hide' && product.name !== 'No Cap' && product.name !== 'Consistent by Choice' && (
           <div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}>
             <button onClick={(e) => { e.stopPropagation(); setView('front'); }} style={{ backgroundColor: view === 'front' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'front' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FRONT</button>
             {product.imageBack && (
