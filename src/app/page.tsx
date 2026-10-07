@@ -187,7 +187,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
         {product.sneakPeek ? (
           <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
             {product.sneakPeek.map((src, i) => (
-              <img key={src} src={src} alt={product.name} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain', backgroundColor: '#f4f1eb', opacity: i === sneakIdx ? 1 : 0, transition: 'opacity 0.8s ease-in-out' }} />
+              <img key={src} src={src} alt={product.name} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain', backgroundColor: '#f4f1eb', opacity: i === sneakIdx ? 1 : 0, transition: 'opacity 0.8s ease-in-out', zIndex: i === sneakIdx ? 1 : 0 }} />
             ))}
           </div>
         ) : null}
