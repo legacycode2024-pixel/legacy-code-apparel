@@ -142,13 +142,16 @@ const preorderProducts: PreorderProduct[] = [
 function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
   const [view, setView] = useState<'front' | 'back' | 'sleeve' | 'model' | 'modelFemale'>('front');
   const [sneakIdx, setSneakIdx] = useState(0);
+  const sneakTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [notifyEmail, setNotifyEmail] = useState('');
   const [notifySent, setNotifySent] = useState(false);
   useEffect(() => {
-    if (!product.sneakPeek) return;
-    const timer = setInterval(() => setSneakIdx(i => (i + 1) % product.sneakPeek!.length), 2500);
-    return () => clearInterval(timer);
-  }, [product.sneakPeek]);
+    if (sneakTimerRef.current) clearInterval(sneakTimerRef.current);
+    setSneakIdx(0);
+    if (!product.sneakPeek || product.sneakPeek.length === 0) return;
+    sneakTimerRef.current = setInterval(() => setSneakIdx(i => (i + 1) % product.sneakPeek!.length), 2500);
+    return () => { if (sneakTimerRef.current) clearInterval(sneakTimerRef.current); };
+  }, [product.name]);
   
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
