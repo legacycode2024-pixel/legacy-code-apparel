@@ -53,7 +53,7 @@ const preorderProducts: PreorderProduct[] = [
     name: 'No Cap',
     price: 225,
     tagline: 'Hood up, truth out.',
-    why: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric, built for the ones who keep it that way. Finished with patch details on the chest and right sleeve.",
+    why: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric, built for the ones who keep it that way. Finished with a Legacy Code patch, zipper and pocket on the sleeve.",
     accent: '#c9a84c',
     image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380372/24898B7B-DF9D-46E6-8752-FEDBCF73165F_qcutra.jpg',
     sneakPeek: [
