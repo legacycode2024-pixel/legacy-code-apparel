@@ -185,7 +185,11 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
     <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', borderTop: `4px solid ${product.accent}` }}>
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
         {product.sneakPeek ? (
-          <img key={`sneak-${product.name}-${sneakIdx}`} src={product.sneakPeek[sneakIdx]} alt={product.name} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain', backgroundColor: '#f4f1eb' }} />
+          <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+            {product.sneakPeek.map((src, i) => (
+              <img key={src} src={src} alt={product.name} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain', backgroundColor: '#f4f1eb', opacity: i === sneakIdx ? 1 : 0, transition: 'opacity 0.8s ease-in-out' }} />
+            ))}
+          </div>
         ) : null}
         {product.sneakPeek && (
           <div style={{ position: 'absolute', bottom: '8px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '6px', zIndex: 2 }}>
