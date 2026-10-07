@@ -346,7 +346,7 @@ export default function Home() {
       <EmailPopup />
 
       <div style={{ backgroundColor: '#c9a84c', padding: '10px 20px', textAlign: 'center' }}>
-        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 PREORDER LIVE — 2 WEEK WINDOW &nbsp;·&nbsp; ONE-OF-ONE PIECES, ONCE THEY'RE GONE THEY'RE GONE</p>
+        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 SAMPLING IN PROGRESS — NEW DROP COMING SOON &nbsp;·&nbsp; ONE-OF-ONE PIECES, ONCE THEY'RE GONE THEY'RE GONE</p>
       </div>
 
       <section style={{ position: 'relative', textAlign: 'center', padding: '100px 20px 80px', color: '#fff', overflow: 'hidden', minHeight: '600px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
