@@ -45,6 +45,7 @@ type PreorderProduct = {
   imageSleeve?: string;
   imageModel?: string;
   colorImages?: { [color: string]: ColorImageSet };
+  sneakPeek?: string[];
 };
 
 const preorderProducts: PreorderProduct[] = [
@@ -54,7 +55,12 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Hood up, truth out.',
     why: "What's real stays real, every time you pull it up. No gimmicks, no shortcuts, no dressing things up — just straight talk and solid fabric, built for the ones who keep it that way. Finished with patch details on the chest and right sleeve.",
     accent: '#c9a84c',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481935/3BCC37CE-47F1-4B41-9C52-54CEE63DC46D_ouohhx.jpg',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380372/24898B7B-DF9D-46E6-8752-FEDBCF73165F_qcutra.jpg',
+    sneakPeek: [
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380372/24898B7B-DF9D-46E6-8752-FEDBCF73165F_qcutra.jpg',
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380363/7E8ECB52-4285-4627-8ED8-062151628689_iy0lkf.jpg',
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380359/E8DDB779-A7C6-4642-A404-30FEE15C5E17_ut0syu.jpg',
+    ],
     imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790355438/36FA33AA-BD95-49CA-BEA3-51A410ED41D5_ghgqxg.jpg',
     imageSleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1788961819/D13078E4-AB75-4C99-AABF-1A2066A8CE70_wf72gn.jpg',
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789963828/5FC67237-1DF0-4D7E-AD4C-50E13780490E_jmrr0d.png',
@@ -76,7 +82,12 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Heavyweight fleece for the days you show up anyway.',
     why: "Showing up isn't luck. It's a decision you make again, every single day, even when nobody's watching. This sweatshirt is for the ones who don't need a reason to keep going — discipline over motivation, every time. Heavyweight fleece. Built to be worn as often as the message needs saying. Finished with a signature detail on the sleeve — a personal mark on every piece.",
     accent: '#1a3a6b',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356682/77B5E230-2FB2-44BC-933D-0F98C8701E45_tprwqe.jpg',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380407/DE25789A-B417-4913-99B6-BD4D0A857C05_ssouhx.jpg',
+    sneakPeek: [
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380407/DE25789A-B417-4913-99B6-BD4D0A857C05_ssouhx.jpg',
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380398/0F919680-94B4-4262-9AA6-9E19125C6A82_xtxz3s.jpg',
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380389/971BA80A-4309-4DE0-8FB9-D0BE5E120246_w739yq.jpg',
+    ],
     imageBack: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356698/77B5E230-2FB2-44BC-933D-0F98C8701E45_xfnpn8.jpg',
     imageSleeve: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356724/77B5E230-2FB2-44BC-933D-0F98C8701E45_vfvtt6.jpg',
     imageModel: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790356682/77B5E230-2FB2-44BC-933D-0F98C8701E45_tprwqe.jpg',
@@ -101,7 +112,12 @@ const preorderProducts: PreorderProduct[] = [
     tagline: 'Comfortable in your own skin, on purpose.',
     why: "This crop is for showing up as you actually are — no performance, no apology, no part of you dimmed down to fit somewhere else. Being seen isn't a risk when you already like who you are. Wear it easy, wear it true. Finished with a utility belt detail at the hem — a small nod to holding things together, on purpose.",
     accent: '#722f37',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1789964263/C98A6C3B-2E76-46C4-8365-42C618727593_nun4on.jpg',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380617/305DAD42-4AE8-4AAC-94C9-48580057D063_jgyeux.png',
+    sneakPeek: [
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380617/305DAD42-4AE8-4AAC-94C9-48580057D063_jgyeux.png',
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380606/26AC96AE-3D57-4B64-B6E7-4BC3FB7706EC_opv909.png',
+      'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380432/7AE9DDE7-9DB3-4CFB-8977-5A30A6853ECC_aw6obv.jpg',
+    ],
 
     colorImages: {
       Black: {
@@ -125,6 +141,14 @@ const preorderProducts: PreorderProduct[] = [
 
 function PreorderCard({ product, inventory }: { product: PreorderProduct; inventory: InventoryRow[] }) {
   const [view, setView] = useState<'front' | 'back' | 'sleeve' | 'model' | 'modelFemale'>('front');
+  const [sneakIdx, setSneakIdx] = useState(0);
+  const [notifyEmail, setNotifyEmail] = useState('');
+  const [notifySent, setNotifySent] = useState(false);
+  useEffect(() => {
+    if (!product.sneakPeek) return;
+    const timer = setInterval(() => setSneakIdx(i => (i + 1) % product.sneakPeek!.length), 2500);
+    return () => clearInterval(timer);
+  }, [product.sneakPeek]);
   
   const productRows = inventory.filter(r => r.product === product.name);
   const currentDesign = productRows.find(r => !r.sold)?.design || '';
@@ -157,6 +181,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
           <video src={colorImgs.modelVideo} autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
         ) : (
           <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'modelFemale' || view === 'front') && colorImgs ? 'contain' : view === 'model' || view === 'modelFemale' ? 'contain' : 'cover' }} sizes="280px" />
+        )}
         )}
         <div style={{ position: 'absolute', top: '12px', left: '12px', backgroundColor: '#0a1931', color: '#c9a84c', fontSize: '11px', fontWeight: '700', letterSpacing: '1px', padding: '4px 10px', borderRadius: '20px' }}>PREORDER</div>
         {product.name === 'Nothing to Hide' ? (<div style={{ position: 'absolute', bottom: '12px', right: '12px', display: 'flex', gap: '6px' }}><button onClick={(e) => { e.stopPropagation(); setView('model'); }} style={{ backgroundColor: view === 'model' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'model' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>MALE</button><button onClick={(e) => { e.stopPropagation(); setView('modelFemale'); }} style={{ backgroundColor: view === 'modelFemale' ? '#c9a84c' : 'rgba(10,25,49,0.85)', color: view === 'modelFemale' ? '#0a1931' : '#fff', border: 'none', borderRadius: '20px', padding: '6px 10px', fontSize: '10px', fontWeight: '700', letterSpacing: '1px', cursor: 'pointer' }}>FEMALE</button></div>) : null}{(product.imageBack || product.imageSleeve || product.imageModel) && product.name !== 'Nothing to Hide' && product.name !== 'No Cap' && product.name !== 'Consistent by Choice' && (
