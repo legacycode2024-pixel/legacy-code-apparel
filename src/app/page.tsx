@@ -149,7 +149,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
     if (sneakTimerRef.current) clearInterval(sneakTimerRef.current);
     setSneakIdx(0);
     if (!product.sneakPeek || product.sneakPeek.length === 0) return;
-    sneakTimerRef.current = setInterval(() => setSneakIdx(i => (i + 1) % product.sneakPeek!.length), 2500);
+    sneakTimerRef.current = setInterval(() => setSneakIdx(i => (i + 1) % product.sneakPeek!.length), 3000);
     return () => { if (sneakTimerRef.current) clearInterval(sneakTimerRef.current); };
   }, [product.name]);
   
@@ -182,7 +182,15 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
         {product.sneakPeek ? (
           <img src={product.sneakPeek[sneakIdx]} alt={product.name} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-        ) : (product.name === 'Consistent by Choice' && colorImgs?.modelVideo) || (view === 'model' && colorImgs?.modelVideo) ? (
+        ) : null}
+        {product.sneakPeek && (
+          <div style={{ position: 'absolute', bottom: '8px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '6px', zIndex: 2 }}>
+            {product.sneakPeek.map((_, i) => (
+              <div key={i} onClick={() => setSneakIdx(i)} style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: i === sneakIdx ? '#c9a84c' : 'rgba(255,255,255,0.6)', cursor: 'pointer' }} />
+            ))}
+          </div>
+        )}
+        {!product.sneakPeek && (product.name === 'Consistent by Choice' && colorImgs?.modelVideo) || (view === 'model' && colorImgs?.modelVideo) ? (
           <video src={colorImgs.modelVideo} autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
         ) : (
           <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'modelFemale' || view === 'front') && colorImgs ? 'contain' : view === 'model' || view === 'modelFemale' ? 'contain' : 'cover' }} sizes="280px" />
@@ -445,7 +453,7 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>📦</p>
-            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>PREORDER — ENDS OCT 12 · SHIPS OCT 26</p>
+            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>PREORDER — ONE OF ONE</p>
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>1️⃣</p>
