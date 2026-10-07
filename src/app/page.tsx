@@ -177,7 +177,9 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
   return (
     <div style={{ width: '300px', flexShrink: 0, borderRadius: '16px', overflow: 'hidden', backgroundColor: '#fff', border: '1px solid #e5e5e5', boxShadow: '0 8px 32px rgba(0,0,0,0.10)', borderTop: `4px solid ${product.accent}` }}>
       <div style={{ position: 'relative', height: '340px', backgroundColor: '#f4f1eb' }}>
-        {(product.name === 'Consistent by Choice' && colorImgs?.modelVideo) || (view === 'model' && colorImgs?.modelVideo) ? (
+        {product.sneakPeek ? (
+          <img src={product.sneakPeek[sneakIdx]} alt={product.name} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+        ) : (product.name === 'Consistent by Choice' && colorImgs?.modelVideo) || (view === 'model' && colorImgs?.modelVideo) ? (
           <video src={colorImgs.modelVideo} autoPlay muted loop playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'contain' }} />
         ) : (
           <Image src={activeImage} alt={product.name} fill style={{ objectFit: (view === 'model' || view === 'modelFemale' || view === 'front') && colorImgs ? 'contain' : view === 'model' || view === 'modelFemale' ? 'contain' : 'cover' }} sizes="280px" />
@@ -209,7 +211,19 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
           <p style={{ margin: 0, fontSize: '11px', color: '#999' }}>One-of-one · Heavyweight fleece · Never restocked</p>
         </div>
 
-        {isSoldOut ? (
+        {product.sneakPeek ? (
+          <div style={{ marginTop: '16px' }}>
+            <p style={{ fontSize: '12px', letterSpacing: '2px', color: '#c9a84c', fontWeight: '700', marginBottom: '8px', textAlign: 'center' }}>🔒 SAMPLING IN PROGRESS — DROPPING SOON</p>
+            {notifySent ? (
+              <p style={{ textAlign: 'center', color: '#0a1931', fontSize: '14px', fontWeight: '700' }}>✅ You are on the list!</p>
+            ) : (
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input value={notifyEmail} onChange={e => setNotifyEmail(e.target.value)} placeholder="Your email" style={{ flex: 1, padding: '10px', border: '1px solid #ddd', borderRadius: '6px', fontSize: '13px' }} />
+                <button onClick={() => { if(notifyEmail) setNotifySent(true); }} style={{ padding: '10px 16px', backgroundColor: '#0a1931', color: '#c9a84c', border: 'none', borderRadius: '6px', fontSize: '12px', fontWeight: '700', cursor: 'pointer', letterSpacing: '1px' }}>NOTIFY ME</button>
+              </div>
+            )}
+          </div>
+        ) : isSoldOut ? (
           <div style={{ padding: '14px', textAlign: 'center', backgroundColor: '#f4f1eb', borderRadius: '8px', fontWeight: '700', color: '#888' }}>SOLD OUT</div>
         ) : (
           <>
