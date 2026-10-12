@@ -21,6 +21,7 @@ export default function Navbar() {
         <a href="/faq" style={{ color: '#fff', textDecoration: 'none' }}>FAQ</a>
         <a href="/contact" style={{ color: '#c9a84c', textDecoration: 'none', border: '1px solid #c9a84c', padding: '6px 14px', borderRadius: '20px' }}>CONTACT</a>
         <a href="/sizeguide" style={{ color: '#fff', textDecoration: 'none' }}>SIZE GUIDE</a>
+        <a href="/waitlist" style={{ color: '#c9a84c', textDecoration: 'none', border: '1px solid #c9a84c', padding: '6px 14px', borderRadius: '20px', fontWeight: '700' }}>JOIN THE LIST</a>
         <span onClick={() => router.push('/cart')} style={{ color: '#fff', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '6px' }}>
           CART
           {cartCount > 0 && (
