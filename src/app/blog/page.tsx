@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'what-year-of-inception-means',
+    date: 'October 12, 2026',
+    category: 'BRAND STORY',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204729/C8AFEA41-3C41-4242-B994-2A8173B09960_leoeni.png',
+    title: 'What Year of Inception Means',
+    excerpt: 'Every Legacy Code piece carries a name that means something. Year of Inception is no different — and once you understand it, you will never look at this sweatshirt the same way.',
+  },
+
+  {
     slug: 'the-story-behind-nothing-to-hide',
     date: 'October 4, 2026',
     category: 'BRAND STORY',

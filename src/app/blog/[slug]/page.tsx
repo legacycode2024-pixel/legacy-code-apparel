@@ -2,6 +2,36 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'what-year-of-inception-means',
+    date: 'October 12, 2026',
+    category: 'BRAND STORY',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204729/C8AFEA41-3C41-4242-B994-2A8173B09960_leoeni.png',
+    title: 'What Year of Inception Means',
+    excerpt: 'Every Legacy Code piece carries a name that means something. Year of Inception is no different — and once you understand it, you will never look at this sweatshirt the same way.',
+    content: [
+      'There is a moment in every person\'s life that changes everything.',
+      'Not the moment things got easy. Not the moment the applause started or the recognition came. The moment before all of that — when you decided. When you chose the path. When something in you said yes before the rest of the world caught up.',
+      'That moment is your year of inception.',
+      'It is the year you started. The year you committed. The year you stopped waiting for permission and began building the thing you were always meant to build.',
+      'For Legacy Code Apparel that year was 2024. But this piece is not about us.',
+      'Year of Inception is about you.',
+      'It is about the year you started your business when everyone told you the market was too crowded. The year you went back to school when people said you were too old. The year you left the relationship, the job, the city — the year you finally chose yourself and started becoming who you were always meant to be.',
+      'That year matters. It deserves to be honored.',
+      'Why we put it on the Consistent by Choice sweatshirt.',
+      'Consistent by Choice has always been about showing up — not when it\'s easy, not when you feel like it, not when the conditions are perfect. Every single day. Regardless.',
+      'Year of Inception adds a layer to that. Because showing up consistently is how you honor the decision you made in your year of inception. Every day you show up is a day you prove that the version of you who started was right to believe.',
+      'The two ideas belong together. The decision. The discipline. The inception. The consistency.',
+      'One of one. Always.',
+      'Every Consistent by Choice sweatshirt exists once — in your size, in your color, never to be made again exactly this way. That is not a coincidence. A year of inception only happens once too. You only begin once. You only make that first decision once.',
+      'This piece honors that.',
+      'Who this piece is for.',
+      'Year of Inception is for the person who remembers their starting point. Who has not forgotten what it cost them to begin. Who wears their journey not as a wound but as a mark of honor.',
+      'If you started something — this piece was made for you.',
+      'Wear your values. Leave a legacy. 🖤',
+    ],
+  },
+
+  {
     slug: 'the-story-behind-nothing-to-hide',
     date: 'October 4, 2026',
     category: 'BRAND STORY',
