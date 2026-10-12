@@ -105,7 +105,7 @@ const posts = [
     slug: 'what-does-it-mean-to-stand-on-it',
     date: 'March 25, 2025',
     category: 'CHARACTER',
-    image: '/images/logo.png',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791380617/305DAD42-4AE8-4AAC-94C9-48580057D063_jgyeux.png',
     title: 'What Does It Mean to Stand On It?',
     excerpt: 'Standing on it is not a phrase — it is a posture. It is the decision to plant your feet on what you believe and refuse to move.',
   },
