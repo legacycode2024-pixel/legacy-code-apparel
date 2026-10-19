@@ -246,7 +246,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
           <div style={{ padding: '14px', textAlign: 'center', backgroundColor: '#f4f1eb', borderRadius: '8px', fontWeight: '700', color: '#888' }}>SOLD OUT</div>
         ) : (
           <>
-            <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: '700', color: '#888', letterSpacing: '1px' }}>COLOR <span style={{ fontWeight: 400, color: '#aaa' }}>(each 1 of 1)</span></p>
+            <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: '700', color: '#888', letterSpacing: '1px' }}>COLOR <span style={{ fontWeight: 400, color: '#aaa' }}>(limited to 24)</span></p>
             <div style={{ display: 'flex', gap: '6px', marginBottom: '12px', flexWrap: 'wrap' }}>
               {availableColors.map(color => (
                 <button key={color} onClick={e => { e.stopPropagation(); setSelectedColor(color); setSelectedSize(''); }} style={{ padding: '6px 12px', border: selectedColor === color ? `2px solid ${product.accent}` : '1px solid #ddd', borderRadius: '6px', backgroundColor: selectedColor === color ? product.accent : '#fff', color: selectedColor === color ? '#fff' : '#0a1931', fontSize: '12px', fontWeight: '600', cursor: 'pointer' }}>{color}</button>
@@ -346,7 +346,7 @@ export default function Home() {
       <EmailPopup />
 
       <div style={{ backgroundColor: '#c9a84c', padding: '10px 20px', textAlign: 'center' }}>
-        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 SAMPLING IN PROGRESS — NEW DROP COMING SOON &nbsp;·&nbsp; ONE-OF-ONE PIECES, ONCE THEY'RE GONE THEY'RE GONE</p>
+        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 SAMPLING IN PROGRESS — NEW DROP COMING SOON &nbsp;·&nbsp; LIMITED TO 24 PIECES — ONCE THEY'RE GONE THEY'RE GONE</p>
       </div>
 
       <section style={{ position: 'relative', textAlign: 'center', padding: '100px 20px 80px', color: '#fff', overflow: 'hidden', minHeight: '600px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -365,7 +365,7 @@ export default function Home() {
       <section id='shop' style={{ padding: '60px 20px' }}>
         <p style={{ textAlign: 'center', fontSize: '12px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '8px', color: '#c9a84c' }}>THE COLLECTION</p>
         <h2 style={{ textAlign: 'center', fontSize: '36px', fontWeight: '400', color: '#0a1931', marginBottom: '8px' }}>Preorder Now</h2>
-        <p style={{ textAlign: 'center', fontSize: '14px', color: '#888', marginBottom: '8px' }}>Each piece is one-of-one. Once a size/color sells, it's gone for good.</p>
+        <p style={{ textAlign: 'center', fontSize: '14px', color: '#888', marginBottom: '8px' }}>Each style is limited to 24 pieces. Once your size sells — it's gone for good.</p>
         <p style={{ textAlign: 'center', fontSize: '13px', color: '#aaa', marginBottom: '32px' }}>Heavyweight fleece. Never restocked. Never mass produced.</p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
@@ -461,11 +461,11 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>📦</p>
-            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>PREORDER — ONE OF ONE</p>
+            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>LIMITED TO 24</p>
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>1️⃣</p>
-            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>ONE-OF-ONE PIECES</p>
+            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>LIMITED TO 24 PIECES</p>
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>💬</p>
