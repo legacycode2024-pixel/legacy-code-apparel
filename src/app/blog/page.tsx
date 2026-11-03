@@ -11,6 +11,24 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'why-i-wont-rush-it',
+    date: 'November 3, 2026',
+    category: 'BRAND STORY',
+    image: '/images/logo.png',
+    title: 'Why I Won\'t Rush It',
+    excerpt: 'There\'s a faster version of this brand. It wouldn\'t be the right one. Why Legacy Code is built slowly and on purpose.',
+  },
+
+  {
+    slug: 'what-it-means-to-be-made-with-intention',
+    date: 'October 19, 2026',
+    category: 'BRAND STORY',
+    image: '/images/logo.png',
+    title: 'What It Means to Be Made With Intention',
+    excerpt: 'Anyone can put a design on a shirt. Intention is what happens before that.',
+  },
+
+  {
     slug: 'what-year-of-inception-means',
     date: 'October 12, 2026',
     category: 'BRAND STORY',

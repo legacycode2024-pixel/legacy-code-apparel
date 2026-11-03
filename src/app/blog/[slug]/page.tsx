@@ -2,6 +2,41 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'why-i-wont-rush-it',
+    date: 'November 3, 2026',
+    category: 'BRAND STORY',
+    image: '/images/logo.png',
+    title: 'Why I Won\'t Rush It',
+    excerpt: 'There\'s a faster version of this brand. It wouldn\'t be the right one. Why Legacy Code is built slowly and on purpose.',
+    content: [
+      'There\'s a version of this brand that launched months ago. It would have used the first sample that came back and put a price on it. It would have been faster. It also wouldn\'t have been right.',
+      'I\'m building Legacy Code Apparel on a simple rule: if I wouldn\'t wear it, I won\'t sell it. That rule is slow. It means waiting on samples, checking the stitching, holding the fabric up to the light, and sending a piece back when the print or the fit isn\'t what I pictured.',
+      'Fast is easy to find. Every corner of the internet is selling something that was made quickly and forgotten faster. I\'m not trying to be another one.',
+      'This brand is built on three ideas: bold integrity, moral character, and legacy. Those aren\'t slogans on a shirt. They\'re how I decide what to make, when to say yes, and when to say not yet.',
+      'So if you\'ve been waiting on the first drop, thank you. The wait isn\'t wasted time. It\'s the part where I make sure that what reaches you is something you can be proud to wear and I can be proud to have made.',
+      'Good things take the time they take. I\'d rather be late and right than early and sorry.',
+      'That\'s the code. Wear your values. Leave a legacy. 🖤',
+    ],
+  },
+
+  {
+    slug: 'what-it-means-to-be-made-with-intention',
+    date: 'October 19, 2026',
+    category: 'BRAND STORY',
+    image: '/images/logo.png',
+    title: 'What It Means to Be Made With Intention',
+    excerpt: 'Anyone can put a design on a shirt. Intention is what happens before that.',
+    content: [
+      'Anyone can put a design on a shirt. Intention is what happens before that.',
+      'It\'s choosing a fabric that holds its shape. It\'s checking the stitching by hand. It\'s deciding that a piece should carry a message you can stand behind, not just a logo.',
+      'At Legacy Code Apparel, every piece starts with a question: does this mean something? If it doesn\'t, we don\'t make it.',
+      'That\'s why we build slowly. We test samples, we adjust, and we only release what we\'d wear ourselves. Fast fashion asks how quickly it can be made. We ask whether it should be made at all.',
+      'Wearing something made with intention changes how you carry it. It\'s a reminder of what you stand for, and a quiet way of saying it out loud.',
+      'That\'s the code. Wear your values. Leave a legacy. 🖤',
+    ],
+  },
+
+  {
     slug: 'what-year-of-inception-means',
     date: 'October 12, 2026',
     category: 'BRAND STORY',
