@@ -227,7 +227,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
         )}
         <div style={{ marginBottom: '16px', padding: '12px 0', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
           <p style={{ margin: '0 0 4px', fontSize: '22px', fontWeight: '700', color: product.accent }}>${product.price.toFixed(2)}</p>
-          <p style={{ margin: 0, fontSize: '11px', color: '#999' }}>One-of-one · Heavyweight fleece · Never restocked</p>
+          <p style={{ margin: 0, fontSize: '11px', color: '#999' }}>Heavyweight fleece</p>
         </div>
 
         {product.sneakPeek ? (
@@ -246,7 +246,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
           <div style={{ padding: '14px', textAlign: 'center', backgroundColor: '#f4f1eb', borderRadius: '8px', fontWeight: '700', color: '#888' }}>SOLD OUT</div>
         ) : (
           <>
-            <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: '700', color: '#888', letterSpacing: '1px' }}>COLOR <span style={{ fontWeight: 400, color: '#aaa' }}>(limited to 24)</span></p>
+            <p style={{ margin: '0 0 6px', fontSize: '11px', fontWeight: '700', color: '#888', letterSpacing: '1px' }}>COLOR</p>
             <div style={{ display: 'flex', gap: '6px', marginBottom: '12px', flexWrap: 'wrap' }}>
               {availableColors.map(color => (
                 <button key={color} onClick={e => { e.stopPropagation(); setSelectedColor(color); setSelectedSize(''); }} style={{ padding: '6px 12px', border: selectedColor === color ? `2px solid ${product.accent}` : '1px solid #ddd', borderRadius: '6px', backgroundColor: selectedColor === color ? product.accent : '#fff', color: selectedColor === color ? '#fff' : '#0a1931', fontSize: '12px', fontWeight: '600', cursor: 'pointer' }}>{color}</button>
@@ -346,7 +346,7 @@ export default function Home() {
       <EmailPopup />
 
       <div style={{ backgroundColor: '#c9a84c', padding: '10px 20px', textAlign: 'center' }}>
-        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 SAMPLING IN PROGRESS — NEW DROP COMING SOON &nbsp;·&nbsp; LIMITED TO 24 PIECES — ONCE THEY'RE GONE THEY'RE GONE</p>
+        <p style={{ margin: 0, fontSize: '13px', fontWeight: '700', color: '#0a1931', letterSpacing: '1px' }}>🚨 SAMPLING IN PROGRESS — NEW DROP COMING SOON</p>
       </div>
 
       <section style={{ position: 'relative', textAlign: 'center', padding: '100px 20px 80px', color: '#fff', overflow: 'hidden', minHeight: '600px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
@@ -355,7 +355,7 @@ export default function Home() {
         <div style={{ position: 'relative', zIndex: 2, maxWidth: '700px' }}>
           <p style={{ fontSize: '11px', letterSpacing: '5px', marginBottom: '20px', color: '#c9a84c', fontFamily: 'Arial, sans-serif' }}>LEGACY CODE APPAREL — EST. 2024</p>
           <h1 style={{ fontSize: '64px', fontWeight: '400', margin: '0 0 20px', letterSpacing: '-2px', color: '#fff', lineHeight: '1.1' }}>Wear What You<br/>Stand For.</h1>
-          <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.8)', margin: '0 0 40px', lineHeight: '1.6' }}>Premium hoodies, sweatshirts &amp; crops for people who lead with integrity.<br/>One-of-one pieces. Preorder now.</p>
+          <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.8)', margin: '0 0 40px', lineHeight: '1.6' }}>Premium hoodies, sweatshirts &amp; crops for people who lead with integrity.<br/>New drop coming soon.</p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href='#shop' style={{ display: 'inline-block', padding: '16px 40px', backgroundColor: '#c9a84c', color: '#0a1931', textDecoration: 'none', fontSize: '14px', letterSpacing: '2px', fontWeight: '700', borderRadius: '4px' }}>SHOP THE PREORDER</a>
           </div>
@@ -365,8 +365,8 @@ export default function Home() {
       <section id='shop' style={{ padding: '60px 20px' }}>
         <p style={{ textAlign: 'center', fontSize: '12px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', marginBottom: '8px', color: '#c9a84c' }}>THE COLLECTION</p>
         <h2 style={{ textAlign: 'center', fontSize: '36px', fontWeight: '400', color: '#0a1931', marginBottom: '8px' }}>Preorder Now</h2>
-        <p style={{ textAlign: 'center', fontSize: '14px', color: '#888', marginBottom: '8px' }}>Each style is limited to 24 pieces. Once your size sells — it's gone for good.</p>
-        <p style={{ textAlign: 'center', fontSize: '13px', color: '#aaa', marginBottom: '32px' }}>Heavyweight fleece. Never restocked. Never mass produced.</p>
+        <p style={{ textAlign: 'center', fontSize: '14px', color: '#888', marginBottom: '8px' }}>Join the waitlist to be the first to know when the new drop is live.</p>
+        <p style={{ textAlign: 'center', fontSize: '13px', color: '#aaa', marginBottom: '32px' }}>Heavyweight fleece. Made with intention.</p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '24px' }}>
           {preorderProducts.map(product => (
@@ -461,11 +461,11 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>📦</p>
-            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>LIMITED TO 24</p>
+            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>COMING SOON</p>
           </div>
           <div style={{ textAlign: 'center' }}>
-            <p style={{ fontSize: '20px', marginBottom: '4px' }}>1️⃣</p>
-            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>LIMITED TO 24 PIECES</p>
+            <p style={{ fontSize: '20px', marginBottom: '4px' }}>🖤</p>
+            <p style={{ fontSize: '12px', letterSpacing: '1px', color: '#0a1931', fontWeight: '700' }}>MADE WITH INTENTION</p>
           </div>
           <div style={{ textAlign: 'center' }}>
             <p style={{ fontSize: '20px', marginBottom: '4px' }}>💬</p>
