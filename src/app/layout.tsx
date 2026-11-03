@@ -5,11 +5,11 @@ import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
-  description: 'Shop premium heavyweight hoodies, sweatshirts, and crops from Legacy Code Apparel. One-of-one preorder pieces for people who lead with character. Value-driven apparel made in Atlanta. Free shipping over $50.',
+  description: 'Shop premium heavyweight hoodies, sweatshirts, and crops from Legacy Code Apparel. One-of-one preorder pieces for people who lead with character. Value-driven apparel made in Atlanta.',
   keywords: 'integrity apparel, legacy code apparel, values based clothing, statement hoodies, heavyweight sweatshirts, premium streetwear, value driven apparel, atlanta apparel, character apparel, one of one preorder',
   openGraph: {
     title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
-    description: 'Premium heavyweight hoodies, sweatshirts, and crops for people who lead with character. One-of-one preorder pieces rooted in integrity. Free shipping over $50.',
+    description: 'Premium heavyweight hoodies, sweatshirts, and crops for people who lead with character. One-of-one preorder pieces rooted in integrity.',
     url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
     images: [{ url: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775277592/IMG_7062_pz5yll.jpg', width: 1200, height: 630, alt: 'Legacy Code Apparel — Wear Your Values' }],

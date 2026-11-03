@@ -7,8 +7,7 @@ export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, total } = useCart();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const freeShipping = total >= 50;
-  const shippingCost = freeShipping ? 0 : 5.01;
+  const shippingCost = 5;
   const orderTotal = total + shippingCost;
 
   const handleCheckout = async () => {
@@ -37,16 +36,6 @@ export default function CartPage() {
       <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px' }}>
         <h1 style={{ fontSize: '32px', fontWeight: '400', marginBottom: '8px', letterSpacing: '-1px' }}>Your Cart</h1>
         
-        {!freeShipping && total > 0 && (
-          <p style={{ fontSize: '14px', color: '#666', marginBottom: '24px' }}>
-            Add <strong>${(50 - total).toFixed(2)}</strong> more for free shipping!
-          </p>
-        )}
-        {freeShipping && (
-          <p style={{ fontSize: '14px', color: 'green', marginBottom: '24px' }}>
-            You qualify for free shipping!
-          </p>
-        )}
 
         {cart.length === 0 ? (
           <div style={{ textAlign: 'center', padding: '60px 0' }}>
@@ -78,9 +67,9 @@ export default function CartPage() {
                 <span>Subtotal</span>
                 <span>${total.toFixed(2)}</span>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '24px', fontSize: '15px', color: freeShipping ? 'green' : '#666' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '24px', fontSize: '15px', color: '#666' }}>
                 <span>Shipping</span>
-                <span>{freeShipping ? 'FREE' : '$5.01'}</span>
+                <span>$5.00</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '24px', fontSize: '20px', fontWeight: '700', borderTop: '1px solid #e5e5e5', paddingTop: '16px' }}>
                 <span>Total</span>

@@ -45,21 +45,15 @@ export async function POST(req: Request) {
       },
     };
 
-    if (total >= 50) {
-      sessionConfig.shipping_options = [
-        {
-          shipping_rate_data: {
-            type: 'fixed_amount',
-            fixed_amount: { amount: 0, currency: 'usd' },
-            display_name: 'Free Shipping',
-          },
+    sessionConfig.shipping_options = [
+      {
+        shipping_rate_data: {
+          type: 'fixed_amount',
+          fixed_amount: { amount: 500, currency: 'usd' },
+          display_name: 'Standard Shipping',
         },
-      ];
-    } else {
-      sessionConfig.shipping_options = [
-        { shipping_rate: 'shr_1TDgFSQ9qsnPjTMWnvR17Xef' },
-      ];
-    }
+      },
+    ];
 
     const session = await stripe.checkout.sessions.create(sessionConfig);
 
