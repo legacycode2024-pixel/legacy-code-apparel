@@ -2,6 +2,25 @@ import Navbar from '../../components/Navbar';
 
 const posts = [
   {
+    slug: 'your-word-is-your-bond',
+    date: 'November 9, 2026',
+    category: 'BRAND STORY',
+    image: '/images/logo.png',
+    title: 'Your Word Is Your Bond',
+    excerpt: 'Your word is the smallest thing you own and the most valuable. Why keeping it matters, and how it shapes everything we make.',
+    content: [
+      'There\'s an old saying that your word is your bond. It sounds simple. It\'s one of the hardest things to live by.',
+      'Your word is the smallest thing you own and the most valuable. It costs nothing to give and everything to break. Every time you say you\'ll show up, finish the work, pay what you owe, or keep something private, you\'re putting your name behind it.',
+      'We live in a time when promises are cheap. A message gets read and forgotten. A plan gets made and dropped. People say "I\'ll get back to you" and never do. After a while, nobody can tell whose word means anything.',
+      'That\'s why keeping it matters. The person who does what they said, especially when it\'s inconvenient and nobody would blame them for skipping it, becomes someone others can count on. That trust is slow to build and quick to lose, and it\'s worth more than any title.',
+      'It also works in the other direction. Don\'t promise what you can\'t deliver. Saying no honestly is better than saying yes and failing. Integrity starts before the promise, with being honest about what you can actually do.',
+      'This is the idea behind everything we make at Legacy Code. A piece of clothing is just fabric until it stands for something. We want what you wear to remind you of the person you decided to be.',
+      'So ask yourself: when was the last time you kept a promise that was hard to keep? Hold on to that feeling. That\'s the code.',
+      'Wear your values. Leave a legacy. 🖤',
+    ],
+  },
+
+  {
     slug: 'why-i-wont-rush-it',
     date: 'November 3, 2026',
     category: 'BRAND STORY',

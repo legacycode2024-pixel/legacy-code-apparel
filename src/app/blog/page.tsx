@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'your-word-is-your-bond',
+    date: 'November 9, 2026',
+    category: 'BRAND STORY',
+    image: '/images/logo.png',
+    title: 'Your Word Is Your Bond',
+    excerpt: 'Your word is the smallest thing you own and the most valuable. Why keeping it matters, and how it shapes everything we make.',
+  },
+
+  {
     slug: 'why-i-wont-rush-it',
     date: 'November 3, 2026',
     category: 'BRAND STORY',
