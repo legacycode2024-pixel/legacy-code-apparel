@@ -51,6 +51,10 @@ export async function POST(req: Request) {
           type: 'fixed_amount',
           fixed_amount: { amount: 500, currency: 'usd' },
           display_name: 'Standard Shipping',
+            delivery_estimate: {
+              minimum: { unit: 'week', value: 6 },
+              maximum: { unit: 'week', value: 9 },
+            },
         },
       },
     ];
