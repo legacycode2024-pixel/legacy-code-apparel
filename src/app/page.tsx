@@ -227,7 +227,7 @@ function PreorderCard({ product, inventory }: { product: PreorderProduct; invent
         )}
         <div style={{ marginBottom: '16px', padding: '12px 0', borderTop: '1px solid #f0f0f0', borderBottom: '1px solid #f0f0f0' }}>
           <p style={{ margin: '0 0 4px', fontSize: '22px', fontWeight: '700', color: product.accent }}>${product.price.toFixed(2)}</p>
-          <p style={{ margin: 0, fontSize: '11px', color: '#999' }}>Heavyweight fleece</p>
+          <p style={{ margin: 0, fontSize: '11px', color: '#999' }}>Heavyweight fleece · Made to order in Pakistan · Arrives in 6-8 weeks</p>
         </div>
 
         {product.sneakPeek ? (
@@ -399,7 +399,7 @@ export default function Home() {
           <div style={{ textAlign: 'center', maxWidth: '240px' }}>
             <p style={{ fontSize: '32px', marginBottom: '12px' }}>🏙️</p>
             <h3 style={{ fontSize: '14px', fontWeight: '700', color: '#0a1931', letterSpacing: '2px', marginBottom: '8px' }}>ATL MADE</h3>
-            <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.7' }}>Rooted in Atlanta. Fulfilled locally. Every order is handled with care.</p>
+            <p style={{ fontSize: '14px', color: '#555', lineHeight: '1.7' }}>Rooted in Atlanta. Every order is packed and shipped from Georgia with care.</p>
           </div>
         </div>
       </section>

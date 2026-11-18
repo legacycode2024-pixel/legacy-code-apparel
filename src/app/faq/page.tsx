@@ -12,7 +12,8 @@ const faqGroups = [
   {
     category: 'SHIPPING',
     faqs: [
-      { question: 'How long does shipping take?', answer: 'Standard shipping takes 3-5 business days. You will receive a tracking number via email once your order ships.' },
+      { question: 'How long does shipping take?', answer: 'Most orders arrive within 6-8 weeks of purchase. Your piece is made to order, so it ships once production is complete, and standard delivery then takes 3-5 business days. You will receive a tracking number via email as soon as it ships.' },
+      { question: 'Why does it take 6 to 8 weeks to get my order?', answer: 'Our pieces are made to order in small batches by our manufacturing partner in Pakistan, not pulled from a warehouse shelf. After you order, your piece is cut, printed and sewn, we review and approve each batch before it ships, and the finished pieces travel from Pakistan to us in Georgia, including customs. We then pack your order and ship it from Atlanta. We would rather take the time to get it right than rush you something we would not wear ourselves.' },
       { question: 'Do you offer free shipping?', answer: 'Yes! We offer free shipping on all orders over $50. Orders under $50 ship for $5.01.' },
       { question: 'Do you ship internationally?', answer: 'Currently we ship within the United States only. International shipping is coming soon!' },
       { question: 'How do I track my order?', answer: 'Once your order ships you will receive a confirmation email with a tracking number.' },

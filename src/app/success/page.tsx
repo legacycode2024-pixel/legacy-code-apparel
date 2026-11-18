@@ -7,7 +7,7 @@ export default function SuccessPage() {
       <div style={{ textAlign: 'center', padding: '100px 20px' }}>
         <div style={{ fontSize: '48px', marginBottom: '24px' }}>✓</div>
         <h1 style={{ fontSize: '36px', fontWeight: '400', marginBottom: '16px' }}>Order Confirmed!</h1>
-        <p style={{ fontSize: '18px', color: '#666', marginBottom: '32px' }}>Your preorder is confirmed! Expect your order to ship within 3-4 weeks of purchase. Thank you for supporting Legacy Code Apparel!</p>
+        <p style={{ fontSize: '18px', color: '#666', marginBottom: '32px' }}>Your order is confirmed! Your piece is being made to order in Pakistan and should arrive within 6-8 weeks. We review every batch before it ships, and we will email you as soon as it is on the way. Thank you for supporting Legacy Code Apparel!</p>
         <a href="/" style={{ display: 'inline-block', padding: '14px 36px', backgroundColor: '#111', color: '#fff', textDecoration: 'none', fontSize: '13px', letterSpacing: '2px', borderRadius: '8px' }}>CONTINUE SHOPPING</a>
       </div>
     </main>

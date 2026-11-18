@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
-  description: 'Shop premium heavyweight hoodies, sweatshirts, and crops from Legacy Code Apparel. Pieces made for people who lead with character. Value-driven apparel made in Atlanta.',
+  description: 'Shop premium heavyweight hoodies, sweatshirts, and crops from Legacy Code Apparel. Pieces made for people who lead with character. Value-driven apparel designed in Atlanta.',
   keywords: 'integrity apparel, legacy code apparel, values based clothing, statement hoodies, heavyweight sweatshirts, premium streetwear, value driven apparel, atlanta apparel, character apparel, one of one preorder',
   openGraph: {
     title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
