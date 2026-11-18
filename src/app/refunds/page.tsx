@@ -18,7 +18,7 @@ export default function RefundsPage() {
 
         <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '40px', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '11px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', color: '#c9a84c', marginBottom: '16px' }}>RETURNS</h2>
-          <p style={{ fontSize: '16px', lineHeight: '1.9', color: '#444', marginBottom: '16px' }}>All sales are final. We accept returns only if your item arrives <strong>damaged, defective or incorrect</strong> and you contact us within <strong>14 days</strong> of the delivery date. To be eligible your item must be:</p>
+          <p style={{ fontSize: '16px', lineHeight: '1.9', color: '#444', marginBottom: '16px' }}>All sales are final. We accept returns only if your item arrives <strong>damaged, defective or incorrect</strong> and you contact us within <strong>10 days</strong> of the delivery date. To be eligible your item must be:</p>
           <ul style={{ fontSize: '16px', lineHeight: '2', color: '#444', paddingLeft: '24px', marginBottom: '16px' }}>
             <li>Unworn and unwashed</li>
             <li>In the same condition you received it</li>
@@ -50,7 +50,7 @@ export default function RefundsPage() {
         <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '40px', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '11px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', color: '#c9a84c', marginBottom: '16px' }}>NON-RETURNABLE ITEMS</h2>
           <ul style={{ fontSize: '16px', lineHeight: '2', color: '#444', paddingLeft: '24px' }}>
-            <li>Items returned after 14 days of delivery</li>
+            <li>Items reported more than 10 days after delivery</li>
             <li>Items that have been worn, washed or altered</li>
             <li>Sale items</li>
             <li>Change of mind, wrong size ordered or size exchanges, since every piece is made to order and all sales are final</li>

@@ -22,7 +22,7 @@ const faqGroups = [
   {
     category: 'RETURNS & EXCHANGES',
     faqs: [
-      { question: 'What is your return policy?', answer: 'Because every piece is made to order, all sales are final. If your item arrives damaged, defective or incorrect, email us at support@legacycodeapparel.store within 14 days of delivery with your order number and photos, and we will make it right.' },
+      { question: 'What is your return policy?', answer: 'Because every piece is made to order, all sales are final. If your item arrives damaged, defective or incorrect, email us at support@legacycodeapparel.store within 10 days of delivery with your order number and photos, and we will make it right.' },
       { question: 'Can I exchange for a different size?', answer: 'Because every piece is made to order, we cannot exchange for a different size. Please check our size guide carefully before ordering.' },
     ],
   },
