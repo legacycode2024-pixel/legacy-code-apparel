@@ -53,7 +53,7 @@ export async function POST(req: Request) {
           display_name: 'Standard Shipping',
             delivery_estimate: {
               minimum: { unit: 'week', value: 6 },
-              maximum: { unit: 'week', value: 9 },
+              maximum: { unit: 'week', value: 8 },
             },
         },
       },

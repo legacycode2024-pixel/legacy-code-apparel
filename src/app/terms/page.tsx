@@ -29,7 +29,7 @@ export default function TermsPage() {
 
         <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '40px', marginBottom: '40px' }}>
           <h2 style={{ fontSize: '11px', letterSpacing: '4px', fontFamily: 'Arial, sans-serif', fontWeight: '400', color: '#c9a84c', marginBottom: '16px' }}>SHIPPING</h2>
-          <p style={{ fontSize: '16px', lineHeight: '1.9', color: '#444' }}>We ship within the United States only. Orders are made to order and ship within 6-8 weeks of purchase. If a delay means your order will not ship within that time, we will notify you by email with a new estimate and you may choose to wait or cancel for a full refund. We are not responsible for delays caused by the carrier, weather or other circumstances outside our control. Risk of loss and title for items purchased pass to you upon delivery to the carrier.</p>
+          <p style={{ fontSize: '16px', lineHeight: '1.9', color: '#444' }}>We ship within the United States only. Orders are made to order and are estimated to arrive within 6-8 weeks of purchase. If a delay means your order will not arrive within that time, we will notify you by email with a new estimate and you may choose to wait or cancel for a full refund. We are not responsible for delays caused by the carrier, weather or other circumstances outside our control. Risk of loss and title for items purchased pass to you upon delivery to the carrier.</p>
         </div>
 
         <div style={{ borderTop: '1px solid #e5e5e5', paddingTop: '40px', marginBottom: '40px' }}>
