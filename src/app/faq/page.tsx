@@ -22,8 +22,8 @@ const faqGroups = [
   {
     category: 'RETURNS & EXCHANGES',
     faqs: [
-      { question: 'What is your return policy?', answer: 'We accept returns within 14 days of delivery. Items must be unworn, unwashed and in original condition. Email us at support@legacycodeapparel.store with your order number to start a return.' },
-      { question: 'Can I exchange for a different size?', answer: 'Yes! Contact us at support@legacycodeapparel.store within 14 days and we will get you the right size.' },
+      { question: 'What is your return policy?', answer: 'Because every piece is made to order, all sales are final. If your item arrives damaged, defective or incorrect, email us at support@legacycodeapparel.store within 14 days of delivery with your order number and photos, and we will make it right.' },
+      { question: 'Can I exchange for a different size?', answer: 'Because every piece is made to order, we cannot exchange for a different size. Please check our size guide carefully before ordering.' },
     ],
   },
   {
