@@ -59,7 +59,7 @@ const posts = [
     slug: 'what-year-of-inception-means',
     date: 'October 12, 2026',
     category: 'BRAND STORY',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791204729/C8AFEA41-3C41-4242-B994-2A8173B09960_leoeni.png',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto,q_auto/v1791204729/C8AFEA41-3C41-4242-B994-2A8173B09960_leoeni.png',
     title: 'What Year of Inception Means',
     excerpt: 'Every Legacy Code piece carries a name that means something. Year of Inception is no different — and once you understand it, you will never look at this sweatshirt the same way.',
     content: [
@@ -89,7 +89,7 @@ const posts = [
     slug: 'the-story-behind-nothing-to-hide',
     date: 'October 4, 2026',
     category: 'BRAND STORY',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1791169397/1E104AA6-BD03-4930-806F-A16161B63788_xuyk8j.jpg',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto,q_auto/v1791169397/1E104AA6-BD03-4930-806F-A16161B63788_xuyk8j.jpg',
     title: 'The Story Behind Nothing to Hide',
     excerpt: 'This piece was not designed to cover you up. It was designed to free you up. The story behind the Nothing to Hide crop.',
     content: [
@@ -116,7 +116,7 @@ const posts = [
     slug: 'why-small-batch-drops-are-taking-over-streetwear',
     date: 'September 27, 2026',
     category: 'BRAND STORY',
-    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1790481935/3BCC37CE-47F1-4B41-9C52-54CEE63DC46D_ouohhx.jpg',
+    image: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_auto,q_auto/v1790481935/3BCC37CE-47F1-4B41-9C52-54CEE63DC46D_ouohhx.jpg',
     title: 'Why Small Batch Drops Are Taking Over Streetwear',
     excerpt: 'The era of mass production is over. The most sought after pieces in streetwear right now are not the ones everyone has — they are the ones almost nobody can get.',
     content: [

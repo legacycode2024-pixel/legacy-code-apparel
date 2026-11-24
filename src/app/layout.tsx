@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     description: 'Premium heavyweight hoodies, sweatshirts, and crops for people who lead with character. Pieces rooted in integrity.',
     url: 'https://legacycodeapparel.store',
     siteName: 'Legacy Code Apparel',
-    images: [{ url: 'https://res.cloudinary.com/dozyoetnr/image/upload/v1775277592/IMG_7062_pz5yll.jpg', width: 1200, height: 630, alt: 'Legacy Code Apparel — Wear Your Values' }],
+    images: [{ url: 'https://res.cloudinary.com/dozyoetnr/image/upload/f_jpg,q_auto/v1775277592/IMG_7062_pz5yll.jpg', width: 1200, height: 630, alt: 'Legacy Code Apparel — Wear Your Values' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Legacy Code Apparel | Wear Your Values | Shop Now!',
     description: 'Premium heavyweight hoodies, sweatshirts, and crops for people who lead with character. Pieces rooted in integrity.',
-    images: ['https://res.cloudinary.com/dozyoetnr/image/upload/v1775277592/IMG_7062_pz5yll.jpg'],
+    images: ['https://res.cloudinary.com/dozyoetnr/image/upload/f_jpg,q_auto/v1775277592/IMG_7062_pz5yll.jpg'],
   },
 };
 
